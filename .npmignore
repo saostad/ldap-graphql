@@ -1,0 +1,9 @@
+.npmrc
+.env
+*.log
+docs
+generated
+/src/**/*.*
+dist/src/app.js
+dist/src/app.js.map
+dist/src/app.d.ts
