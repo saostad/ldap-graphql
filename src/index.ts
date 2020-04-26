@@ -1,28 +1,15 @@
-import dotenv from "dotenv";
-dotenv.config();
+import { ApolloServer } from "apollo-server";
 
-import { createLogger, writeLog } from "fast-node-logger";
+import { typeDefs } from "./graphql/typeDefs";
+import { resolvers } from "./graphql/resolvers";
 
-export async function main() {
-  /** ready to use instance of logger */
-  const logger = await createLogger({
-    level: "trace",
-    prettyPrint: { colorize: true, translateTime: " yyyy-mm-dd HH:MM:ss" },
+/** initial an instance of Apollo-Server */
+export async function initial() {
+  const server = new ApolloServer({
+    resolvers,
+    typeDefs,
+    playground: true,
+    introspection: true,
   });
-
-  /** put your code below here */
-
-  logger.trace("logger started!");
-
-  // alternative to access logger
-  writeLog(`here is my secret: ${process.env.MY_SECRET}`, {
-    stdout: true,
-    level: "warn",
-  });
-
-  return process.env.MY_SECRET;
+  return server.listen();
 }
-
-main().catch((err: Error) => {
-  writeLog(err, { level: "error", stdout: true });
-});

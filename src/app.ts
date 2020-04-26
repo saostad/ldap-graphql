@@ -1,16 +1,7 @@
-import { ApolloServer, ServerInfo } from "apollo-server";
+// HOW TO USE IT
 
-import { typeDefs } from "./graphql/typeDefs";
-import { resolvers } from "./graphql/resolvers";
+// import { initial } from "./index";
 
-const server = new ApolloServer({
-  resolvers,
-  typeDefs,
-  playground: true,
-  introspection: false,
-});
-
-// The `listen` method launches a web server.
-server.listen().then(({ url }: ServerInfo) => {
-  console.log(`🚀  Server ready at ${url}`);
-});
+// initial().then((info) => {
+//   console.log(`File: app.ts,`, `Line: 4 => `, info.url);
+// });

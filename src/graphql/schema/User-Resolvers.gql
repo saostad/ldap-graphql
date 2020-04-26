@@ -1,0 +1,989 @@
+type Query {
+  userGetAll(criteria: String): [User]
+  userGetByDn(dn: ID!): User
+}
+
+type Mutation {
+  userUpdate(input: UserUpdateInput!): User
+  userDelete(dn: ID!): Boolean
+}
+
+input UserUpdateInput {
+  dn: ID!
+  """
+  Admin DisplayName: ms-Exch-User-Culture
+  Description: ms-Exch-User-Culture
+  ldapDisplayName: msExchUserCulture
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.50773
+  """
+  msExchUserCulture: String
+  """
+  Admin DisplayName: ms-DS-Phonetic-Last-Name
+  Description: Contains the phonetic last name of the person.
+  ldapDisplayName: msDS-PhoneticLastName
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.1943
+  """
+  msDsPhoneticLastName: String
+  """
+  Admin DisplayName: ms-DS-Phonetic-First-Name
+  Description: Contains the phonetic given name or first name of the person.
+  ldapDisplayName: msDS-PhoneticFirstName
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.1942
+  """
+  msDsPhoneticFirstName: String
+  """
+  Admin DisplayName: ms-DS-Phonetic-Department
+  Description: Contains the phonetic department name where the person works.
+  ldapDisplayName: msDS-PhoneticDepartment
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.1944
+  """
+  msDsPhoneticDepartment: String
+  """
+  Admin DisplayName: ms-DS-Phonetic-Company-Name
+  Description: Contains the phonetic company name where the person works.
+  ldapDisplayName: msDS-PhoneticCompanyName
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.1945
+  """
+  msDsPhoneticCompanyName: String
+  """
+  Admin DisplayName: ms-DS-Phonetic-Display-Name
+  Description: The phonetic display name of an object.  In the absence of a phonetic display name the existing display name is used.
+  ldapDisplayName: msDS-PhoneticDisplayName
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.1946
+  """
+  msDsPhoneticDisplayName: String
+  """
+  Admin DisplayName: ms-DS-HAB-Seniority-Index
+  Description: Contains the seniority index as applied by the organization where the person works.
+  ldapDisplayName: msDS-HABSeniorityIndex
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.1997
+  """
+  msDsHabSeniorityIndex: Int
+  """
+  Admin DisplayName: Employee-Number
+  Description: Employee-Number
+  ldapDisplayName: employeeNumber
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.2.610
+  """
+  employeeNumber: String
+  """
+  Admin DisplayName: Employee-Type
+  Description: Employee-Type
+  ldapDisplayName: employeeType
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.2.613
+  """
+  employeeType: String
+  """
+  Admin DisplayName: ms-Exch-Business-Roles
+  Description: ms-Exch-Business-Roles
+  ldapDisplayName: businessRoles
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.2.105
+  """
+  businessRoles: String
+  """
+  Admin DisplayName: ms-Exch-Telephone-Assistant
+  Description: ms-Exch-Telephone-Assistant
+  ldapDisplayName: telephoneAssistant
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.2.79
+  """
+  telephoneAssistant: String
+  """
+  Admin DisplayName: ms-Exch-Telephone-Personal-Pager
+  Description: ms-Exch-Telephone-Personal-Pager
+  ldapDisplayName: personalPager
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.2.612
+  """
+  personalPager: String
+  """
+  Admin DisplayName: houseIdentifier
+  Description: The houseIdentifier attribute type specifies a linguistic construct used to identify a particular building, for example a house number or house name relative to a street, avenue, town or city, etc.
+  ldapDisplayName: houseIdentifier
+  attributeSyntax: 2.5.5.12
+  attributeID: 2.5.4.51
+  """
+  houseIdentifier: [String]
+  """
+  Admin DisplayName: ms-Exch-House-Identifier
+  Description: ms-Exch-House-Identifier
+  ldapDisplayName: msExchHouseIdentifier
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.2.596
+  """
+  msExchHouseIdentifier: String
+  """
+  Admin DisplayName: Address-Home
+  Description: Address-Home
+  ldapDisplayName: homePostalAddress
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.2.617
+  """
+  homePostalAddress: String
+  """
+  Admin DisplayName: Given-Name
+  Description: Given-Name
+  ldapDisplayName: givenName
+  attributeSyntax: 2.5.5.12
+  attributeID: 2.5.4.42
+  """
+  givenName: String
+  """
+  Admin DisplayName: attributeCertificateAttribute
+  Description: A digitally signed or certified identity and set of attributes. Used to bind authorization information to an identity. X.509
+  ldapDisplayName: attributeCertificateAttribute
+  attributeSyntax: 2.5.5.10
+  attributeID: 2.5.4.58
+  """
+  attributeCertificateAttribute: [String]
+  """
+  Admin DisplayName: ms-Exch-UG-Event-Subscription-BL
+  Description: ms-Exch-UG-Event-Subscription-BL
+  ldapDisplayName: msExchUGEventSubscriptionBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52160
+  """
+  msExchUgEventSubscriptionBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Administrative-Unit-BL
+  Description: ms-Exch-Administrative-Unit-BL
+  ldapDisplayName: msExchAdministrativeUnitBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52158
+  """
+  msExchAdministrativeUnitBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Auth-Policy-BL
+  Description: ms-Exch-Auth-Policy-BL
+  ldapDisplayName: msExchAuthPolicyBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52156
+  """
+  msExchAuthPolicyBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Data-Encryption-Policy-BL
+  Description: ms-Exch-Data-Encryption-Policy-BL
+  ldapDisplayName: msExchDataEncryptionPolicyBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52152
+  """
+  msExchDataEncryptionPolicyBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Multi-Mailbox-Locations-BL
+  Description: ms-Exch-Multi-Mailbox-Locations-BL
+  ldapDisplayName: msExchMultiMailboxLocationsBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52150
+  """
+  msExchMultiMailboxLocationsBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Multi-Mailbox-Databases-BL
+  Description: ms-Exch-Multi-Mailbox-Databases-BL
+  ldapDisplayName: msExchMultiMailboxDatabasesBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52149
+  """
+  msExchMultiMailboxDatabasesBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Aux-Mailbox-Parent-Object-Id-BL
+  Description: ms-Exch-Aux-Mailbox-Parent-Object-Id-BL
+  ldapDisplayName: msExchAuxMailboxParentObjectIdBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52142
+  """
+  msExchAuxMailboxParentObjectIdBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-UG-Member-BL
+  Description: ms-Exch-UG-Member-BL
+  ldapDisplayName: msExchUGMemberBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52138
+  """
+  msExchUgMemberBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-OAB-Generating-Mailbox-BL
+  Description: ms-Exch-OAB-Generating-Mailbox-BL
+  ldapDisplayName: msExchOABGeneratingMailboxBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52133
+  """
+  msExchOabGeneratingMailboxBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-EvictedMemebers-BL
+  Description: ms-Exch-EvictedMemebers-BL
+  ldapDisplayName: msExchEvictedMemebersBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52129
+  """
+  msExchEvictedMemebersBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Catch-All-Recipient-BL
+  Description: ms-Exch-Catch-All-Recipient-BL
+  ldapDisplayName: msExchCatchAllRecipientBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52120
+  """
+  msExchCatchAllRecipientBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Associated-Accepted-Domain-BL
+  Description: ms-Exch-Associated-Accepted-Domain-BL
+  ldapDisplayName: msExchAssociatedAcceptedDomainBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52119
+  """
+  msExchAssociatedAcceptedDomainBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-MDB-Availability-Group-Configuration-BL
+  Description: ms-Exch-MDB-Availability-Group-Configuration-BL
+  ldapDisplayName: msExchMDBAvailabilityGroupConfigurationBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52101
+  """
+  msExchMdbAvailabilityGroupConfigurationBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Transport-Rule-Target-BL
+  Description: ms-Exch-Transport-Rule-Target-BL
+  ldapDisplayName: msExchTransportRuleTargetBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52085
+  """
+  msExchTransportRuleTargetBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Hygiene-Configuration-Spam-BL
+  Description: ms-Exch-Hygiene-Configuration-Spam-BL
+  ldapDisplayName: msExchHygieneConfigurationSpamBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51951
+  """
+  msExchHygieneConfigurationSpamBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Hygiene-Configuration-Malware-BL
+  Description: ms-Exch-Hygiene-Configuration-Malware-BL
+  ldapDisplayName: msExchHygieneConfigurationMalwareBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51947
+  """
+  msExchHygieneConfigurationMalwareBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Accepted-Domain-BL
+  Description: ms-Exch-Accepted-Domain-BL
+  ldapDisplayName: msExchAcceptedDomainBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51948
+  """
+  msExchAcceptedDomainBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Trusted-Domain-BL
+  Description: ms-Exch-Trusted-Domain-BL
+  ldapDisplayName: msExchTrustedDomainBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51914
+  """
+  msExchTrustedDomainBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Account-Forest-BL
+  Description: ms-Exch-Account-Forest-BL
+  ldapDisplayName: msExchAccountForestBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51915
+  """
+  msExchAccountForestBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Mailbox-Move-Source-User-BL
+  Description: ms-Exch-Mailbox-Move-Source-User-BL
+  ldapDisplayName: msExchMailboxMoveSourceUserBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51599
+  """
+  msExchMailboxMoveSourceUserBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-HAB-Root-Department-BL
+  Description: ms-Exch-HAB-Root-Department-BL
+  ldapDisplayName: msExchHABRootDepartmentBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.50826
+  """
+  msExchHabRootDepartmentBl: [ID]
+  """
+  Admin DisplayName: ms-Org-Leaders-BL
+  Description: ms-Org-Leaders-BL
+  ldapDisplayName: msOrg-LeadersBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.6.47.2.5
+  """
+  msOrgLeadersBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Mailbox-Move-Storage-MDB-BL
+  Description: ms-Exch-Mailbox-Move-Storage-MDB-BL
+  ldapDisplayName: msExchMailboxMoveStorageMDBBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51601
+  """
+  msExchMailboxMoveStorageMdbbl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Mailbox-Move-Target-User-BL
+  Description: ms-Exch-Mailbox-Move-Target-User-BL
+  ldapDisplayName: msExchMailboxMoveTargetUserBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51597
+  """
+  msExchMailboxMoveTargetUserBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Mailbox-Move-Source-Archive-MDB-BL
+  Description: ms-Exch-Mailbox-Move-Source-Archive-MDB-BL
+  ldapDisplayName: msExchMailboxMoveSourceArchiveMDBBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51686
+  """
+  msExchMailboxMoveSourceArchiveMdbbl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Mailbox-Move-Target-Archive-MDB-BL
+  Description: ms-Exch-Mailbox-Move-Target-Archive-MDB-BL
+  ldapDisplayName: msExchMailboxMoveTargetArchiveMDBBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51687
+  """
+  msExchMailboxMoveTargetArchiveMdbbl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Delegate-List-BL
+  Description: ms-Exch-Delegate-List-BL
+  ldapDisplayName: msExchDelegateListBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51538
+  """
+  msExchDelegateListBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Supervision-User-BL
+  Description: ms-Exch-Supervision-User-BL
+  ldapDisplayName: msExchSupervisionUserBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51465
+  """
+  msExchSupervisionUserBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Supervision-One-Off-BL
+  Description: ms-Exch-Supervision-One-Off-BL
+  ldapDisplayName: msExchSupervisionOneOffBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51476
+  """
+  msExchSupervisionOneOffBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Supervision-DL-BL
+  Description: ms-Exch-Supervision-DL-BL
+  ldapDisplayName: msExchSupervisionDLBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51480
+  """
+  msExchSupervisionDlbl: [ID]
+  """
+  Admin DisplayName: ms-Exch-SMTP-Receive-Default-Accepted-Domain-BL
+  Description: ms-Exch-SMTP-Receive-Default-Accepted-Domain-BL
+  ldapDisplayName: msExchSMTPReceiveDefaultAcceptedDomainBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51482
+  """
+  msExchSmtpReceiveDefaultAcceptedDomainBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Server-Site-BL
+  Description: ms-Exch-Server-Site-BL
+  ldapDisplayName: msExchServerSiteBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51469
+  """
+  msExchServerSiteBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-RBAC-Policy-BL
+  Description: ms-Exch-RBAC-Policy-BL
+  ldapDisplayName: msExchRBACPolicyBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51448
+  """
+  msExchRbacPolicyBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Parent-Plan-BL
+  Description: ms-Exch-Parent-Plan-BL
+  ldapDisplayName: msExchParentPlanBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51446
+  """
+  msExchParentPlanBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-OWA-Transcoding-Mime-Types-BL
+  Description: ms-Exch-OWA-Transcoding-Mime-Types-BL
+  ldapDisplayName: msExchOWATranscodingMimeTypesBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51477
+  """
+  msExchOwaTranscodingMimeTypesBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-OWA-Transcoding-File-Types-BL
+  Description: ms-Exch-OWA-Transcoding-File-Types-BL
+  ldapDisplayName: msExchOWATranscodingFileTypesBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51447
+  """
+  msExchOwaTranscodingFileTypesBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-OWA-Remote-Documents-Internal-Domain-Suffix-List-BL
+  Description: ms-Exch-OWA-Remote-Documents-Internal-Domain-Suffix-List-BL
+  ldapDisplayName: msExchOWARemoteDocumentsInternalDomainSuffixListBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51471
+  """
+  msExchOwaRemoteDocumentsInternalDomainSuffixListBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-OWA-Remote-Documents-Blocked-Servers-BL
+  Description: ms-Exch-OWA-Remote-Documents-Blocked-Servers-BL
+  ldapDisplayName: msExchOWARemoteDocumentsBlockedServersBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51464
+  """
+  msExchOwaRemoteDocumentsBlockedServersBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-OWA-Remote-Documents-Allowed-Servers-BL
+  Description: ms-Exch-OWA-Remote-Documents-Allowed-Servers-BL
+  ldapDisplayName: msExchOWARemoteDocumentsAllowedServersBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51481
+  """
+  msExchOwaRemoteDocumentsAllowedServersBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-OWA-Force-Save-MIME-Types-BL
+  Description: ms-Exch-OWA-Force-Save-MIME-Types-BL
+  ldapDisplayName: msExchOWAForceSaveMIMETypesBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51463
+  """
+  msExchOwaForceSaveMimeTypesBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-OWA-Force-Save-File-Types-BL
+  Description: ms-Exch-OWA-Force-Save-File-Types-BL
+  ldapDisplayName: msExchOWAForceSaveFileTypesBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51479
+  """
+  msExchOwaForceSaveFileTypesBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-OWA-Blocked-MIME-Types-BL
+  Description: ms-Exch-OWA-Blocked-MIME-Types-BL
+  ldapDisplayName: msExchOWABlockedMIMETypesBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51474
+  """
+  msExchOwaBlockedMimeTypesBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-OWA-Blocked-File-Types-BL
+  Description: ms-Exch-OWA-Blocked-File-Types-BL
+  ldapDisplayName: msExchOWABlockedFileTypesBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51470
+  """
+  msExchOwaBlockedFileTypesBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-OWA-Allowed-Mime-Types-BL
+  Description: ms-Exch-OWA-Allowed-Mime-Types-BL
+  ldapDisplayName: msExchOWAAllowedMimeTypesBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51473
+  """
+  msExchOwaAllowedMimeTypesBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-OWA-Allowed-File-Types-BL
+  Description: ms-Exch-OWA-Allowed-File-Types-BL
+  ldapDisplayName: msExchOWAAllowedFileTypesBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51468
+  """
+  msExchOwaAllowedFileTypesBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Organizations-Template-Roots-BL
+  Description: ms-Exch-Organizations-Template-Roots-BL
+  ldapDisplayName: msExchOrganizationsTemplateRootsBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51467
+  """
+  msExchOrganizationsTemplateRootsBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Organizations-Global-Address-Lists-BL
+  Description: ms-Exch-Organizations-Global-Address-Lists-BL
+  ldapDisplayName: msExchOrganizationsGlobalAddressListsBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51478
+  """
+  msExchOrganizationsGlobalAddressListsBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Organizations-Address-Book-Roots-BL
+  Description: ms-Exch-Organizations-Address-Book-Roots-BL
+  ldapDisplayName: msExchOrganizationsAddressBookRootsBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51472
+  """
+  msExchOrganizationsAddressBookRootsBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Mobile-Remote-Documents-Internal-Domain-Suffix-List-BL
+  Description: ms-Exch-Mobile-Remote-Documents-Internal-Domain-Suffix-List-BL
+  ldapDisplayName: msExchMobileRemoteDocumentsInternalDomainSuffixListBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51475
+  """
+  msExchMobileRemoteDocumentsInternalDomainSuffixListBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Mobile-Remote-Documents-Blocked-Servers-BL
+  Description: ms-Exch-Mobile-Remote-Documents-Blocked-Servers-BL
+  ldapDisplayName: msExchMobileRemoteDocumentsBlockedServersBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51466
+  """
+  msExchMobileRemoteDocumentsBlockedServersBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Mobile-Remote-Documents-Allowed-Servers-BL
+  Description: ms-Exch-Mobile-Remote-Documents-Allowed-Servers-BL
+  ldapDisplayName: msExchMobileRemoteDocumentsAllowedServersBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51483
+  """
+  msExchMobileRemoteDocumentsAllowedServersBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Availability-Per-User-Account-BL
+  Description: ms-Exch-Availability-Per-User-Account-BL
+  ldapDisplayName: msExchAvailabilityPerUserAccountBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51462
+  """
+  msExchAvailabilityPerUserAccountBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Availability-Org-Wide-Account-BL
+  Description: ms-Exch-Availability-Org-Wide-Account-BL
+  ldapDisplayName: msExchAvailabilityOrgWideAccountBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51461
+  """
+  msExchAvailabilityOrgWideAccountBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Archive-Database-BL
+  Description: ms-Exch-Archive-Database-BL
+  ldapDisplayName: msExchArchiveDatabaseBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51449
+  """
+  msExchArchiveDatabaseBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Mailbox-Move-Target-MDB-BL
+  Description: ms-Exch-Mailbox-Move-Target-MDB-BL
+  ldapDisplayName: msExchMailboxMoveTargetMDBBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51399
+  """
+  msExchMailboxMoveTargetMdbbl: [ID]
+  """
+  Admin DisplayName: ms-Exch-User-BL
+  Description: ms-Exch-User-BL
+  ldapDisplayName: msExchUserBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51260
+  """
+  msExchUserBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Server-Association-BL
+  Description: ms-Exch-Server-Association-BL
+  ldapDisplayName: msExchServerAssociationBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51248
+  """
+  msExchServerAssociationBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Device-Access-Control-Rule-BL
+  Description: ms-Exch-Device-Access-Control-Rule-BL
+  ldapDisplayName: msExchDeviceAccessControlRuleBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51504
+  """
+  msExchDeviceAccessControlRuleBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Intended-Mailbox-Plan-BL
+  Description: ms-Exch-Intended-Mailbox-Plan-BL
+  ldapDisplayName: msExchIntendedMailboxPlanBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51564
+  """
+  msExchIntendedMailboxPlanBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Mailbox-Move-Source-MDB-BL
+  Description: ms-Exch-Mailbox-Move-Source-MDB-BL
+  ldapDisplayName: msExchMailboxMoveSourceMDBBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51440
+  """
+  msExchMailboxMoveSourceMdbbl: [ID]
+  """
+  Admin DisplayName: ms-Exch-RMS-Computer-Accounts-BL
+  Description: ms-Exch-RMS-Computer-Accounts-BL
+  ldapDisplayName: msExchRMSComputerAccountsBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51523
+  """
+  msExchRmsComputerAccountsBl: [ID]
+  """
+  Admin DisplayName: ms-DFSR-ComputerReferenceBL
+  Description: Backlink attribute for ms-DFSR-ComputerReference
+  ldapDisplayName: msDFSR-ComputerReferenceBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.6.13.3.103
+  """
+  msDfsrComputerReferenceBl: [ID]
+  """
+  Admin DisplayName: ms-DFSR-MemberReferenceBL
+  Description: Backlink attribute for ms-DFSR-MemberReference
+  ldapDisplayName: msDFSR-MemberReferenceBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.6.13.3.102
+  """
+  msDfsrMemberReferenceBl: [ID]
+  """
+  Admin DisplayName: msSFU-30-Posix-Member-Of
+  Description: stores the display names of groups to which this user belongs to
+  ldapDisplayName: msSFU30PosixMemberOf
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.6.18.1.347
+  """
+  msSfu30PosixMemberOf: [ID]
+  """
+  Admin DisplayName: ms-DS-Host-Service-Account-BL
+  Description: Service Accounts Back Link for linking machines associated with the service account.
+  ldapDisplayName: msDS-HostServiceAccountBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.2057
+  """
+  msDsHostServiceAccountBl: [ID]
+  """
+  Admin DisplayName: Display-Name
+  Description: Display-Name
+  ldapDisplayName: displayName
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.2.13
+  """
+  displayName: String
+  """
+  Admin DisplayName: msRTCSIP-UserPolicy
+  Description: msRTCSIP-UserPolicy
+  ldapDisplayName: msRTCSIP-UserPolicy
+  attributeSyntax: 2.5.5.7
+  attributeID: 1.2.840.113556.1.6.24.1.132
+  """
+  msRtcsipUserPolicy: [String]
+  """
+  Admin DisplayName: msRTCSIP-PrimaryUserAddress
+  Description: msRTCSIP-PrimaryUserAddress
+  ldapDisplayName: msRTCSIP-PrimaryUserAddress
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.6.24.1.1
+  """
+  msRtcsipPrimaryUserAddress: String
+  """
+  Admin DisplayName: msRTCSIP-UserEnabled
+  Description: msRTCSIP-UserEnabled
+  ldapDisplayName: msRTCSIP-UserEnabled
+  attributeSyntax: 2.5.5.8
+  attributeID: 1.2.840.113556.1.6.24.1.6
+  """
+  msRtcsipUserEnabled: Boolean
+  """
+  Admin DisplayName: msRTCSIP-TargetHomeServer
+  Description: msRTCSIP-TargetHomeServer
+  ldapDisplayName: msRTCSIP-TargetHomeServer
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.6.24.1.47
+  """
+  msRtcsipTargetHomeServer: ID
+  """
+  Admin DisplayName: msRTCSIP-OriginatorSid
+  Description: msRTCSIP-OriginatorSid
+  ldapDisplayName: msRTCSIP-OriginatorSid
+  attributeSyntax: 2.5.5.17
+  attributeID: 1.2.840.113556.1.6.24.1.50
+  """
+  msRtcsipOriginatorSid: String
+  """
+  Admin DisplayName: msRTCSIP-PrimaryHomeServer
+  Description: msRTCSIP-PrimaryHomeServer
+  ldapDisplayName: msRTCSIP-PrimaryHomeServer
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.6.24.1.57
+  """
+  msRtcsipPrimaryHomeServer: ID
+  """
+  Admin DisplayName: msRTCSIP-UserExtension
+  Description: msRTCSIP-UserExtension
+  ldapDisplayName: msRTCSIP-UserExtension
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.6.24.1.63
+  """
+  msRtcsipUserExtension: [String]
+  """
+  Admin DisplayName: msRTCSIP-FederationEnabled
+  Description: msRTCSIP-FederationEnabled
+  ldapDisplayName: msRTCSIP-FederationEnabled
+  attributeSyntax: 2.5.5.8
+  attributeID: 1.2.840.113556.1.6.24.1.67
+  """
+  msRtcsipFederationEnabled: Boolean
+  """
+  Admin DisplayName: msRTCSIP-InternetAccessEnabled
+  Description: msRTCSIP-InternetAccessEnabled
+  ldapDisplayName: msRTCSIP-InternetAccessEnabled
+  attributeSyntax: 2.5.5.8
+  attributeID: 1.2.840.113556.1.6.24.1.68
+  """
+  msRtcsipInternetAccessEnabled: Boolean
+  """
+  Admin DisplayName: msRTCSIP-ArchivingEnabled
+  Description: msRTCSIP-ArchivingEnabled
+  ldapDisplayName: msRTCSIP-ArchivingEnabled
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.6.24.1.80
+  """
+  msRtcsipArchivingEnabled: Int
+  """
+  Admin DisplayName: msRTCSIP-OptionFlags
+  Description: msRTCSIP-OptionFlags
+  ldapDisplayName: msRTCSIP-OptionFlags
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.6.24.1.87
+  """
+  msRtcsipOptionFlags: Int
+  """
+  Admin DisplayName: msRTCSIP-Line
+  Description: msRTCSIP-Line
+  ldapDisplayName: msRTCSIP-Line
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.6.24.1.88
+  """
+  msRtcsipLine: String
+  """
+  Admin DisplayName: msRTCSIP-LineServer
+  Description: msRTCSIP-LineServer
+  ldapDisplayName: msRTCSIP-LineServer
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.6.24.1.89
+  """
+  msRtcsipLineServer: String
+  """
+  Admin DisplayName: ms-DS-Source-Object-DN
+  Description: The string representation of the DN of the object in another forest that corresponds to this object.
+  ldapDisplayName: msDS-SourceObjectDN
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.1879
+  """
+  msDsSourceObjectDn: String
+  """
+  Admin DisplayName: msSFU-30-Name
+  Description: stores the name of a map
+  ldapDisplayName: msSFU30Name
+  attributeSyntax: 2.5.5.5
+  attributeID: 1.2.840.113556.1.6.18.1.309
+  """
+  msSfu30Name: String
+  """
+  Admin DisplayName: msSFU-30-Nis-Domain
+  Description: This attribute is used to store the NIS domain
+  ldapDisplayName: msSFU30NisDomain
+  attributeSyntax: 2.5.5.5
+  attributeID: 1.2.840.113556.1.6.18.1.339
+  """
+  msSfu30NisDomain: String
+  """
+  Admin DisplayName: ms-Exch-Query-Base-DN
+  Description: ms-Exch-Query-Base-DN
+  ldapDisplayName: msExchQueryBaseDN
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.15008
+  """
+  msExchQueryBaseDn: ID
+  """
+  Admin DisplayName: ms-Exch-Controlling-Zone
+  Description: ms-Exch-Controlling-Zone
+  ldapDisplayName: msExchControllingZone
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.9026
+  """
+  msExchControllingZone: ID
+  """
+  Admin DisplayName: ms-Exch-Resource-GUID
+  Description: ms-Exch-Resource-GUID
+  ldapDisplayName: msExchResourceGUID
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.9001
+  """
+  msExchResourceGuid: [String]
+  """
+  Admin DisplayName: ms-Exch-Resource-Properties
+  Description: ms-Exch-Resource-Properties
+  ldapDisplayName: msExchResourceProperties
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.9025
+  """
+  msExchResourceProperties: [String]
+  """
+  Admin DisplayName: ms-Exch-Conference-Mailbox-BL
+  Description: ms-Exch-Conference-Mailbox-BL
+  ldapDisplayName: msExchConferenceMailboxBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.9030
+  """
+  msExchConferenceMailboxBl: ID
+  """
+  Admin DisplayName: ms-Exch-KM-Server
+  Description: ms-Exch-KM-Server
+  ldapDisplayName: kMServer
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.2.440
+  """
+  kMServer: ID
+  """
+  Admin DisplayName: ms-Exch-IMAP-OWA-URL-Prefix-Override
+  Description: ms-Exch-IMAP-OWA-URL-Prefix-Override
+  ldapDisplayName: msExchIMAPOWAURLPrefixOverride
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.50213
+  """
+  msExchImapowaurlPrefixOverride: String
+  """
+  Admin DisplayName: ms-Exch-Originating-Forest
+  Description: ms-Exch-Originating-Forest
+  ldapDisplayName: msExchOriginatingForest
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.50300
+  """
+  msExchOriginatingForest: [String]
+  """
+  Admin DisplayName: x500uniqueIdentifier
+  Description: Used to distinguish between objects when a distinguished name has been reused.  This is a different attribute type from both the "uid" and "uniqueIdentifier" types.
+  ldapDisplayName: x500uniqueIdentifier
+  attributeSyntax: 2.5.5.10
+  attributeID: 2.5.4.45
+  """
+  x500uniqueIdentifier: [String]
+  """
+  Admin DisplayName: User-SMIME-Certificate
+  Description: User-SMIME-Certificate
+  ldapDisplayName: userSMIMECertificate
+  attributeSyntax: 2.5.5.10
+  attributeID: 2.16.840.1.113730.3.140
+  """
+  userSmimeCertificate: [String]
+  """
+  Admin DisplayName: userPKCS12
+  Description: PKCS #12 PFX PDU for exchange of personal identity information.
+  ldapDisplayName: userPKCS12
+  attributeSyntax: 2.5.5.10
+  attributeID: 2.16.840.1.113730.3.1.216
+  """
+  userPkcs12: [String]
+  """
+  Admin DisplayName: uid
+  Description: A user ID.
+  ldapDisplayName: uid
+  attributeSyntax: 2.5.5.12
+  attributeID: 0.9.2342.19200300.100.1.1
+  """
+  uid: [String]
+  """
+  Admin DisplayName: secretary
+  Description: Specifies the secretary of a person.
+  ldapDisplayName: secretary
+  attributeSyntax: 2.5.5.1
+  attributeID: 0.9.2342.19200300.100.1.21
+  """
+  secretary: [ID]
+  """
+  Admin DisplayName: roomNumber
+  Description: The room number of an object.
+  ldapDisplayName: roomNumber
+  attributeSyntax: 2.5.5.12
+  attributeID: 0.9.2342.19200300.100.1.6
+  """
+  roomNumber: [String]
+  """
+  Admin DisplayName: preferredLanguage
+  Description: The preferred written or spoken language for a person.
+  ldapDisplayName: preferredLanguage
+  attributeSyntax: 2.5.5.12
+  attributeID: 2.16.840.1.113730.3.1.39
+  """
+  preferredLanguage: String
+  """
+  Admin DisplayName: photo
+  Description: An object encoded in G3 fax as explained in recommendation T.4, with an ASN.1 wrapper to make it compatible with an X.400 BodyPart as defined in X.420.
+  ldapDisplayName: photo
+  attributeSyntax: 2.5.5.10
+  attributeID: 0.9.2342.19200300.100.1.7
+  """
+  photo: [String]
+  """
+  Admin DisplayName: labeledURI
+  Description: A Uniform Resource Identifier followed by a label. The label is used to describe the resource to which the URI points, and is intended as a friendly name fit for human consumption.
+  ldapDisplayName: labeledURI
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.3.6.1.4.1.250.1.57
+  """
+  labeledUri: [String]
+  """
+  Admin DisplayName: jpegPhoto
+  Description: Used to store one or more images of a person using the JPEG File Interchange Format [JFIF].
+  ldapDisplayName: jpegPhoto
+  attributeSyntax: 2.5.5.10
+  attributeID: 0.9.2342.19200300.100.1.60
+  """
+  jpegPhoto: [String]
+  """
+  Admin DisplayName: departmentNumber
+  Description: Identifies a department within an organization.
+  ldapDisplayName: departmentNumber
+  attributeSyntax: 2.5.5.12
+  attributeID: 2.16.840.1.113730.3.1.2
+  """
+  departmentNumber: [String]
+  """
+  Admin DisplayName: carLicense
+  Description: Vehicle license or registration plate.
+  ldapDisplayName: carLicense
+  attributeSyntax: 2.5.5.12
+  attributeID: 2.16.840.1.113730.3.1.1
+  """
+  carLicense: [String]
+  """
+  Admin DisplayName: audio
+  Description: The Audio attribute type allows the storing of sounds in the Directory.
+  ldapDisplayName: audio
+  attributeSyntax: 2.5.5.10
+  attributeID: 0.9.2342.19200300.100.1.55
+  """
+  audio: [String]
+  """
+  Admin DisplayName: ms-PKI-Credential-Roaming-Tokens
+  Description: Storage of encrypted user credential token blobs for roaming.
+  ldapDisplayName: msPKI-CredentialRoamingTokens
+  attributeSyntax: 2.5.5.7
+  attributeID: 1.2.840.113556.1.4.2050
+  """
+  msPkiCredentialRoamingTokens: [String]
+  """
+  Admin DisplayName: ms-DRM-Identity-Certificate
+  Description: The XrML digital rights management certificates for this user.
+  ldapDisplayName: msDRM-IdentityCertificate
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.1843
+  """
+  msDrmIdentityCertificate: [String]
+}
