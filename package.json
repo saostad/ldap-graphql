@@ -1,6 +1,6 @@
 {
   "name": "ldap-graphql",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Graphql binding for LDAP server",
   "repository": {
     "type": "git",
@@ -21,9 +21,11 @@
     "tsc:watch": "tsc --watch",
     "prepublishOnly": "npm-run-all -s tsc gen-docs",
     "postpublish": "npm-run-all -s tag gen-changelog",
+    "copy-files": "copyfiles --up 3 src/graphql/schema/**/*.gql src/graphql/schema/**/*.graphql dist/graphql/schema",
     "prod": "node --unhandled-rejections=strict dist/app.js",
     "inspect": "node --inspect --unhandled-rejections=strict dist/app.js",
-    "dev": "nodemon --watch dist --exec \"npm run inspect\"",
+    "dev:scripts": "npm-run-all -p copy-files inspect ",
+    "dev": "nodemon --ext js,ts,gql,graphql --watch dist --watch src/graphql/schema --exec \"npm run dev:scripts\"",
     "start": "npm-run-all -p tsc:watch dev"
   },
   "keywords": [
@@ -46,6 +48,7 @@
     "@typescript-eslint/eslint-plugin": "^2.29.0",
     "@typescript-eslint/parser": "^2.29.0",
     "auto-changelog": "^2.0.0",
+    "copyfiles": "^2.2.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
