@@ -25,3 +25,7 @@ initial().then(({ url }) => {
 ### Note
 
 this is not meant to be used in edge
+
+### TODO:
+
+- [ ] provide a way to extend pre-defined schema and resolvers via custom code

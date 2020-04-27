@@ -1,6 +1,7 @@
 import { config } from "dotenv";
 config();
 import * as directory from "ldap-directory-manager";
+import { camelCase } from "change-case";
 
 export async function userGetAll(_: any, { criteria }: any, ctx: any) {
   const options = {
@@ -17,5 +18,13 @@ export async function userGetAll(_: any, { criteria }: any, ctx: any) {
     baseDN: "DC=KI,DC=local",
   });
 
-  return data as any;
+  const transferredData = data.map((el) => {
+    const transferredObject: any = {};
+    for (const [key, value] of Object.entries(el)) {
+      transferredObject[camelCase(key)] = value;
+    }
+    return transferredObject;
+  }) as any;
+
+  return transferredData;
 }
