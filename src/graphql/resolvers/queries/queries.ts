@@ -18,6 +18,7 @@ export async function userGetAll(_: any, { criteria }: any, ctx: any) {
     baseDN: "DC=KI,DC=local",
   });
 
+  // TODO: this should be a helper function and use it in return value of  all resolvers
   const transferredData = data.map((el) => {
     const transferredObject: any = {};
     for (const [key, value] of Object.entries(el)) {

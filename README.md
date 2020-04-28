@@ -29,3 +29,4 @@ this is not meant to be used in edge
 ### TODO:
 
 - [ ] provide a way to extend pre-defined schema and resolvers via custom code
+- [ ] add ability to re-generate schema and update pre-defined schemas
