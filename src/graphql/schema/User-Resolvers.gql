@@ -11,21 +11,13 @@ type Mutation {
 input UserUpdateInput {
   dn: ID!
   """
-  Admin DisplayName: ms-Exch-UG-Event-Subscription-BL
-  Description: ms-Exch-UG-Event-Subscription-BL
-  ldapDisplayName: msExchUGEventSubscriptionBL
+  Admin DisplayName: ms-Exch-Data-Encryption-Policy-BL
+  Description: ms-Exch-Data-Encryption-Policy-BL
+  ldapDisplayName: msExchDataEncryptionPolicyBL
   attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.52160
+  attributeID: 1.2.840.113556.1.4.7000.102.52152
   """
-  msExchUgEventSubscriptionBl: [ID]
-  """
-  Admin DisplayName: ms-Exch-Administrative-Unit-BL
-  Description: ms-Exch-Administrative-Unit-BL
-  ldapDisplayName: msExchAdministrativeUnitBL
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.52158
-  """
-  msExchAdministrativeUnitBl: [ID]
+  msExchDataEncryptionPolicyBl: [ID]
   """
   Admin DisplayName: ms-Exch-Auth-Policy-BL
   Description: ms-Exch-Auth-Policy-BL
@@ -35,117 +27,29 @@ input UserUpdateInput {
   """
   msExchAuthPolicyBl: [ID]
   """
-  Admin DisplayName: ms-Exch-Data-Encryption-Policy-BL
-  Description: ms-Exch-Data-Encryption-Policy-BL
-  ldapDisplayName: msExchDataEncryptionPolicyBL
+  Admin DisplayName: ms-Exch-Administrative-Unit-BL
+  Description: ms-Exch-Administrative-Unit-BL
+  ldapDisplayName: msExchAdministrativeUnitBL
   attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.52152
+  attributeID: 1.2.840.113556.1.4.7000.102.52158
   """
-  msExchDataEncryptionPolicyBl: [ID]
+  msExchAdministrativeUnitBl: [ID]
   """
-  Admin DisplayName: ms-Exch-Multi-Mailbox-Locations-BL
-  Description: ms-Exch-Multi-Mailbox-Locations-BL
-  ldapDisplayName: msExchMultiMailboxLocationsBL
+  Admin DisplayName: ms-Exch-UG-Event-Subscription-BL
+  Description: ms-Exch-UG-Event-Subscription-BL
+  ldapDisplayName: msExchUGEventSubscriptionBL
   attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.52150
+  attributeID: 1.2.840.113556.1.4.7000.102.52160
   """
-  msExchMultiMailboxLocationsBl: [ID]
+  msExchUgEventSubscriptionBl: [ID]
   """
-  Admin DisplayName: ms-Exch-Multi-Mailbox-Databases-BL
-  Description: ms-Exch-Multi-Mailbox-Databases-BL
-  ldapDisplayName: msExchMultiMailboxDatabasesBL
+  Admin DisplayName: ms-Exch-Account-Forest-BL
+  Description: ms-Exch-Account-Forest-BL
+  ldapDisplayName: msExchAccountForestBL
   attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.52149
+  attributeID: 1.2.840.113556.1.4.7000.102.51915
   """
-  msExchMultiMailboxDatabasesBl: [ID]
-  """
-  Admin DisplayName: ms-Exch-Aux-Mailbox-Parent-Object-Id-BL
-  Description: ms-Exch-Aux-Mailbox-Parent-Object-Id-BL
-  ldapDisplayName: msExchAuxMailboxParentObjectIdBL
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.52142
-  """
-  msExchAuxMailboxParentObjectIdBl: [ID]
-  """
-  Admin DisplayName: ms-Exch-UG-Member-BL
-  Description: ms-Exch-UG-Member-BL
-  ldapDisplayName: msExchUGMemberBL
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.52138
-  """
-  msExchUgMemberBl: [ID]
-  """
-  Admin DisplayName: ms-Exch-OAB-Generating-Mailbox-BL
-  Description: ms-Exch-OAB-Generating-Mailbox-BL
-  ldapDisplayName: msExchOABGeneratingMailboxBL
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.52133
-  """
-  msExchOabGeneratingMailboxBl: [ID]
-  """
-  Admin DisplayName: ms-Exch-EvictedMemebers-BL
-  Description: ms-Exch-EvictedMemebers-BL
-  ldapDisplayName: msExchEvictedMemebersBL
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.52129
-  """
-  msExchEvictedMemebersBl: [ID]
-  """
-  Admin DisplayName: ms-Exch-Catch-All-Recipient-BL
-  Description: ms-Exch-Catch-All-Recipient-BL
-  ldapDisplayName: msExchCatchAllRecipientBL
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.52120
-  """
-  msExchCatchAllRecipientBl: [ID]
-  """
-  Admin DisplayName: ms-Exch-Associated-Accepted-Domain-BL
-  Description: ms-Exch-Associated-Accepted-Domain-BL
-  ldapDisplayName: msExchAssociatedAcceptedDomainBL
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.52119
-  """
-  msExchAssociatedAcceptedDomainBl: [ID]
-  """
-  Admin DisplayName: ms-Exch-MDB-Availability-Group-Configuration-BL
-  Description: ms-Exch-MDB-Availability-Group-Configuration-BL
-  ldapDisplayName: msExchMDBAvailabilityGroupConfigurationBL
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.52101
-  """
-  msExchMdbAvailabilityGroupConfigurationBl: [ID]
-  """
-  Admin DisplayName: ms-Exch-Transport-Rule-Target-BL
-  Description: ms-Exch-Transport-Rule-Target-BL
-  ldapDisplayName: msExchTransportRuleTargetBL
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.52085
-  """
-  msExchTransportRuleTargetBl: [ID]
-  """
-  Admin DisplayName: ms-Exch-Hygiene-Configuration-Spam-BL
-  Description: ms-Exch-Hygiene-Configuration-Spam-BL
-  ldapDisplayName: msExchHygieneConfigurationSpamBL
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.51951
-  """
-  msExchHygieneConfigurationSpamBl: [ID]
-  """
-  Admin DisplayName: ms-Exch-Hygiene-Configuration-Malware-BL
-  Description: ms-Exch-Hygiene-Configuration-Malware-BL
-  ldapDisplayName: msExchHygieneConfigurationMalwareBL
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.51947
-  """
-  msExchHygieneConfigurationMalwareBl: [ID]
-  """
-  Admin DisplayName: ms-Exch-Accepted-Domain-BL
-  Description: ms-Exch-Accepted-Domain-BL
-  ldapDisplayName: msExchAcceptedDomainBL
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.51948
-  """
-  msExchAcceptedDomainBl: [ID]
+  msExchAccountForestBl: [ID]
   """
   Admin DisplayName: ms-Exch-Trusted-Domain-BL
   Description: ms-Exch-Trusted-Domain-BL
@@ -155,13 +59,109 @@ input UserUpdateInput {
   """
   msExchTrustedDomainBl: [ID]
   """
-  Admin DisplayName: ms-Exch-Account-Forest-BL
-  Description: ms-Exch-Account-Forest-BL
-  ldapDisplayName: msExchAccountForestBL
+  Admin DisplayName: ms-Exch-Accepted-Domain-BL
+  Description: ms-Exch-Accepted-Domain-BL
+  ldapDisplayName: msExchAcceptedDomainBL
   attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.51915
+  attributeID: 1.2.840.113556.1.4.7000.102.51948
   """
-  msExchAccountForestBl: [ID]
+  msExchAcceptedDomainBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Hygiene-Configuration-Malware-BL
+  Description: ms-Exch-Hygiene-Configuration-Malware-BL
+  ldapDisplayName: msExchHygieneConfigurationMalwareBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51947
+  """
+  msExchHygieneConfigurationMalwareBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Hygiene-Configuration-Spam-BL
+  Description: ms-Exch-Hygiene-Configuration-Spam-BL
+  ldapDisplayName: msExchHygieneConfigurationSpamBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51951
+  """
+  msExchHygieneConfigurationSpamBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Transport-Rule-Target-BL
+  Description: ms-Exch-Transport-Rule-Target-BL
+  ldapDisplayName: msExchTransportRuleTargetBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52085
+  """
+  msExchTransportRuleTargetBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-MDB-Availability-Group-Configuration-BL
+  Description: ms-Exch-MDB-Availability-Group-Configuration-BL
+  ldapDisplayName: msExchMDBAvailabilityGroupConfigurationBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52101
+  """
+  msExchMdbAvailabilityGroupConfigurationBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Associated-Accepted-Domain-BL
+  Description: ms-Exch-Associated-Accepted-Domain-BL
+  ldapDisplayName: msExchAssociatedAcceptedDomainBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52119
+  """
+  msExchAssociatedAcceptedDomainBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Catch-All-Recipient-BL
+  Description: ms-Exch-Catch-All-Recipient-BL
+  ldapDisplayName: msExchCatchAllRecipientBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52120
+  """
+  msExchCatchAllRecipientBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-EvictedMemebers-BL
+  Description: ms-Exch-EvictedMemebers-BL
+  ldapDisplayName: msExchEvictedMemebersBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52129
+  """
+  msExchEvictedMemebersBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-OAB-Generating-Mailbox-BL
+  Description: ms-Exch-OAB-Generating-Mailbox-BL
+  ldapDisplayName: msExchOABGeneratingMailboxBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52133
+  """
+  msExchOabGeneratingMailboxBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-UG-Member-BL
+  Description: ms-Exch-UG-Member-BL
+  ldapDisplayName: msExchUGMemberBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52138
+  """
+  msExchUgMemberBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Aux-Mailbox-Parent-Object-Id-BL
+  Description: ms-Exch-Aux-Mailbox-Parent-Object-Id-BL
+  ldapDisplayName: msExchAuxMailboxParentObjectIdBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52142
+  """
+  msExchAuxMailboxParentObjectIdBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Multi-Mailbox-Databases-BL
+  Description: ms-Exch-Multi-Mailbox-Databases-BL
+  ldapDisplayName: msExchMultiMailboxDatabasesBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52149
+  """
+  msExchMultiMailboxDatabasesBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Multi-Mailbox-Locations-BL
+  Description: ms-Exch-Multi-Mailbox-Locations-BL
+  ldapDisplayName: msExchMultiMailboxLocationsBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52150
+  """
+  msExchMultiMailboxLocationsBl: [ID]
   """
   Admin DisplayName: ms-Exch-Mailbox-Move-Source-User-BL
   Description: ms-Exch-Mailbox-Move-Source-User-BL
@@ -723,21 +723,13 @@ input UserUpdateInput {
   """
   assistant: ID
   """
-  Admin DisplayName: ms-Exch-UG-Event-Subscription-Link
-  Description: ms-Exch-UG-Event-Subscription-Link
-  ldapDisplayName: msExchUGEventSubscriptionLink
+  Admin DisplayName: ms-Exch-Auth-Policy-Link
+  Description: ms-Exch-Auth-Policy-Link
+  ldapDisplayName: msExchAuthPolicyLink
   attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.52159
+  attributeID: 1.2.840.113556.1.4.7000.102.52155
   """
-  msExchUgEventSubscriptionLink: [ID]
-  """
-  Admin DisplayName: ms-Exch-Immutable-Sid
-  Description: ms-Exch-Immutable-Sid
-  ldapDisplayName: msExchImmutableSid
-  attributeSyntax: 2.5.5.17
-  attributeID: 1.2.840.113556.1.4.7000.102.52161
-  """
-  msExchImmutableSid: String
+  msExchAuthPolicyLink: ID
   """
   Admin DisplayName: ms-Exch-Administrative-Unit-Link
   Description: ms-Exch-Administrative-Unit-Link
@@ -747,221 +739,21 @@ input UserUpdateInput {
   """
   msExchAdministrativeUnitLink: [ID]
   """
-  Admin DisplayName: ms-Exch-Auth-Policy-Link
-  Description: ms-Exch-Auth-Policy-Link
-  ldapDisplayName: msExchAuthPolicyLink
+  Admin DisplayName: ms-Exch-Immutable-Sid
+  Description: ms-Exch-Immutable-Sid
+  ldapDisplayName: msExchImmutableSid
+  attributeSyntax: 2.5.5.17
+  attributeID: 1.2.840.113556.1.4.7000.102.52161
+  """
+  msExchImmutableSid: String
+  """
+  Admin DisplayName: ms-Exch-UG-Event-Subscription-Link
+  Description: ms-Exch-UG-Event-Subscription-Link
+  ldapDisplayName: msExchUGEventSubscriptionLink
   attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.52155
+  attributeID: 1.2.840.113556.1.4.7000.102.52159
   """
-  msExchAuthPolicyLink: ID
-  """
-  Admin DisplayName: ms-Exch-Multi-Mailbox-Databases-Link
-  Description: ms-Exch-Multi-Mailbox-Databases-Link
-  ldapDisplayName: msExchMultiMailboxDatabasesLink
-  attributeSyntax: 2.5.5.14
-  attributeID: 1.2.840.113556.1.4.7000.102.52148
-  """
-  msExchMultiMailboxDatabasesLink: [String]
-  """
-  Admin DisplayName: ms-Exch-Group-Security-Flags
-  Description: ms-Exch-Group-Security-Flags
-  ldapDisplayName: msExchGroupSecurityFlags
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.52147
-  """
-  msExchGroupSecurityFlags: Int
-  """
-  Admin DisplayName: ms-DS-External-Directory-Object-Id
-  Description: ms-DS-External-Directory-Object-Id
-  ldapDisplayName: msDS-ExternalDirectoryObjectId
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.2310
-  """
-  msDsExternalDirectoryObjectId: String
-  """
-  Admin DisplayName: ms-Exch-Sts-Refresh-Tokens-Valid-From
-  Description: ms-Exch-Sts-Refresh-Tokens-Valid-From
-  ldapDisplayName: msExchStsRefreshTokensValidFrom
-  attributeSyntax: 2.5.5.11
-  attributeID: 1.2.840.113556.1.4.7000.102.52143
-  """
-  msExchStsRefreshTokensValidFrom: String
-  """
-  Admin DisplayName: ms-Exch-Aux-Mailbox-Parent-Object-Id-Link
-  Description: ms-Exch-Aux-Mailbox-Parent-Object-Id-Link
-  ldapDisplayName: msExchAuxMailboxParentObjectIdLink
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.52141
-  """
-  msExchAuxMailboxParentObjectIdLink: ID
-  """
-  Admin DisplayName: ms-Exch-UG-Member-Link
-  Description: ms-Exch-UG-Member-Link
-  ldapDisplayName: msExchUGMemberLink
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.52137
-  """
-  msExchUgMemberLink: [ID]
-  """
-  Admin DisplayName: ms-Exch-Organization-Upgrade-Status
-  Description: ms-Exch-Organization-Upgrade-Status
-  ldapDisplayName: msExchOrganizationUpgradeStatus
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.52097
-  """
-  msExchOrganizationUpgradeStatus: Int
-  """
-  Admin DisplayName: ms-Exch-Organization-Upgrade-Request
-  Description: ms-Exch-Organization-Upgrade-Request
-  ldapDisplayName: msExchOrganizationUpgradeRequest
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.52096
-  """
-  msExchOrganizationUpgradeRequest: Int
-  """
-  Admin DisplayName: ms-Exch-Configuration-XML
-  Description: ms-Exch-Configuration-XML
-  ldapDisplayName: msExchConfigurationXML
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.52076
-  """
-  msExchConfigurationXml: String
-  """
-  Admin DisplayName: ms-Exch-Previous-Recipient-Type-Details
-  Description: ms-Exch-Previous-Recipient-Type-Details
-  ldapDisplayName: msExchPreviousRecipientTypeDetails
-  attributeSyntax: 2.5.5.16
-  attributeID: 1.2.840.113556.1.4.7000.102.52107
-  """
-  msExchPreviousRecipientTypeDetails: Int
-  """
-  Admin DisplayName: ms-Exch-Mailbox-Release
-  Description: ms-Exch-Mailbox-Release
-  ldapDisplayName: msExchMailboxRelease
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.52073
-  """
-  msExchMailboxRelease: String
-  """
-  Admin DisplayName: ms-Exch-Archive-Release
-  Description: ms-Exch-Archive-Release
-  ldapDisplayName: msExchArchiveRelease
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.52074
-  """
-  msExchArchiveRelease: String
-  """
-  Admin DisplayName: ms-Exch-User-Hold-Policies
-  Description: ms-Exch-User-Hold-Policies
-  ldapDisplayName: msExchUserHoldPolicies
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.52071
-  """
-  msExchUserHoldPolicies: [String]
-  """
-  Admin DisplayName: ms-Exch-Public-Folder-Smtp-Address
-  Description: ms-Exch-Public-Folder-Smtp-Address
-  ldapDisplayName: msExchPublicFolderSmtpAddress
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.52036
-  """
-  msExchPublicFolderSmtpAddress: String
-  """
-  Admin DisplayName: ms-Exch-Public-Folder-Mailbox
-  Description: ms-Exch-Public-Folder-Mailbox
-  ldapDisplayName: msExchPublicFolderMailbox
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.52034
-  """
-  msExchPublicFolderMailbox: ID
-  """
-  Admin DisplayName: ms-Exch-Shadow-When-Soft-Deleted-Time
-  Description: ms-Exch-Shadow-When-Soft-Deleted-Time
-  ldapDisplayName: msExchShadowWhenSoftDeletedTime
-  attributeSyntax: 2.5.5.11
-  attributeID: 1.2.840.113556.1.4.7000.102.51996
-  """
-  msExchShadowWhenSoftDeletedTime: String
-  """
-  Admin DisplayName: ms-Exch-Group-Member-Count
-  Description: ms-Exch-Group-Member-Count
-  ldapDisplayName: msExchGroupMemberCount
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.51993
-  """
-  msExchGroupMemberCount: Int
-  """
-  Admin DisplayName: ms-Exch-Group-External-Member-Count
-  Description: ms-Exch-Group-External-Member-Count
-  ldapDisplayName: msExchGroupExternalMemberCount
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.51994
-  """
-  msExchGroupExternalMemberCount: Int
-  """
-  Admin DisplayName: ms-Exch-Mailbox-Move-Target-MDB-Link-SL
-  Description: ms-Exch-Mailbox-Move-Target-MDB-Link-SL
-  ldapDisplayName: msExchMailboxMoveTargetMDBLinkSL
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.51952
-  """
-  msExchMailboxMoveTargetMdbLinkSl: String
-  """
-  Admin DisplayName: ms-Exch-Mailbox-Move-Target-Archive-MDB-Link-SL
-  Description: ms-Exch-Mailbox-Move-Target-Archive-MDB-Link-SL
-  ldapDisplayName: msExchMailboxMoveTargetArchiveMDBLinkSL
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.51936
-  """
-  msExchMailboxMoveTargetArchiveMdbLinkSl: String
-  """
-  Admin DisplayName: ms-Exch-Mailbox-Move-Source-MDB-Link-SL
-  Description: ms-Exch-Mailbox-Move-Source-MDB-Link-SL
-  ldapDisplayName: msExchMailboxMoveSourceMDBLinkSL
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.51934
-  """
-  msExchMailboxMoveSourceMdbLinkSl: String
-  """
-  Admin DisplayName: ms-Exch-Mailbox-Move-Source-Archive-MDB-Link-SL
-  Description: ms-Exch-Mailbox-Move-Source-Archive-MDB-Link-SL
-  ldapDisplayName: msExchMailboxMoveSourceArchiveMDBLinkSL
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.51933
-  """
-  msExchMailboxMoveSourceArchiveMdbLinkSl: String
-  """
-  Admin DisplayName: ms-Exch-Home-MTA-SL
-  Description: ms-Exch-Home-MTA-SL
-  ldapDisplayName: msExchHomeMTASL
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.51940
-  """
-  msExchHomeMtasl: String
-  """
-  Admin DisplayName: ms-Exch-When-Soft-Deleted-Time
-  Description: ms-Exch-When-Soft-Deleted-Time
-  ldapDisplayName: msExchWhenSoftDeletedTime
-  attributeSyntax: 2.5.5.11
-  attributeID: 1.2.840.113556.1.4.7000.102.51860
-  """
-  msExchWhenSoftDeletedTime: String
-  """
-  Admin DisplayName: ms-Exch-Recipient-SoftDeleted-Status
-  Description: ms-Exch-Recipient-SoftDeleted-Status
-  ldapDisplayName: msExchRecipientSoftDeletedStatus
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.51859
-  """
-  msExchRecipientSoftDeletedStatus: Int
-  """
-  Admin DisplayName: ms-Exch-RoleGroup-Type
-  Description: ms-Exch-RoleGroup-Type
-  ldapDisplayName: msExchRoleGroupType
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.51775
-  """
-  msExchRoleGroupType: Int
+  msExchUgEventSubscriptionLink: [ID]
   """
   Admin DisplayName: ms-Exch-Localization-Flags
   Description: ms-Exch-Localization-Flags
@@ -971,21 +763,213 @@ input UserUpdateInput {
   """
   msExchLocalizationFlags: Int
   """
-  Admin DisplayName: ms-DS-GeoCoordinates-Longitude
-  Description: ms-DS-GeoCoordinates-Longitude
-  ldapDisplayName: msDS-GeoCoordinatesLongitude
+  Admin DisplayName: ms-Exch-RoleGroup-Type
+  Description: ms-Exch-RoleGroup-Type
+  ldapDisplayName: msExchRoleGroupType
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.51775
+  """
+  msExchRoleGroupType: Int
+  """
+  Admin DisplayName: ms-Exch-Recipient-SoftDeleted-Status
+  Description: ms-Exch-Recipient-SoftDeleted-Status
+  ldapDisplayName: msExchRecipientSoftDeletedStatus
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.51859
+  """
+  msExchRecipientSoftDeletedStatus: Int
+  """
+  Admin DisplayName: ms-Exch-When-Soft-Deleted-Time
+  Description: ms-Exch-When-Soft-Deleted-Time
+  ldapDisplayName: msExchWhenSoftDeletedTime
+  attributeSyntax: 2.5.5.11
+  attributeID: 1.2.840.113556.1.4.7000.102.51860
+  """
+  msExchWhenSoftDeletedTime: String
+  """
+  Admin DisplayName: ms-Exch-Home-MTA-SL
+  Description: ms-Exch-Home-MTA-SL
+  ldapDisplayName: msExchHomeMTASL
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.51940
+  """
+  msExchHomeMtasl: String
+  """
+  Admin DisplayName: ms-Exch-Mailbox-Move-Source-Archive-MDB-Link-SL
+  Description: ms-Exch-Mailbox-Move-Source-Archive-MDB-Link-SL
+  ldapDisplayName: msExchMailboxMoveSourceArchiveMDBLinkSL
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.51933
+  """
+  msExchMailboxMoveSourceArchiveMdbLinkSl: String
+  """
+  Admin DisplayName: ms-Exch-Mailbox-Move-Source-MDB-Link-SL
+  Description: ms-Exch-Mailbox-Move-Source-MDB-Link-SL
+  ldapDisplayName: msExchMailboxMoveSourceMDBLinkSL
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.51934
+  """
+  msExchMailboxMoveSourceMdbLinkSl: String
+  """
+  Admin DisplayName: ms-Exch-Mailbox-Move-Target-Archive-MDB-Link-SL
+  Description: ms-Exch-Mailbox-Move-Target-Archive-MDB-Link-SL
+  ldapDisplayName: msExchMailboxMoveTargetArchiveMDBLinkSL
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.51936
+  """
+  msExchMailboxMoveTargetArchiveMdbLinkSl: String
+  """
+  Admin DisplayName: ms-Exch-Mailbox-Move-Target-MDB-Link-SL
+  Description: ms-Exch-Mailbox-Move-Target-MDB-Link-SL
+  ldapDisplayName: msExchMailboxMoveTargetMDBLinkSL
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.51952
+  """
+  msExchMailboxMoveTargetMdbLinkSl: String
+  """
+  Admin DisplayName: ms-Exch-Group-External-Member-Count
+  Description: ms-Exch-Group-External-Member-Count
+  ldapDisplayName: msExchGroupExternalMemberCount
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.51994
+  """
+  msExchGroupExternalMemberCount: Int
+  """
+  Admin DisplayName: ms-Exch-Group-Member-Count
+  Description: ms-Exch-Group-Member-Count
+  ldapDisplayName: msExchGroupMemberCount
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.51993
+  """
+  msExchGroupMemberCount: Int
+  """
+  Admin DisplayName: ms-Exch-Shadow-When-Soft-Deleted-Time
+  Description: ms-Exch-Shadow-When-Soft-Deleted-Time
+  ldapDisplayName: msExchShadowWhenSoftDeletedTime
+  attributeSyntax: 2.5.5.11
+  attributeID: 1.2.840.113556.1.4.7000.102.51996
+  """
+  msExchShadowWhenSoftDeletedTime: String
+  """
+  Admin DisplayName: ms-Exch-Public-Folder-Mailbox
+  Description: ms-Exch-Public-Folder-Mailbox
+  ldapDisplayName: msExchPublicFolderMailbox
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52034
+  """
+  msExchPublicFolderMailbox: ID
+  """
+  Admin DisplayName: ms-Exch-Public-Folder-Smtp-Address
+  Description: ms-Exch-Public-Folder-Smtp-Address
+  ldapDisplayName: msExchPublicFolderSmtpAddress
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.52036
+  """
+  msExchPublicFolderSmtpAddress: String
+  """
+  Admin DisplayName: ms-Exch-User-Hold-Policies
+  Description: ms-Exch-User-Hold-Policies
+  ldapDisplayName: msExchUserHoldPolicies
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.52071
+  """
+  msExchUserHoldPolicies: [String]
+  """
+  Admin DisplayName: ms-Exch-Archive-Release
+  Description: ms-Exch-Archive-Release
+  ldapDisplayName: msExchArchiveRelease
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.52074
+  """
+  msExchArchiveRelease: String
+  """
+  Admin DisplayName: ms-Exch-Mailbox-Release
+  Description: ms-Exch-Mailbox-Release
+  ldapDisplayName: msExchMailboxRelease
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.52073
+  """
+  msExchMailboxRelease: String
+  """
+  Admin DisplayName: ms-Exch-Previous-Recipient-Type-Details
+  Description: ms-Exch-Previous-Recipient-Type-Details
+  ldapDisplayName: msExchPreviousRecipientTypeDetails
   attributeSyntax: 2.5.5.16
-  attributeID: 1.2.840.113556.1.4.2185
+  attributeID: 1.2.840.113556.1.4.7000.102.52107
   """
-  msDsGeoCoordinatesLongitude: Int
+  msExchPreviousRecipientTypeDetails: String
   """
-  Admin DisplayName: ms-DS-GeoCoordinates-Latitude
-  Description: ms-DS-GeoCoordinates-Latitude
-  ldapDisplayName: msDS-GeoCoordinatesLatitude
-  attributeSyntax: 2.5.5.16
-  attributeID: 1.2.840.113556.1.4.2184
+  Admin DisplayName: ms-Exch-Configuration-XML
+  Description: ms-Exch-Configuration-XML
+  ldapDisplayName: msExchConfigurationXML
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.52076
   """
-  msDsGeoCoordinatesLatitude: Int
+  msExchConfigurationXml: String
+  """
+  Admin DisplayName: ms-Exch-Organization-Upgrade-Request
+  Description: ms-Exch-Organization-Upgrade-Request
+  ldapDisplayName: msExchOrganizationUpgradeRequest
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.52096
+  """
+  msExchOrganizationUpgradeRequest: Int
+  """
+  Admin DisplayName: ms-Exch-Organization-Upgrade-Status
+  Description: ms-Exch-Organization-Upgrade-Status
+  ldapDisplayName: msExchOrganizationUpgradeStatus
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.52097
+  """
+  msExchOrganizationUpgradeStatus: Int
+  """
+  Admin DisplayName: ms-Exch-UG-Member-Link
+  Description: ms-Exch-UG-Member-Link
+  ldapDisplayName: msExchUGMemberLink
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52137
+  """
+  msExchUgMemberLink: [ID]
+  """
+  Admin DisplayName: ms-Exch-Aux-Mailbox-Parent-Object-Id-Link
+  Description: ms-Exch-Aux-Mailbox-Parent-Object-Id-Link
+  ldapDisplayName: msExchAuxMailboxParentObjectIdLink
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.52141
+  """
+  msExchAuxMailboxParentObjectIdLink: ID
+  """
+  Admin DisplayName: ms-Exch-Sts-Refresh-Tokens-Valid-From
+  Description: ms-Exch-Sts-Refresh-Tokens-Valid-From
+  ldapDisplayName: msExchStsRefreshTokensValidFrom
+  attributeSyntax: 2.5.5.11
+  attributeID: 1.2.840.113556.1.4.7000.102.52143
+  """
+  msExchStsRefreshTokensValidFrom: String
+  """
+  Admin DisplayName: ms-DS-External-Directory-Object-Id
+  Description: ms-DS-External-Directory-Object-Id
+  ldapDisplayName: msDS-ExternalDirectoryObjectId
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.2310
+  """
+  msDsExternalDirectoryObjectId: String
+  """
+  Admin DisplayName: ms-Exch-Group-Security-Flags
+  Description: ms-Exch-Group-Security-Flags
+  ldapDisplayName: msExchGroupSecurityFlags
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.52147
+  """
+  msExchGroupSecurityFlags: Int
+  """
+  Admin DisplayName: ms-Exch-Multi-Mailbox-Databases-Link
+  Description: ms-Exch-Multi-Mailbox-Databases-Link
+  ldapDisplayName: msExchMultiMailboxDatabasesLink
+  attributeSyntax: 2.5.5.14
+  attributeID: 1.2.840.113556.1.4.7000.102.52148
+  """
+  msExchMultiMailboxDatabasesLink: [String]
   """
   Admin DisplayName: ms-DS-GeoCoordinates-Altitude
   Description: ms-DS-GeoCoordinates-Altitude
@@ -993,7 +977,23 @@ input UserUpdateInput {
   attributeSyntax: 2.5.5.16
   attributeID: 1.2.840.113556.1.4.2183
   """
-  msDsGeoCoordinatesAltitude: Int
+  msDsGeoCoordinatesAltitude: String
+  """
+  Admin DisplayName: ms-DS-GeoCoordinates-Latitude
+  Description: ms-DS-GeoCoordinates-Latitude
+  ldapDisplayName: msDS-GeoCoordinatesLatitude
+  attributeSyntax: 2.5.5.16
+  attributeID: 1.2.840.113556.1.4.2184
+  """
+  msDsGeoCoordinatesLatitude: String
+  """
+  Admin DisplayName: ms-DS-GeoCoordinates-Longitude
+  Description: ms-DS-GeoCoordinates-Longitude
+  ldapDisplayName: msDS-GeoCoordinatesLongitude
+  attributeSyntax: 2.5.5.16
+  attributeID: 1.2.840.113556.1.4.2185
+  """
+  msDsGeoCoordinatesLongitude: String
   """
   Admin DisplayName: ms-Exch-Ews-Application-Access-Policy
   Description: ms-Exch-Ews-Application-Access-Policy
@@ -1041,7 +1041,7 @@ input UserUpdateInput {
   attributeSyntax: 2.5.5.16
   attributeID: 1.2.840.113556.1.4.7000.102.51611
   """
-  msExchRemoteRecipientType: Int
+  msExchRemoteRecipientType: String
   """
   Admin DisplayName: ms-Exch-UC-Voice-Mail-Settings
   Description: ms-Exch-UC-Voice-Mail-Settings
@@ -1242,6 +1242,270 @@ input UserUpdateInput {
   attributeID: 1.2.840.113556.1.4.7000.102.51767
   """
   msExchUsageLocation: String
+  """
+  Admin DisplayName: ms-Exch-UM-Dtmf-Map
+  Description: ms-Exch-UM-Dtmf-Map
+  ldapDisplayName: msExchUMDtmfMap
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.50341
+  """
+  msExchUmDtmfMap: [String]
+  """
+  Admin DisplayName: ms-Exch-Resource-Search-Properties
+  Description: ms-Exch-Resource-Search-Properties
+  ldapDisplayName: msExchResourceSearchProperties
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.50331
+  """
+  msExchResourceSearchProperties: [String]
+  """
+  Admin DisplayName: ms-Exch-Resource-Meta-Data
+  Description: ms-Exch-Resource-Meta-Data
+  ldapDisplayName: msExchResourceMetaData
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.50333
+  """
+  msExchResourceMetaData: [String]
+  """
+  Admin DisplayName: ms-Exch-Resource-Display
+  Description: ms-Exch-Resource-Display
+  ldapDisplayName: msExchResourceDisplay
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.50334
+  """
+  msExchResourceDisplay: String
+  """
+  Admin DisplayName: ms-Exch-Resource-Capacity
+  Description: ms-Exch-Resource-Capacity
+  ldapDisplayName: msExchResourceCapacity
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.50332
+  """
+  msExchResourceCapacity: Int
+  """
+  Admin DisplayName: ms-Exch-UM-List-In-Directory-Search
+  Description: ms-Exch-UM-List-In-Directory-Search
+  ldapDisplayName: msExchUMListInDirectorySearch
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.50342
+  """
+  msExchUmListInDirectorySearch: Int
+  """
+  Admin DisplayName: ms-Exch-UM-Recipient-Dial-Plan-Link
+  Description: ms-Exch-UM-Recipient-Dial-Plan-Link
+  ldapDisplayName: msExchUMRecipientDialPlanLink
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.50388
+  """
+  msExchUmRecipientDialPlanLink: ID
+  """
+  Admin DisplayName: ms-Exch-UM-Spoken-Name
+  Description: ms-Exch-UM-Spoken-Name
+  ldapDisplayName: msExchUMSpokenName
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.50336
+  """
+  msExchUmSpokenName: String
+  """
+  Admin DisplayName: ms-Exch-Message-Hygiene-Flags
+  Description: ms-Exch-Message-Hygiene-Flags
+  ldapDisplayName: msExchMessageHygieneFlags
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.50687
+  """
+  msExchMessageHygieneFlags: Int
+  """
+  Admin DisplayName: ms-Exch-HAB-Show-In-Departments
+  Description: ms-Exch-HAB-Show-In-Departments
+  ldapDisplayName: msExchHABShowInDepartments
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.50823
+  """
+  msExchHabShowInDepartments: [ID]
+  """
+  Admin DisplayName: ms-Exch-Message-Hygiene-SCL-Delete-Threshold
+  Description: ms-Exch-Message-Hygiene-SCL-Delete-Threshold
+  ldapDisplayName: msExchMessageHygieneSCLDeleteThreshold
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.50779
+  """
+  msExchMessageHygieneSclDeleteThreshold: Int
+  """
+  Admin DisplayName: ms-Exch-Message-Hygiene-SCL-Junk-Threshold
+  Description: ms-Exch-Message-Hygiene-SCL-Junk-Threshold
+  ldapDisplayName: msExchMessageHygieneSCLJunkThreshold
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.50783
+  """
+  msExchMessageHygieneSclJunkThreshold: Int
+  """
+  Admin DisplayName: ms-Exch-Message-Hygiene-SCL-Quarantine-Threshold
+  Description: ms-Exch-Message-Hygiene-SCL-Quarantine-Threshold
+  ldapDisplayName: msExchMessageHygieneSCLQuarantineThreshold
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.50781
+  """
+  msExchMessageHygieneSclQuarantineThreshold: Int
+  """
+  Admin DisplayName: ms-Exch-Message-Hygiene-SCL-Reject-Threshold
+  Description: ms-Exch-Message-Hygiene-SCL-Reject-Threshold
+  ldapDisplayName: msExchMessageHygieneSCLRejectThreshold
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.50780
+  """
+  msExchMessageHygieneSclRejectThreshold: Int
+  """
+  Admin DisplayName: ms-Exch-Recipient-Display-Type
+  Description: ms-Exch-Recipient-Display-Type
+  ldapDisplayName: msExchRecipientDisplayType
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.50730
+  """
+  msExchRecipientDisplayType: Int
+  """
+  Admin DisplayName: ms-Exch-Recipient-Type-Details
+  Description: ms-Exch-Recipient-Type-Details
+  ldapDisplayName: msExchRecipientTypeDetails
+  attributeSyntax: 2.5.5.16
+  attributeID: 1.2.840.113556.1.4.7000.102.50855
+  """
+  msExchRecipientTypeDetails: String
+  """
+  Admin DisplayName: ms-Exch-Safe-Recipients-Hash
+  Description: ms-Exch-Safe-Recipients-Hash
+  ldapDisplayName: msExchSafeRecipientsHash
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.50766
+  """
+  msExchSafeRecipientsHash: String
+  """
+  Admin DisplayName: ms-Exch-Safe-Senders-Hash
+  Description: ms-Exch-Safe-Senders-Hash
+  ldapDisplayName: msExchSafeSendersHash
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.50765
+  """
+  msExchSafeSendersHash: String
+  """
+  Admin DisplayName: ms-Exch-Sender-Hint-Translations
+  Description: ms-Exch-Sender-Hint-Translations
+  ldapDisplayName: msExchSenderHintTranslations
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.50899
+  """
+  msExchSenderHintTranslations: [String]
+  """
+  Admin DisplayName: ms-Exch-Arbitration-Mailbox
+  Description: ms-Exch-Arbitration-Mailbox
+  ldapDisplayName: msExchArbitrationMailbox
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.50957
+  """
+  msExchArbitrationMailbox: ID
+  """
+  Admin DisplayName: ms-Exch-Blocked-Senders-Hash
+  Description: ms-Exch-Blocked-Senders-Hash
+  ldapDisplayName: msExchBlockedSendersHash
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.50976
+  """
+  msExchBlockedSendersHash: String
+  """
+  Admin DisplayName: ms-Exch-Co-Managed-Objects-BL
+  Description: ms-Exch-Co-Managed-Objects-BL
+  ldapDisplayName: msExchCoManagedObjectsBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.50954
+  """
+  msExchCoManagedObjectsBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Enable-Moderation
+  Description: ms-Exch-Enable-Moderation
+  ldapDisplayName: msExchEnableModeration
+  attributeSyntax: 2.5.5.8
+  attributeID: 1.2.840.113556.1.4.7000.102.50969
+  """
+  msExchEnableModeration: Boolean
+  """
+  Admin DisplayName: ms-Exch-Moderated-By-Link
+  Description: ms-Exch-Moderated-By-Link
+  ldapDisplayName: msExchModeratedByLink
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.50952
+  """
+  msExchModeratedByLink: [ID]
+  """
+  Admin DisplayName: ms-Exch-Moderated-Objects-BL
+  Description: ms-Exch-Moderated-Objects-BL
+  ldapDisplayName: msExchModeratedObjectsBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.50955
+  """
+  msExchModeratedObjectsBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Moderation-Flags
+  Description: ms-Exch-Moderation-Flags
+  ldapDisplayName: msExchModerationFlags
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.50972
+  """
+  msExchModerationFlags: Int
+  """
+  Admin DisplayName: ms-Exch-OWA-Policy
+  Description: ms-Exch-OWA-Policy
+  ldapDisplayName: msExchOWAPolicy
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.50993
+  """
+  msExchOwaPolicy: ID
+  """
+  Admin DisplayName: ms-Exch-Signup-Addresses
+  Description: ms-Exch-Signup-Addresses
+  ldapDisplayName: msExchSignupAddresses
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.50990
+  """
+  msExchSignupAddresses: [String]
+  """
+  Admin DisplayName: ms-Exch-Windows-Live-ID
+  Description: ms-Exch-Windows-Live-ID
+  ldapDisplayName: msExchWindowsLiveID
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.51016
+  """
+  msExchWindowsLiveId: String
+  """
+  Admin DisplayName: ms-Exch-Immutable-Id
+  Description: ms-Exch-Immutable-Id
+  ldapDisplayName: msExchImmutableId
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.51022
+  """
+  msExchImmutableId: String
+  """
+  Admin DisplayName: ms-Exch-Sharing-Partner-Identities
+  Description: ms-Exch-Sharing-Partner-Identities
+  ldapDisplayName: msExchSharingPartnerIdentities
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.51031
+  """
+  msExchSharingPartnerIdentities: [String]
+  """
+  Admin DisplayName: ms-Exch-Transport-Recipient-Settings-Flags
+  Description: ms-Exch-Transport-Recipient-Settings-Flags
+  ldapDisplayName: msExchTransportRecipientSettingsFlags
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.51025
+  """
+  msExchTransportRecipientSettingsFlags: Int
+  """
+  Admin DisplayName: ms-Exch-External-Sync-State
+  Description: ms-Exch-External-Sync-State
+  ldapDisplayName: msExchExternalSyncState
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.51032
+  """
+  msExchExternalSyncState: String
   """
   Admin DisplayName: ms-Exch-UM-Calling-Line-IDs
   Description: ms-Exch-UM-Calling-Line-IDs
@@ -1522,270 +1786,6 @@ input UserUpdateInput {
   attributeID: 1.2.840.113556.1.4.7000.102.51569
   """
   msExchObjectId: String
-  """
-  Admin DisplayName: ms-Exch-Resource-Capacity
-  Description: ms-Exch-Resource-Capacity
-  ldapDisplayName: msExchResourceCapacity
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.50332
-  """
-  msExchResourceCapacity: Int
-  """
-  Admin DisplayName: ms-Exch-Resource-Display
-  Description: ms-Exch-Resource-Display
-  ldapDisplayName: msExchResourceDisplay
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.50334
-  """
-  msExchResourceDisplay: String
-  """
-  Admin DisplayName: ms-Exch-Resource-Meta-Data
-  Description: ms-Exch-Resource-Meta-Data
-  ldapDisplayName: msExchResourceMetaData
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.50333
-  """
-  msExchResourceMetaData: [String]
-  """
-  Admin DisplayName: ms-Exch-Resource-Search-Properties
-  Description: ms-Exch-Resource-Search-Properties
-  ldapDisplayName: msExchResourceSearchProperties
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.50331
-  """
-  msExchResourceSearchProperties: [String]
-  """
-  Admin DisplayName: ms-Exch-UM-Dtmf-Map
-  Description: ms-Exch-UM-Dtmf-Map
-  ldapDisplayName: msExchUMDtmfMap
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.50341
-  """
-  msExchUmDtmfMap: [String]
-  """
-  Admin DisplayName: ms-Exch-UM-List-In-Directory-Search
-  Description: ms-Exch-UM-List-In-Directory-Search
-  ldapDisplayName: msExchUMListInDirectorySearch
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.50342
-  """
-  msExchUmListInDirectorySearch: Int
-  """
-  Admin DisplayName: ms-Exch-UM-Recipient-Dial-Plan-Link
-  Description: ms-Exch-UM-Recipient-Dial-Plan-Link
-  ldapDisplayName: msExchUMRecipientDialPlanLink
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.50388
-  """
-  msExchUmRecipientDialPlanLink: ID
-  """
-  Admin DisplayName: ms-Exch-UM-Spoken-Name
-  Description: ms-Exch-UM-Spoken-Name
-  ldapDisplayName: msExchUMSpokenName
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.50336
-  """
-  msExchUmSpokenName: String
-  """
-  Admin DisplayName: ms-Exch-Message-Hygiene-Flags
-  Description: ms-Exch-Message-Hygiene-Flags
-  ldapDisplayName: msExchMessageHygieneFlags
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.50687
-  """
-  msExchMessageHygieneFlags: Int
-  """
-  Admin DisplayName: ms-Exch-HAB-Show-In-Departments
-  Description: ms-Exch-HAB-Show-In-Departments
-  ldapDisplayName: msExchHABShowInDepartments
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.50823
-  """
-  msExchHabShowInDepartments: [ID]
-  """
-  Admin DisplayName: ms-Exch-Message-Hygiene-SCL-Delete-Threshold
-  Description: ms-Exch-Message-Hygiene-SCL-Delete-Threshold
-  ldapDisplayName: msExchMessageHygieneSCLDeleteThreshold
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.50779
-  """
-  msExchMessageHygieneSclDeleteThreshold: Int
-  """
-  Admin DisplayName: ms-Exch-Message-Hygiene-SCL-Junk-Threshold
-  Description: ms-Exch-Message-Hygiene-SCL-Junk-Threshold
-  ldapDisplayName: msExchMessageHygieneSCLJunkThreshold
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.50783
-  """
-  msExchMessageHygieneSclJunkThreshold: Int
-  """
-  Admin DisplayName: ms-Exch-Message-Hygiene-SCL-Quarantine-Threshold
-  Description: ms-Exch-Message-Hygiene-SCL-Quarantine-Threshold
-  ldapDisplayName: msExchMessageHygieneSCLQuarantineThreshold
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.50781
-  """
-  msExchMessageHygieneSclQuarantineThreshold: Int
-  """
-  Admin DisplayName: ms-Exch-Message-Hygiene-SCL-Reject-Threshold
-  Description: ms-Exch-Message-Hygiene-SCL-Reject-Threshold
-  ldapDisplayName: msExchMessageHygieneSCLRejectThreshold
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.50780
-  """
-  msExchMessageHygieneSclRejectThreshold: Int
-  """
-  Admin DisplayName: ms-Exch-Recipient-Display-Type
-  Description: ms-Exch-Recipient-Display-Type
-  ldapDisplayName: msExchRecipientDisplayType
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.50730
-  """
-  msExchRecipientDisplayType: Int
-  """
-  Admin DisplayName: ms-Exch-Recipient-Type-Details
-  Description: ms-Exch-Recipient-Type-Details
-  ldapDisplayName: msExchRecipientTypeDetails
-  attributeSyntax: 2.5.5.16
-  attributeID: 1.2.840.113556.1.4.7000.102.50855
-  """
-  msExchRecipientTypeDetails: Int
-  """
-  Admin DisplayName: ms-Exch-Safe-Recipients-Hash
-  Description: ms-Exch-Safe-Recipients-Hash
-  ldapDisplayName: msExchSafeRecipientsHash
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.50766
-  """
-  msExchSafeRecipientsHash: String
-  """
-  Admin DisplayName: ms-Exch-Safe-Senders-Hash
-  Description: ms-Exch-Safe-Senders-Hash
-  ldapDisplayName: msExchSafeSendersHash
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.50765
-  """
-  msExchSafeSendersHash: String
-  """
-  Admin DisplayName: ms-Exch-Sender-Hint-Translations
-  Description: ms-Exch-Sender-Hint-Translations
-  ldapDisplayName: msExchSenderHintTranslations
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.50899
-  """
-  msExchSenderHintTranslations: [String]
-  """
-  Admin DisplayName: ms-Exch-Arbitration-Mailbox
-  Description: ms-Exch-Arbitration-Mailbox
-  ldapDisplayName: msExchArbitrationMailbox
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.50957
-  """
-  msExchArbitrationMailbox: ID
-  """
-  Admin DisplayName: ms-Exch-Blocked-Senders-Hash
-  Description: ms-Exch-Blocked-Senders-Hash
-  ldapDisplayName: msExchBlockedSendersHash
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.50976
-  """
-  msExchBlockedSendersHash: String
-  """
-  Admin DisplayName: ms-Exch-Co-Managed-Objects-BL
-  Description: ms-Exch-Co-Managed-Objects-BL
-  ldapDisplayName: msExchCoManagedObjectsBL
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.50954
-  """
-  msExchCoManagedObjectsBl: [ID]
-  """
-  Admin DisplayName: ms-Exch-Enable-Moderation
-  Description: ms-Exch-Enable-Moderation
-  ldapDisplayName: msExchEnableModeration
-  attributeSyntax: 2.5.5.8
-  attributeID: 1.2.840.113556.1.4.7000.102.50969
-  """
-  msExchEnableModeration: Boolean
-  """
-  Admin DisplayName: ms-Exch-Moderated-By-Link
-  Description: ms-Exch-Moderated-By-Link
-  ldapDisplayName: msExchModeratedByLink
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.50952
-  """
-  msExchModeratedByLink: [ID]
-  """
-  Admin DisplayName: ms-Exch-Moderated-Objects-BL
-  Description: ms-Exch-Moderated-Objects-BL
-  ldapDisplayName: msExchModeratedObjectsBL
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.50955
-  """
-  msExchModeratedObjectsBl: [ID]
-  """
-  Admin DisplayName: ms-Exch-Moderation-Flags
-  Description: ms-Exch-Moderation-Flags
-  ldapDisplayName: msExchModerationFlags
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.50972
-  """
-  msExchModerationFlags: Int
-  """
-  Admin DisplayName: ms-Exch-OWA-Policy
-  Description: ms-Exch-OWA-Policy
-  ldapDisplayName: msExchOWAPolicy
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.50993
-  """
-  msExchOwaPolicy: ID
-  """
-  Admin DisplayName: ms-Exch-Signup-Addresses
-  Description: ms-Exch-Signup-Addresses
-  ldapDisplayName: msExchSignupAddresses
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.50990
-  """
-  msExchSignupAddresses: [String]
-  """
-  Admin DisplayName: ms-Exch-Windows-Live-ID
-  Description: ms-Exch-Windows-Live-ID
-  ldapDisplayName: msExchWindowsLiveID
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.51016
-  """
-  msExchWindowsLiveId: String
-  """
-  Admin DisplayName: ms-Exch-Immutable-Id
-  Description: ms-Exch-Immutable-Id
-  ldapDisplayName: msExchImmutableId
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.51022
-  """
-  msExchImmutableId: String
-  """
-  Admin DisplayName: ms-Exch-Sharing-Partner-Identities
-  Description: ms-Exch-Sharing-Partner-Identities
-  ldapDisplayName: msExchSharingPartnerIdentities
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.51031
-  """
-  msExchSharingPartnerIdentities: [String]
-  """
-  Admin DisplayName: ms-Exch-Transport-Recipient-Settings-Flags
-  Description: ms-Exch-Transport-Recipient-Settings-Flags
-  ldapDisplayName: msExchTransportRecipientSettingsFlags
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.51025
-  """
-  msExchTransportRecipientSettingsFlags: Int
-  """
-  Admin DisplayName: ms-Exch-External-Sync-State
-  Description: ms-Exch-External-Sync-State
-  ldapDisplayName: msExchExternalSyncState
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.51032
-  """
-  msExchExternalSyncState: String
   """
   Admin DisplayName: ms-Exch-Policies-Included
   Description: ms-Exch-Policies-Included
@@ -2867,69 +2867,13 @@ input UserUpdateInput {
   """
   msExchDataEncryptionPolicyLink: ID
   """
-  Admin DisplayName: ms-Exch-Unified-Mailbox
-  Description: ms-Exch-Unified-Mailbox
-  ldapDisplayName: msExchUnifiedMailbox
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.52136
-  """
-  msExchUnifiedMailbox: String
-  """
-  Admin DisplayName: ms-Exch-Mailbox-Container-Guid
-  Description: ms-Exch-Mailbox-Container-Guid
-  ldapDisplayName: msExchMailboxContainerGuid
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.52134
-  """
-  msExchMailboxContainerGuid: String
-  """
-  Admin DisplayName: ms-Exch-Previous-Home-MDB-SL
-  Description: ms-Exch-Previous-Home-MDB-SL
-  ldapDisplayName: msExchPreviousHomeMDBSL
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.51944
-  """
-  msExchPreviousHomeMdbsl: String
-  """
-  Admin DisplayName: ms-Exch-Previous-Archive-Database-SL
-  Description: ms-Exch-Previous-Archive-Database-SL
-  ldapDisplayName: msExchPreviousArchiveDatabaseSL
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.51943
-  """
-  msExchPreviousArchiveDatabaseSl: String
-  """
-  Admin DisplayName: ms-Exch-Home-MDB-SL
-  Description: ms-Exch-Home-MDB-SL
-  ldapDisplayName: msExchHomeMDBSL
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.51930
-  """
-  msExchHomeMdbsl: String
-  """
-  Admin DisplayName: ms-Exch-Disabled-Archive-Database-Link-SL
-  Description: ms-Exch-Disabled-Archive-Database-Link-SL
-  ldapDisplayName: msExchDisabledArchiveDatabaseLinkSL
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.51932
-  """
-  msExchDisabledArchiveDatabaseLinkSl: String
-  """
-  Admin DisplayName: ms-Exch-Archive-Database-Link-SL
-  Description: ms-Exch-Archive-Database-Link-SL
-  ldapDisplayName: msExchArchiveDatabaseLinkSL
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.51931
-  """
-  msExchArchiveDatabaseLinkSl: String
-  """
-  Admin DisplayName: ms-Exch-Team-Mailbox-Show-In-Client-List
-  Description: ms-Exch-Team-Mailbox-Show-In-Client-List
-  ldapDisplayName: msExchTeamMailboxShowInClientList
+  Admin DisplayName: ms-Exch-Team-Mailbox-SharePoint-Linked-By
+  Description: ms-Exch-Team-Mailbox-SharePoint-Linked-By
+  ldapDisplayName: msExchTeamMailboxSharePointLinkedBy
   attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.51873
+  attributeID: 1.2.840.113556.1.4.7000.102.51875
   """
-  msExchTeamMailboxShowInClientList: [ID]
+  msExchTeamMailboxSharePointLinkedBy: ID
   """
   Admin DisplayName: ms-Exch-Team-Mailbox-SharePoint-Url
   Description: ms-Exch-Team-Mailbox-SharePoint-Url
@@ -2939,13 +2883,21 @@ input UserUpdateInput {
   """
   msExchTeamMailboxSharePointUrl: String
   """
-  Admin DisplayName: ms-Exch-Team-Mailbox-SharePoint-Linked-By
-  Description: ms-Exch-Team-Mailbox-SharePoint-Linked-By
-  ldapDisplayName: msExchTeamMailboxSharePointLinkedBy
+  Admin DisplayName: ms-Exch-Team-Mailbox-Show-In-Client-List
+  Description: ms-Exch-Team-Mailbox-Show-In-Client-List
+  ldapDisplayName: msExchTeamMailboxShowInClientList
   attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.51875
+  attributeID: 1.2.840.113556.1.4.7000.102.51873
   """
-  msExchTeamMailboxSharePointLinkedBy: ID
+  msExchTeamMailboxShowInClientList: [ID]
+  """
+  Admin DisplayName: ms-Exch-Archive-Database-Link-SL
+  Description: ms-Exch-Archive-Database-Link-SL
+  ldapDisplayName: msExchArchiveDatabaseLinkSL
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.51931
+  """
+  msExchArchiveDatabaseLinkSl: String
   """
   Admin DisplayName: ms-Exch-Team-Mailbox-Owners
   Description: ms-Exch-Team-Mailbox-Owners
@@ -2970,6 +2922,54 @@ input UserUpdateInput {
   attributeID: 1.2.840.113556.1.4.7000.102.51773
   """
   msExchPreviousArchiveDatabase: ID
+  """
+  Admin DisplayName: ms-Exch-Disabled-Archive-Database-Link-SL
+  Description: ms-Exch-Disabled-Archive-Database-Link-SL
+  ldapDisplayName: msExchDisabledArchiveDatabaseLinkSL
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.51932
+  """
+  msExchDisabledArchiveDatabaseLinkSl: String
+  """
+  Admin DisplayName: ms-Exch-Home-MDB-SL
+  Description: ms-Exch-Home-MDB-SL
+  ldapDisplayName: msExchHomeMDBSL
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.51930
+  """
+  msExchHomeMdbsl: String
+  """
+  Admin DisplayName: ms-Exch-Previous-Archive-Database-SL
+  Description: ms-Exch-Previous-Archive-Database-SL
+  ldapDisplayName: msExchPreviousArchiveDatabaseSL
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.51943
+  """
+  msExchPreviousArchiveDatabaseSl: String
+  """
+  Admin DisplayName: ms-Exch-Previous-Home-MDB-SL
+  Description: ms-Exch-Previous-Home-MDB-SL
+  ldapDisplayName: msExchPreviousHomeMDBSL
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.51944
+  """
+  msExchPreviousHomeMdbsl: String
+  """
+  Admin DisplayName: ms-Exch-Mailbox-Container-Guid
+  Description: ms-Exch-Mailbox-Container-Guid
+  ldapDisplayName: msExchMailboxContainerGuid
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.52134
+  """
+  msExchMailboxContainerGuid: String
+  """
+  Admin DisplayName: ms-Exch-Unified-Mailbox
+  Description: ms-Exch-Unified-Mailbox
+  ldapDisplayName: msExchUnifiedMailbox
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.52136
+  """
+  msExchUnifiedMailbox: String
   """
   Admin DisplayName: ms-Exch-Calendar-Logging-Quota
   Description: ms-Exch-Calendar-Logging-Quota
@@ -3027,13 +3027,13 @@ input UserUpdateInput {
   """
   msExchDisabledArchiveGuid: String
   """
-  Admin DisplayName: ms-Exch-Alternate-Mailboxes
-  Description: ms-Exch-Alternate-Mailboxes
-  ldapDisplayName: msExchAlternateMailboxes
+  Admin DisplayName: ms-Exch-UM-Phone-Provider
+  Description: ms-Exch-UM-Phone-Provider
+  ldapDisplayName: msExchUMPhoneProvider
   attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.51270
+  attributeID: 1.2.840.113556.1.4.7000.102.51347
   """
-  msExchAlternateMailboxes: [String]
+  msExchUmPhoneProvider: String
   """
   Admin DisplayName: ms-Exch-UM-Mailbox-OVA-Language
   Description: ms-Exch-UM-Mailbox-OVA-Language
@@ -3043,101 +3043,117 @@ input UserUpdateInput {
   """
   msExchUmMailboxOvaLanguage: Int
   """
-  Admin DisplayName: ms-Exch-UM-Phone-Provider
-  Description: ms-Exch-UM-Phone-Provider
-  ldapDisplayName: msExchUMPhoneProvider
+  Admin DisplayName: ms-Exch-Alternate-Mailboxes
+  Description: ms-Exch-Alternate-Mailboxes
+  ldapDisplayName: msExchAlternateMailboxes
   attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.51347
+  attributeID: 1.2.840.113556.1.4.7000.102.51270
   """
-  msExchUmPhoneProvider: String
+  msExchAlternateMailboxes: [String]
   """
-  Admin DisplayName: ms-Exch-UM-Audio-Codec-2
-  Description: ms-Exch-UM-Audio-Codec-2
-  ldapDisplayName: msExchUMAudioCodec2
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.51413
-  """
-  msExchUmAudioCodec2: Int
-  """
-  Admin DisplayName: ms-Exch-Archive-Database-Link
-  Description: ms-Exch-Archive-Database-Link
-  ldapDisplayName: msExchArchiveDatabaseLink
+  Admin DisplayName: ms-Exch-Approval-Application-Link
+  Description: ms-Exch-Approval-Application-Link
+  ldapDisplayName: msExchApprovalApplicationLink
   attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.51444
+  attributeID: 1.2.840.113556.1.4.7000.102.50950
   """
-  msExchArchiveDatabaseLink: ID
+  msExchApprovalApplicationLink: [ID]
   """
-  Admin DisplayName: ms-Exch-Archive-GUID
-  Description: ms-Exch-Archive-GUID
-  ldapDisplayName: msExchArchiveGUID
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.51443
+  Admin DisplayName: ms-Exch-UM-Enabled-Flags-2
+  Description: ms-Exch-UM-Enabled-Flags-2
+  ldapDisplayName: msExchUMEnabledFlags2
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.50905
   """
-  msExchArchiveGuid: String
+  msExchUmEnabledFlags2: Int
   """
-  Admin DisplayName: ms-Exch-Archive-Name
-  Description: ms-Exch-Archive-Name
-  ldapDisplayName: msExchArchiveName
+  Admin DisplayName: ms-Exch-Max-Safe-Senders
+  Description: ms-Exch-Max-Safe-Senders
+  ldapDisplayName: msExchMaxSafeSenders
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.50877
+  """
+  msExchMaxSafeSenders: Int
+  """
+  Admin DisplayName: ms-Exch-Max-Blocked-Senders
+  Description: ms-Exch-Max-Blocked-Senders
+  ldapDisplayName: msExchMaxBlockedSenders
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.50878
+  """
+  msExchMaxBlockedSenders: Int
+  """
+  Admin DisplayName: ms-Exch-UM-Server-Writable-Flags
+  Description: ms-Exch-UM-Server-Writable-Flags
+  ldapDisplayName: msExchUMServerWritableFlags
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.50850
+  """
+  msExchUmServerWritableFlags: Int
+  """
+  Admin DisplayName: ms-Exch-UM-Audio-Codec
+  Description: ms-Exch-UM-Audio-Codec
+  ldapDisplayName: msExchUMAudioCodec
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.50378
+  """
+  msExchUmAudioCodec: Int
+  """
+  Admin DisplayName: ms-Exch-Mobile-Mailbox-Flags
+  Description: ms-Exch-Mobile-Mailbox-Flags
+  ldapDisplayName: msExchMobileMailboxFlags
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.50858
+  """
+  msExchMobileMailboxFlags: Int
+  """
+  Admin DisplayName: ms-Exch-ELC-Mailbox-Flags
+  Description: ms-Exch-ELC-Mailbox-Flags
+  ldapDisplayName: msExchELCMailboxFlags
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.50761
+  """
+  msExchElcMailboxFlags: Int
+  """
+  Admin DisplayName: ms-Exch-ELC-Expiry-Suspension-Start
+  Description: ms-Exch-ELC-Expiry-Suspension-Start
+  ldapDisplayName: msExchELCExpirySuspensionStart
+  attributeSyntax: 2.5.5.11
+  attributeID: 1.2.840.113556.1.4.7000.102.50762
+  """
+  msExchElcExpirySuspensionStart: String
+  """
+  Admin DisplayName: ms-Exch-ELC-Expiry-Suspension-End
+  Description: ms-Exch-ELC-Expiry-Suspension-End
+  ldapDisplayName: msExchELCExpirySuspensionEnd
+  attributeSyntax: 2.5.5.11
+  attributeID: 1.2.840.113556.1.4.7000.102.50763
+  """
+  msExchElcExpirySuspensionEnd: String
+  """
+  Admin DisplayName: ms-Exch-Mobile-Mailbox-Policy-Link
+  Description: ms-Exch-Mobile-Mailbox-Policy-Link
+  ldapDisplayName: msExchMobileMailboxPolicyLink
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.50668
+  """
+  msExchMobileMailboxPolicyLink: ID
+  """
+  Admin DisplayName: ms-Exch-Mobile-Debug-Logging
+  Description: ms-Exch-Mobile-Debug-Logging
+  ldapDisplayName: msExchMobileDebugLogging
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.50667
+  """
+  msExchMobileDebugLogging: Int
+  """
+  Admin DisplayName: ms-Exch-Mobile-Allowed-Device-IDs
+  Description: ms-Exch-Mobile-Allowed-Device-IDs
+  ldapDisplayName: msExchMobileAllowedDeviceIDs
   attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.51441
+  attributeID: 1.2.840.113556.1.4.7000.102.50666
   """
-  msExchArchiveName: [String]
-  """
-  Admin DisplayName: ms-Exch-Archive-Quota
-  Description: ms-Exch-Archive-Quota
-  ldapDisplayName: msExchArchiveQuota
-  attributeSyntax: 2.5.5.16
-  attributeID: 1.2.840.113556.1.4.7000.102.51442
-  """
-  msExchArchiveQuota: Int
-  """
-  Admin DisplayName: ms-Exch-Archive-Warn-Quota
-  Description: ms-Exch-Archive-Warn-Quota
-  ldapDisplayName: msExchArchiveWarnQuota
-  attributeSyntax: 2.5.5.16
-  attributeID: 1.2.840.113556.1.4.7000.102.51493
-  """
-  msExchArchiveWarnQuota: Int
-  """
-  Admin DisplayName: ms-Exch-Previous-Home-MDB
-  Description: ms-Exch-Previous-Home-MDB
-  ldapDisplayName: msExchPreviousHomeMDB
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.51450
-  """
-  msExchPreviousHomeMdb: ID
-  """
-  Admin DisplayName: ms-Exch-Delegate-List-Link
-  Description: ms-Exch-Delegate-List-Link
-  ldapDisplayName: msExchDelegateListLink
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.51530
-  """
-  msExchDelegateListLink: [ID]
-  """
-  Admin DisplayName: ms-Exch-Dumpster-Quota
-  Description: ms-Exch-Dumpster-Quota
-  ldapDisplayName: msExchDumpsterQuota
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.51508
-  """
-  msExchDumpsterQuota: Int
-  """
-  Admin DisplayName: ms-Exch-Dumpster-Warning-Quota
-  Description: ms-Exch-Dumpster-Warning-Quota
-  ldapDisplayName: msExchDumpsterWarningQuota
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.51509
-  """
-  msExchDumpsterWarningQuota: Int
-  """
-  Admin DisplayName: ms-Exch-Mobile-Blocked-Device-IDs
-  Description: ms-Exch-Mobile-Blocked-Device-IDs
-  ldapDisplayName: msExchMobileBlockedDeviceIDs
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.51519
-  """
-  msExchMobileBlockedDeviceIDs: [String]
+  msExchMobileAllowedDeviceIDs: [String]
   """
   Admin DisplayName: ms-Exch-MDB-Rules-Quota
   Description: ms-Exch-MDB-Rules-Quota
@@ -3219,109 +3235,93 @@ input UserUpdateInput {
   """
   msExchMailboxTemplateLink: ID
   """
-  Admin DisplayName: ms-Exch-Mobile-Allowed-Device-IDs
-  Description: ms-Exch-Mobile-Allowed-Device-IDs
-  ldapDisplayName: msExchMobileAllowedDeviceIDs
+  Admin DisplayName: ms-Exch-UM-Audio-Codec-2
+  Description: ms-Exch-UM-Audio-Codec-2
+  ldapDisplayName: msExchUMAudioCodec2
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.51413
+  """
+  msExchUmAudioCodec2: Int
+  """
+  Admin DisplayName: ms-Exch-Archive-Database-Link
+  Description: ms-Exch-Archive-Database-Link
+  ldapDisplayName: msExchArchiveDatabaseLink
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.51444
+  """
+  msExchArchiveDatabaseLink: ID
+  """
+  Admin DisplayName: ms-Exch-Archive-GUID
+  Description: ms-Exch-Archive-GUID
+  ldapDisplayName: msExchArchiveGUID
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.51443
+  """
+  msExchArchiveGuid: String
+  """
+  Admin DisplayName: ms-Exch-Archive-Name
+  Description: ms-Exch-Archive-Name
+  ldapDisplayName: msExchArchiveName
   attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.50666
+  attributeID: 1.2.840.113556.1.4.7000.102.51441
   """
-  msExchMobileAllowedDeviceIDs: [String]
+  msExchArchiveName: [String]
   """
-  Admin DisplayName: ms-Exch-Mobile-Debug-Logging
-  Description: ms-Exch-Mobile-Debug-Logging
-  ldapDisplayName: msExchMobileDebugLogging
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.50667
+  Admin DisplayName: ms-Exch-Archive-Quota
+  Description: ms-Exch-Archive-Quota
+  ldapDisplayName: msExchArchiveQuota
+  attributeSyntax: 2.5.5.16
+  attributeID: 1.2.840.113556.1.4.7000.102.51442
   """
-  msExchMobileDebugLogging: Int
+  msExchArchiveQuota: String
   """
-  Admin DisplayName: ms-Exch-Mobile-Mailbox-Policy-Link
-  Description: ms-Exch-Mobile-Mailbox-Policy-Link
-  ldapDisplayName: msExchMobileMailboxPolicyLink
+  Admin DisplayName: ms-Exch-Archive-Warn-Quota
+  Description: ms-Exch-Archive-Warn-Quota
+  ldapDisplayName: msExchArchiveWarnQuota
+  attributeSyntax: 2.5.5.16
+  attributeID: 1.2.840.113556.1.4.7000.102.51493
+  """
+  msExchArchiveWarnQuota: String
+  """
+  Admin DisplayName: ms-Exch-Previous-Home-MDB
+  Description: ms-Exch-Previous-Home-MDB
+  ldapDisplayName: msExchPreviousHomeMDB
   attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.50668
+  attributeID: 1.2.840.113556.1.4.7000.102.51450
   """
-  msExchMobileMailboxPolicyLink: ID
+  msExchPreviousHomeMdb: ID
   """
-  Admin DisplayName: ms-Exch-ELC-Expiry-Suspension-End
-  Description: ms-Exch-ELC-Expiry-Suspension-End
-  ldapDisplayName: msExchELCExpirySuspensionEnd
-  attributeSyntax: 2.5.5.11
-  attributeID: 1.2.840.113556.1.4.7000.102.50763
-  """
-  msExchElcExpirySuspensionEnd: String
-  """
-  Admin DisplayName: ms-Exch-ELC-Expiry-Suspension-Start
-  Description: ms-Exch-ELC-Expiry-Suspension-Start
-  ldapDisplayName: msExchELCExpirySuspensionStart
-  attributeSyntax: 2.5.5.11
-  attributeID: 1.2.840.113556.1.4.7000.102.50762
-  """
-  msExchElcExpirySuspensionStart: String
-  """
-  Admin DisplayName: ms-Exch-ELC-Mailbox-Flags
-  Description: ms-Exch-ELC-Mailbox-Flags
-  ldapDisplayName: msExchELCMailboxFlags
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.50761
-  """
-  msExchElcMailboxFlags: Int
-  """
-  Admin DisplayName: ms-Exch-Mobile-Mailbox-Flags
-  Description: ms-Exch-Mobile-Mailbox-Flags
-  ldapDisplayName: msExchMobileMailboxFlags
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.50858
-  """
-  msExchMobileMailboxFlags: Int
-  """
-  Admin DisplayName: ms-Exch-UM-Audio-Codec
-  Description: ms-Exch-UM-Audio-Codec
-  ldapDisplayName: msExchUMAudioCodec
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.50378
-  """
-  msExchUmAudioCodec: Int
-  """
-  Admin DisplayName: ms-Exch-UM-Server-Writable-Flags
-  Description: ms-Exch-UM-Server-Writable-Flags
-  ldapDisplayName: msExchUMServerWritableFlags
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.50850
-  """
-  msExchUmServerWritableFlags: Int
-  """
-  Admin DisplayName: ms-Exch-Max-Blocked-Senders
-  Description: ms-Exch-Max-Blocked-Senders
-  ldapDisplayName: msExchMaxBlockedSenders
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.50878
-  """
-  msExchMaxBlockedSenders: Int
-  """
-  Admin DisplayName: ms-Exch-Max-Safe-Senders
-  Description: ms-Exch-Max-Safe-Senders
-  ldapDisplayName: msExchMaxSafeSenders
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.50877
-  """
-  msExchMaxSafeSenders: Int
-  """
-  Admin DisplayName: ms-Exch-UM-Enabled-Flags-2
-  Description: ms-Exch-UM-Enabled-Flags-2
-  ldapDisplayName: msExchUMEnabledFlags2
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.50905
-  """
-  msExchUmEnabledFlags2: Int
-  """
-  Admin DisplayName: ms-Exch-Approval-Application-Link
-  Description: ms-Exch-Approval-Application-Link
-  ldapDisplayName: msExchApprovalApplicationLink
+  Admin DisplayName: ms-Exch-Delegate-List-Link
+  Description: ms-Exch-Delegate-List-Link
+  ldapDisplayName: msExchDelegateListLink
   attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.50950
+  attributeID: 1.2.840.113556.1.4.7000.102.51530
   """
-  msExchApprovalApplicationLink: [ID]
+  msExchDelegateListLink: [ID]
+  """
+  Admin DisplayName: ms-Exch-Dumpster-Quota
+  Description: ms-Exch-Dumpster-Quota
+  ldapDisplayName: msExchDumpsterQuota
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.51508
+  """
+  msExchDumpsterQuota: Int
+  """
+  Admin DisplayName: ms-Exch-Dumpster-Warning-Quota
+  Description: ms-Exch-Dumpster-Warning-Quota
+  ldapDisplayName: msExchDumpsterWarningQuota
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.51509
+  """
+  msExchDumpsterWarningQuota: Int
+  """
+  Admin DisplayName: ms-Exch-Mobile-Blocked-Device-IDs
+  Description: ms-Exch-Mobile-Blocked-Device-IDs
+  ldapDisplayName: msExchMobileBlockedDeviceIDs
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.51519
+  """
+  msExchMobileBlockedDeviceIDs: [String]
   """
   Admin DisplayName: ms-Exch-Pf-Root-Url
   Description: ms-Exch-Pf-Root-Url
@@ -3419,94 +3419,6 @@ input UserUpdateInput {
   """
   autoReply: Boolean
   """
-  Admin DisplayName: ms-Exch-Multi-Mailbox-Locations-Link
-  Description: ms-Exch-Multi-Mailbox-Locations-Link
-  ldapDisplayName: msExchMultiMailboxLocationsLink
-  attributeSyntax: 2.5.5.14
-  attributeID: 1.2.840.113556.1.4.7000.102.52144
-  """
-  msExchMultiMailboxLocationsLink: [String]
-  """
-  Admin DisplayName: ms-Exch-Multi-Mailbox-GUIDs
-  Description: ms-Exch-Multi-Mailbox-GUIDs
-  ldapDisplayName: msExchMultiMailboxGUIDs
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.52145
-  """
-  msExchMultiMailboxGuiDs: [String]
-  """
-  Admin DisplayName: ms-Exch-Tenant-Country
-  Description: ms-Exch-Tenant-Country
-  ldapDisplayName: msExchTenantCountry
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.52130
-  """
-  msExchTenantCountry: String
-  """
-  Admin DisplayName: ms-Exch-Provisioning-Tags
-  Description: ms-Exch-Provisioning-Tags
-  ldapDisplayName: msExchProvisioningTags
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.52126
-  """
-  msExchProvisioningTags: [String]
-  """
-  Admin DisplayName: ms-Exch-Correlation-Id
-  Description: ms-Exch-Correlation-Id
-  ldapDisplayName: msExchCorrelationId
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.52065
-  """
-  msExchCorrelationId: String
-  """
-  Admin DisplayName: ms-Exch-Canary-Data-2
-  Description: ms-Exch-Canary-Data-2
-  ldapDisplayName: msExchCanaryData2
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.52053
-  """
-  msExchCanaryData2: String
-  """
-  Admin DisplayName: ms-Exch-Canary-Data-1
-  Description: ms-Exch-Canary-Data-1
-  ldapDisplayName: msExchCanaryData1
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.52052
-  """
-  msExchCanaryData1: String
-  """
-  Admin DisplayName: ms-Exch-Canary-Data-0
-  Description: ms-Exch-Canary-Data-0
-  ldapDisplayName: msExchCanaryData0
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.52051
-  """
-  msExchCanaryData0: String
-  """
-  Admin DisplayName: ms-Exch-Forest-Mode-Flag
-  Description: ms-Exch-Forest-Mode-Flag
-  ldapDisplayName: msExchForestModeFlag
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.51796
-  """
-  msExchForestModeFlag: Int
-  """
-  Admin DisplayName: ms-Exch-Default-Public-Folder-Mailbox
-  Description: ms-Exch-Default-Public-Folder-Mailbox
-  ldapDisplayName: msExchDefaultPublicFolderMailbox
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.51805
-  """
-  msExchDefaultPublicFolderMailbox: String
-  """
-  Admin DisplayName: ms-Exch-HAB-Root-Department-Link
-  Description: ms-Exch-HAB-Root-Department-Link
-  ldapDisplayName: msExchHABRootDepartmentLink
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.50824
-  """
-  msExchHabRootDepartmentLink: ID
-  """
   Admin DisplayName: ms-Exch-Edge-Sync-Config-Flags
   Description: ms-Exch-Edge-Sync-Config-Flags
   ldapDisplayName: msExchEdgeSyncConfigFlags
@@ -3531,6 +3443,94 @@ input UserUpdateInput {
   """
   msExchDirsyncAuthorityMetadata: [String]
   """
+  Admin DisplayName: ms-Exch-HAB-Root-Department-Link
+  Description: ms-Exch-HAB-Root-Department-Link
+  ldapDisplayName: msExchHABRootDepartmentLink
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.50824
+  """
+  msExchHabRootDepartmentLink: ID
+  """
+  Admin DisplayName: ms-Exch-Default-Public-Folder-Mailbox
+  Description: ms-Exch-Default-Public-Folder-Mailbox
+  ldapDisplayName: msExchDefaultPublicFolderMailbox
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.51805
+  """
+  msExchDefaultPublicFolderMailbox: String
+  """
+  Admin DisplayName: ms-Exch-Forest-Mode-Flag
+  Description: ms-Exch-Forest-Mode-Flag
+  ldapDisplayName: msExchForestModeFlag
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.51796
+  """
+  msExchForestModeFlag: Int
+  """
+  Admin DisplayName: ms-Exch-Canary-Data-0
+  Description: ms-Exch-Canary-Data-0
+  ldapDisplayName: msExchCanaryData0
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.52051
+  """
+  msExchCanaryData0: String
+  """
+  Admin DisplayName: ms-Exch-Canary-Data-1
+  Description: ms-Exch-Canary-Data-1
+  ldapDisplayName: msExchCanaryData1
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.52052
+  """
+  msExchCanaryData1: String
+  """
+  Admin DisplayName: ms-Exch-Canary-Data-2
+  Description: ms-Exch-Canary-Data-2
+  ldapDisplayName: msExchCanaryData2
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.52053
+  """
+  msExchCanaryData2: String
+  """
+  Admin DisplayName: ms-Exch-Correlation-Id
+  Description: ms-Exch-Correlation-Id
+  ldapDisplayName: msExchCorrelationId
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.52065
+  """
+  msExchCorrelationId: String
+  """
+  Admin DisplayName: ms-Exch-Provisioning-Tags
+  Description: ms-Exch-Provisioning-Tags
+  ldapDisplayName: msExchProvisioningTags
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.52126
+  """
+  msExchProvisioningTags: [String]
+  """
+  Admin DisplayName: ms-Exch-Tenant-Country
+  Description: ms-Exch-Tenant-Country
+  ldapDisplayName: msExchTenantCountry
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.52130
+  """
+  msExchTenantCountry: String
+  """
+  Admin DisplayName: ms-Exch-Multi-Mailbox-GUIDs
+  Description: ms-Exch-Multi-Mailbox-GUIDs
+  ldapDisplayName: msExchMultiMailboxGUIDs
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.52145
+  """
+  msExchMultiMailboxGuiDs: [String]
+  """
+  Admin DisplayName: ms-Exch-Multi-Mailbox-Locations-Link
+  Description: ms-Exch-Multi-Mailbox-Locations-Link
+  ldapDisplayName: msExchMultiMailboxLocationsLink
+  attributeSyntax: 2.5.5.14
+  attributeID: 1.2.840.113556.1.4.7000.102.52144
+  """
+  msExchMultiMailboxLocationsLink: [String]
+  """
   Admin DisplayName: ms-Exch-Is-MSO-Dirsynced
   Description: ms-Exch-Is-MSO-Dirsynced
   ldapDisplayName: msExchIsMSODirsynced
@@ -3554,118 +3554,6 @@ input UserUpdateInput {
   attributeID: 1.2.840.113556.1.4.7000.102.51610
   """
   msExchExternalDirectoryObjectId: String
-  """
-  Admin DisplayName: ms-Exch-Shadow-Mobile
-  Description: ms-Exch-Shadow-Mobile
-  ldapDisplayName: msExchShadowMobile
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.51699
-  """
-  msExchShadowMobile: String
-  """
-  Admin DisplayName: ms-Exch-Shadow-Mail-Nickname
-  Description: ms-Exch-Shadow-Mail-Nickname
-  ldapDisplayName: msExchShadowMailNickname
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.51698
-  """
-  msExchShadowMailNickname: String
-  """
-  Admin DisplayName: ms-Exch-Shadow-L
-  Description: ms-Exch-Shadow-L
-  ldapDisplayName: msExchShadowL
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.51697
-  """
-  msExchShadowL: String
-  """
-  Admin DisplayName: ms-Exch-Shadow-Info
-  Description: ms-Exch-Shadow-Info
-  ldapDisplayName: msExchShadowInfo
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.51696
-  """
-  msExchShadowInfo: String
-  """
-  Admin DisplayName: ms-Exch-Shadow-Home-Phone
-  Description: ms-Exch-Shadow-Home-Phone
-  ldapDisplayName: msExchShadowHomePhone
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.51695
-  """
-  msExchShadowHomePhone: String
-  """
-  Admin DisplayName: ms-Exch-Shadow-Given-Name
-  Description: ms-Exch-Shadow-Given-Name
-  ldapDisplayName: msExchShadowGivenName
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.51694
-  """
-  msExchShadowGivenName: String
-  """
-  Admin DisplayName: ms-Exch-Shadow-Facsimile-Telephone-Number
-  Description: ms-Exch-Shadow-Facsimile-Telephone-Number
-  ldapDisplayName: msExchShadowFacsimileTelephoneNumber
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.51693
-  """
-  msExchShadowFacsimileTelephoneNumber: String
-  """
-  Admin DisplayName: ms-Exch-Shadow-Display-Name
-  Description: ms-Exch-Shadow-Display-Name
-  ldapDisplayName: msExchShadowDisplayName
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.51692
-  """
-  msExchShadowDisplayName: String
-  """
-  Admin DisplayName: ms-Exch-Shadow-Department
-  Description: ms-Exch-Shadow-Department
-  ldapDisplayName: msExchShadowDepartment
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.51691
-  """
-  msExchShadowDepartment: String
-  """
-  Admin DisplayName: ms-Exch-Shadow-Country-Code
-  Description: ms-Exch-Shadow-Country-Code
-  ldapDisplayName: msExchShadowCountryCode
-  attributeSyntax: 2.5.5.9
-  attributeID: 1.2.840.113556.1.4.7000.102.51690
-  """
-  msExchShadowCountryCode: Int
-  """
-  Admin DisplayName: ms-Exch-Shadow-Co
-  Description: ms-Exch-Shadow-Co
-  ldapDisplayName: msExchShadowCo
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.51689
-  """
-  msExchShadowCo: String
-  """
-  Admin DisplayName: ms-Exch-Shadow-C
-  Description: ms-Exch-Shadow-C
-  ldapDisplayName: msExchShadowC
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.51688
-  """
-  msExchShadowC: String
-  """
-  Admin DisplayName: ms-Exch-On-Premise-Object-Guid
-  Description: ms-Exch-On-Premise-Object-Guid
-  ldapDisplayName: msExchOnPremiseObjectGuid
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.51717
-  """
-  msExchOnPremiseObjectGuid: String
-  """
-  Admin DisplayName: ms-Exch-Shadow-Assistant-Name
-  Description: ms-Exch-Shadow-Assistant-Name
-  ldapDisplayName: msExchShadowAssistantName
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.51700
-  """
-  msExchShadowAssistantName: String
   """
   Admin DisplayName: ms-Exch-Shadow-Proxy-Addresses
   Description: ms-Exch-Shadow-Proxy-Addresses
@@ -3722,6 +3610,118 @@ input UserUpdateInput {
   attributeID: 1.2.840.113556.1.4.7000.102.51701
   """
   msExchShadowOtherFacsimileTelephone: [String]
+  """
+  Admin DisplayName: ms-Exch-Shadow-Mobile
+  Description: ms-Exch-Shadow-Mobile
+  ldapDisplayName: msExchShadowMobile
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.51699
+  """
+  msExchShadowMobile: String
+  """
+  Admin DisplayName: ms-Exch-Shadow-Mail-Nickname
+  Description: ms-Exch-Shadow-Mail-Nickname
+  ldapDisplayName: msExchShadowMailNickname
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.51698
+  """
+  msExchShadowMailNickname: String
+  """
+  Admin DisplayName: ms-Exch-Shadow-L
+  Description: ms-Exch-Shadow-L
+  ldapDisplayName: msExchShadowL
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.51697
+  """
+  msExchShadowL: String
+  """
+  Admin DisplayName: ms-Exch-Shadow-Info
+  Description: ms-Exch-Shadow-Info
+  ldapDisplayName: msExchShadowInfo
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.51696
+  """
+  msExchShadowInfo: String
+  """
+  Admin DisplayName: ms-Exch-On-Premise-Object-Guid
+  Description: ms-Exch-On-Premise-Object-Guid
+  ldapDisplayName: msExchOnPremiseObjectGuid
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.51717
+  """
+  msExchOnPremiseObjectGuid: String
+  """
+  Admin DisplayName: ms-Exch-Shadow-Assistant-Name
+  Description: ms-Exch-Shadow-Assistant-Name
+  ldapDisplayName: msExchShadowAssistantName
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.51700
+  """
+  msExchShadowAssistantName: String
+  """
+  Admin DisplayName: ms-Exch-Shadow-C
+  Description: ms-Exch-Shadow-C
+  ldapDisplayName: msExchShadowC
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.51688
+  """
+  msExchShadowC: String
+  """
+  Admin DisplayName: ms-Exch-Shadow-Co
+  Description: ms-Exch-Shadow-Co
+  ldapDisplayName: msExchShadowCo
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.51689
+  """
+  msExchShadowCo: String
+  """
+  Admin DisplayName: ms-Exch-Shadow-Country-Code
+  Description: ms-Exch-Shadow-Country-Code
+  ldapDisplayName: msExchShadowCountryCode
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.7000.102.51690
+  """
+  msExchShadowCountryCode: Int
+  """
+  Admin DisplayName: ms-Exch-Shadow-Department
+  Description: ms-Exch-Shadow-Department
+  ldapDisplayName: msExchShadowDepartment
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.51691
+  """
+  msExchShadowDepartment: String
+  """
+  Admin DisplayName: ms-Exch-Shadow-Display-Name
+  Description: ms-Exch-Shadow-Display-Name
+  ldapDisplayName: msExchShadowDisplayName
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.51692
+  """
+  msExchShadowDisplayName: String
+  """
+  Admin DisplayName: ms-Exch-Shadow-Facsimile-Telephone-Number
+  Description: ms-Exch-Shadow-Facsimile-Telephone-Number
+  ldapDisplayName: msExchShadowFacsimileTelephoneNumber
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.51693
+  """
+  msExchShadowFacsimileTelephoneNumber: String
+  """
+  Admin DisplayName: ms-Exch-Shadow-Given-Name
+  Description: ms-Exch-Shadow-Given-Name
+  ldapDisplayName: msExchShadowGivenName
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.51694
+  """
+  msExchShadowGivenName: String
+  """
+  Admin DisplayName: ms-Exch-Shadow-Home-Phone
+  Description: ms-Exch-Shadow-Home-Phone
+  ldapDisplayName: msExchShadowHomePhone
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.51695
+  """
+  msExchShadowHomePhone: String
   """
   Admin DisplayName: ms-Exch-Shadow-Sn
   Description: ms-Exch-Shadow-Sn
@@ -3819,6 +3819,62 @@ input UserUpdateInput {
   """
   msExchSetupStatus: Int
   """
+  Admin DisplayName: ms-Exch-Recipient-Validator-Cookies
+  Description: ms-Exch-Recipient-Validator-Cookies
+  ldapDisplayName: msExchRecipientValidatorCookies
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.50961
+  """
+  msExchRecipientValidatorCookies: [String]
+  """
+  Admin DisplayName: ms-Exch-Edge-Sync-Source-Guid
+  Description: ms-Exch-Edge-Sync-Source-Guid
+  ldapDisplayName: msExchEdgeSyncSourceGuid
+  attributeSyntax: 2.5.5.10
+  attributeID: 1.2.840.113556.1.4.7000.102.50962
+  """
+  msExchEdgeSyncSourceGuid: String
+  """
+  Admin DisplayName: ms-Exch-Edge-Sync-Cookies
+  Description: ms-Exch-Edge-Sync-Cookies
+  ldapDisplayName: msExchEdgeSyncCookies
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.4.7000.102.50960
+  """
+  msExchEdgeSyncCookies: [String]
+  """
+  Admin DisplayName: ms-Exch-OU-Root
+  Description: ms-Exch-OU-Root
+  ldapDisplayName: msExchOURoot
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.50921
+  """
+  msExchOuRoot: ID
+  """
+  Admin DisplayName: ms-Exch-CU
+  Description: ms-Exch-CU
+  ldapDisplayName: msExchCU
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.50920
+  """
+  msExchCu: ID
+  """
+  Admin DisplayName: ms-Exch-Configuration-Unit-BL
+  Description: ms-Exch-Configuration-Unit-BL
+  ldapDisplayName: msExchConfigurationUnitBL
+  attributeSyntax: 2.5.5.1
+  attributeID: 1.2.840.113556.1.4.7000.102.50919
+  """
+  msExchConfigurationUnitBl: [ID]
+  """
+  Admin DisplayName: ms-Exch-Version
+  Description: ms-Exch-Version
+  ldapDisplayName: msExchVersion
+  attributeSyntax: 2.5.5.16
+  attributeID: 1.2.840.113556.1.4.7000.102.50853
+  """
+  msExchVersion: String
+  """
   Admin DisplayName: ms-Exch-Server-Association-Link
   Description: ms-Exch-Server-Association-Link
   ldapDisplayName: msExchServerAssociationLink
@@ -3898,62 +3954,6 @@ input UserUpdateInput {
   attributeID: 1.2.840.113556.1.4.7000.102.51487
   """
   msExchTransportOutboundSettings: Int
-  """
-  Admin DisplayName: ms-Exch-Version
-  Description: ms-Exch-Version
-  ldapDisplayName: msExchVersion
-  attributeSyntax: 2.5.5.16
-  attributeID: 1.2.840.113556.1.4.7000.102.50853
-  """
-  msExchVersion: Int
-  """
-  Admin DisplayName: ms-Exch-Configuration-Unit-BL
-  Description: ms-Exch-Configuration-Unit-BL
-  ldapDisplayName: msExchConfigurationUnitBL
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.50919
-  """
-  msExchConfigurationUnitBl: [ID]
-  """
-  Admin DisplayName: ms-Exch-CU
-  Description: ms-Exch-CU
-  ldapDisplayName: msExchCU
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.50920
-  """
-  msExchCu: ID
-  """
-  Admin DisplayName: ms-Exch-OU-Root
-  Description: ms-Exch-OU-Root
-  ldapDisplayName: msExchOURoot
-  attributeSyntax: 2.5.5.1
-  attributeID: 1.2.840.113556.1.4.7000.102.50921
-  """
-  msExchOuRoot: ID
-  """
-  Admin DisplayName: ms-Exch-Edge-Sync-Cookies
-  Description: ms-Exch-Edge-Sync-Cookies
-  ldapDisplayName: msExchEdgeSyncCookies
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.50960
-  """
-  msExchEdgeSyncCookies: [String]
-  """
-  Admin DisplayName: ms-Exch-Edge-Sync-Source-Guid
-  Description: ms-Exch-Edge-Sync-Source-Guid
-  ldapDisplayName: msExchEdgeSyncSourceGuid
-  attributeSyntax: 2.5.5.10
-  attributeID: 1.2.840.113556.1.4.7000.102.50962
-  """
-  msExchEdgeSyncSourceGuid: String
-  """
-  Admin DisplayName: ms-Exch-Recipient-Validator-Cookies
-  Description: ms-Exch-Recipient-Validator-Cookies
-  ldapDisplayName: msExchRecipientValidatorCookies
-  attributeSyntax: 2.5.5.12
-  attributeID: 1.2.840.113556.1.4.7000.102.50961
-  """
-  msExchRecipientValidatorCookies: [String]
   """
   Admin DisplayName: ms-Exch-AL-Object-Version
   Description: ms-Exch-AL-Object-Version
@@ -4243,14 +4243,6 @@ input UserUpdateInput {
   """
   gecos: String
   """
-  Admin DisplayName: msRTCSIP-UserPolicy
-  Description: msRTCSIP-UserPolicy
-  ldapDisplayName: msRTCSIP-UserPolicy
-  attributeSyntax: 2.5.5.7
-  attributeID: 1.2.840.113556.1.6.24.1.132
-  """
-  msRtcsipUserPolicy: [String]
-  """
   Admin DisplayName: msRTCSIP-PrimaryUserAddress
   Description: msRTCSIP-PrimaryUserAddress
   ldapDisplayName: msRTCSIP-PrimaryUserAddress
@@ -4346,6 +4338,14 @@ input UserUpdateInput {
   attributeID: 1.2.840.113556.1.6.24.1.89
   """
   msRtcsipLineServer: String
+  """
+  Admin DisplayName: msRTCSIP-UserPolicy
+  Description: msRTCSIP-UserPolicy
+  ldapDisplayName: msRTCSIP-UserPolicy
+  attributeSyntax: 2.5.5.7
+  attributeID: 1.2.840.113556.1.6.24.1.132
+  """
+  msRtcsipUserPolicy: [String]
   """
   Admin DisplayName: ms-DS-Source-Object-DN
   Description: The string representation of the DN of the object in another forest that corresponds to this object.

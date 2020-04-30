@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;graphql/resolvers/queries/queries&quot; | ldap-graphql</title>
+	<title>&quot;helpers/utils&quot; | ldap-graphql</title>
 	<meta name="description" content="Documentation for ldap-graphql">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_graphql_resolvers_queries_queries_.html">&quot;graphql/resolvers/queries/queries&quot;</a>
+					<a href="_helpers_utils_.html">&quot;helpers/utils&quot;</a>
 				</li>
 			</ul>
-			<h1>Module &quot;graphql/resolvers/queries/queries&quot;</h1>
+			<h1>Module &quot;helpers/utils&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -73,7 +73,8 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_graphql_resolvers_queries_queries_.html#usergetall" class="tsd-kind-icon">user<wbr>Get<wbr>All</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_helpers_utils_.html#ldapbooleantojsboolean" class="tsd-kind-icon">ldap<wbr>Boolean<wbr>ToJs<wbr>Boolean</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_helpers_utils_.html#transformdata" class="tsd-kind-icon">transform<wbr>Data</a></li>
 							</ul>
 						</section>
 					</div>
@@ -82,36 +83,77 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="usergetall" class="tsd-anchor"></a>
-					<h3>user<wbr>Get<wbr>All</h3>
+					<a name="ldapbooleantojsboolean" class="tsd-anchor"></a>
+					<h3>ldap<wbr>Boolean<wbr>ToJs<wbr>Boolean</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">user<wbr>Get<wbr>All<span class="tsd-signature-symbol">(</span>_<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, __namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>criteria<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span>, ctx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">ldap<wbr>Boolean<wbr>ToJs<wbr>Boolean<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/saostad/ldap-graphql/blob/d7cb4bb/src/graphql/resolvers/queries/queries.ts#L7">graphql/resolvers/queries/queries.ts:7</a></li>
+									<li>Defined in helpers/utils.ts:5</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>convert LDAP boolean &quot;TRUE&quot;/&quot;FALSE&quot; to js boolean</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>_: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>criteria<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter">
-											<h5>criteria<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></h5>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<h5>ctx: <span class="tsd-signature-type">any</span></h5>
+									<h5>input: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="transformdata" class="tsd-anchor"></a>
+					<h3>transform<wbr>Data</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">transform<wbr>Data&lt;T&gt;<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{}</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in helpers/utils.ts:22</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>transform data to be compatible with GraphQL schema.</p>
+								</div>
+								<p>it does:</p>
+								<ul>
+									<li>make sure object property names are camelcase with no illegal characters</li>
+									<li>change LDAP Boolean to JS Boolean</li>
+									<li>make sure values are always in arrays even when it&#39;s just a single string. it&#39;s because something like below is not possible in GraphQL schema.</li>
+								</ul>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><p>type A { field: String | [String] }</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{}</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>obj: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{}</span></h4>
+							<ul class="tsd-parameters">
+							</ul>
 						</li>
 					</ul>
 				</section>
@@ -129,7 +171,7 @@
 					<li class=" tsd-kind-module">
 						<a href="_graphql_resolvers_queries_index_.html">&quot;graphql/resolvers/queries/index&quot;</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="_graphql_resolvers_queries_queries_.html">&quot;graphql/resolvers/queries/queries&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -138,7 +180,7 @@
 					<li class=" tsd-kind-module">
 						<a href="_graphql_typedefs_.html">&quot;graphql/type<wbr>Defs&quot;</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="_helpers_utils_.html">&quot;helpers/utils&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -149,7 +191,10 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="_graphql_resolvers_queries_queries_.html#usergetall" class="tsd-kind-icon">user<wbr>Get<wbr>All</a>
+						<a href="_helpers_utils_.html#ldapbooleantojsboolean" class="tsd-kind-icon">ldap<wbr>Boolean<wbr>ToJs<wbr>Boolean</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="_helpers_utils_.html#transformdata" class="tsd-kind-icon">transform<wbr>Data</a>
 					</li>
 				</ul>
 			</nav>

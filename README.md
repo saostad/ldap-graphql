@@ -2,7 +2,7 @@
 
 ### Goal
 
-create a binding between ldap and graphql
+create a battery included binding between ldap and graphql
 
 ### How to use it
 

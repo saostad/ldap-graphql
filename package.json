@@ -1,6 +1,6 @@
 {
   "name": "ldap-graphql",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Graphql binding for LDAP server",
   "repository": {
     "type": "git",
@@ -40,7 +40,7 @@
       "test/*",
       "docs/*"
     ],
-    "delay": "1000"
+    "delay": "2000"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
