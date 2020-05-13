@@ -1,5 +1,6 @@
+import type { Config } from "apollo-server-express";
 import * as queries from "./queries";
 
-export const resolvers = {
+export const resolvers: Config["resolvers"] = {
   Query: { ...queries },
 };
