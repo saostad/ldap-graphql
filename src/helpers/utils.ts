@@ -10,12 +10,19 @@ export function ldapBooleanToJsBoolean(input: string): boolean {
   return false;
 }
 
-/** [source of code with small changes](https://stackoverflow.com/questions/48224097/how-to-to-convert-from-ldap-time-format-to-js-date-format) */
+/**@description convert ldap 64-bit NT FILE TIME (time-interval) to js date
+ * @note It’s the date/time value stored in Active Directory as the number of 100-nanosecond intervals that have elapsed since the 0 hours on January 1, 1601 (12:00 AM, January 1, 1601), until the date/time that is being stored. It’s always in UTC (Coordinated Universal Time, aka. GMT) and is often used in Properties like LastLogonTimeStamp, LastPwdSet, etc. [source of code with small changes](https://stackoverflow.com/questions/48224097/how-to-to-convert-from-ldap-time-format-to-js-date-format) */
 export function ldapDateToJsDate(input: string) {
+  if (input === "0") {
+    return "0";
+  }
   if (input.length === 18) {
     return new Date(Number(input) / 1e4 - 1.16444736e13);
   }
-  return input;
+
+  writeLog(`input ${input} is not valid!`, { level: "error", stdout: true });
+  /** fall-back for wrong formatted values */
+  return new Date("1601-01-01T00:00:00");
 }
 
 /** transform data to be compatible with GraphQL schema.
