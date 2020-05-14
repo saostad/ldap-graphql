@@ -1,7 +1,6 @@
 import { GraphQLScalarType } from "graphql";
 import { Kind } from "graphql/language";
 import { ldapDateToJsDate } from "../../../helpers/utils";
-import { parse } from "date-fns";
 
 export const resolverMap = {
   Date: new GraphQLScalarType({
@@ -11,12 +10,20 @@ export const resolverMap = {
       return new Date(value); // value from the client
     },
     serialize(value: string) {
+      /** @step check if input came as format "yyyyMMddkkmmss.0Z" */
       if (value.includes("Z")) {
-        // to remove '.0Z' at the end of all values
-        const trimmedValue = value.slice(0, -3);
-        return parse(trimmedValue, "yyyyMMddkkmmss", new Date()); // value sent to the client
+        const year = Number(value.slice(0, 4));
+        const month = Number(value.slice(4, 6));
+        const day = Number(value.slice(6, 8));
+        const hour = Number(value.slice(8, 10));
+        const minutes = Number(value.slice(10, 12));
+        const seconds = Number(value.slice(12, 14));
+        const result = new Date(year, month, day, hour, minutes, seconds);
+
+        return result; // value sent to the client
       } else {
-        return ldapDateToJsDate(value);
+        /**@step input came as forma Long-Integer (64-bit NT FILE TIME time-interval) */
+        return ldapDateToJsDate(value); // value sent to the client
       }
     },
     parseLiteral(ast) {

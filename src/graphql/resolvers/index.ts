@@ -1,4 +1,4 @@
-import type { Config } from "apollo-server-express";
+import type { Config } from "apollo-server";
 import * as queries from "./queries";
 import { resolverMap } from "./custom-scalar/custom-resolvers";
 

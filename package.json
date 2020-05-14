@@ -1,6 +1,6 @@
 {
   "name": "ldap-graphql",
-  "version": "0.2.1",
+  "version": "0.2.2-beta1",
   "description": "Graphql binding for LDAP server",
   "repository": {
     "type": "git",
@@ -39,8 +39,7 @@
     "ignore": [
       "test/*",
       "docs/*"
-    ],
-    "delay": "2000"
+    ]
   },
   "devDependencies": {
     "@types/jest": "^25.2.2",
@@ -64,7 +63,6 @@
     "apollo-server": "^2.13.1",
     "apollo-server-express": "^2.13.1",
     "change-case": "^4.1.1",
-    "date-fns": "^2.13.0",
     "dotenv": "^8.2.0",
     "fast-node-logger": "^1.4.0",
     "graphql": "^15.0.0",
