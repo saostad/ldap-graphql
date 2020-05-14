@@ -9,6 +9,7 @@ export const resolverMap = {
     parseValue(value) {
       return new Date(value); // value from the client
     },
+    /** change LDAP string Date to JS Date (example of ldap date:  20190524202157.0Z & 132156337140137963 ) */
     serialize(value: string) {
       /** @step check if input came as format "yyyyMMddkkmmss.0Z" */
       if (value.includes("Z")) {

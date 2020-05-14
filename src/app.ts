@@ -1,8 +1,11 @@
 // HOW TO USE IT
 import { IClientConfig } from "ldap-directory-manager";
+import { createLogger } from "fast-node-logger";
 import { initial } from "./index";
 import { config } from "dotenv";
 config();
+
+createLogger({ prettyPrint: { colorize: true } });
 
 const configs: IClientConfig = {
   baseDN: "DC=ki,DC=local",
@@ -11,6 +14,6 @@ const configs: IClientConfig = {
   ldapServerUrl: process.env.AD_URI ?? "",
 };
 
-initial({ connectionInfo: configs }).then(({ url }) => {
+initial({ connectionInfo: configs, generateSchema: false }).then(({ url }) => {
   console.log(`Server started on ${url}`);
 });

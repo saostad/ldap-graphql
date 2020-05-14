@@ -20,7 +20,10 @@ export function ldapDateToJsDate(input: string) {
     return new Date(Number(input) / 1e4 - 1.16444736e13);
   }
 
-  writeLog(`input ${input} is not valid!`, { level: "error", stdout: true });
+  writeLog(`input ${input} is not valid! fallback to 1601-01-01T00:00:00`, {
+    level: "warn",
+    stdout: true,
+  });
   /** fall-back for wrong formatted values */
   return new Date("1601-01-01T00:00:00");
 }
@@ -30,7 +33,6 @@ export function ldapDateToJsDate(input: string) {
  * it does:
  * - make sure object property names are camelcase with no illegal characters
  * - change LDAP string Boolean to JS Boolean
- * - change LDAP string Date to JS Date (example of ldap date:  20190524202157.0Z & 132156337140137963 )
  * - make sure values are always in arrays even when it's just a single string. it's because something like below is not possible in GraphQL schema.
  * @example
  * type A { field: String | [String] }

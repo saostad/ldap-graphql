@@ -2,7 +2,7 @@
 
 ### Goal
 
-Battery included binding between ldap and graphql
+Battery included, Schema-aware binding between LDAP and Graphql
 
 ### How to use it
 
@@ -28,3 +28,4 @@ this is not meant to be used in edge
 
 - [ ] provide a way to extend pre-defined schema and resolvers via custom code
 - [ ] add ability to re-generate schema and update pre-defined schemas
+- [ ] add option to change default schema generated output directory

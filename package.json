@@ -1,7 +1,7 @@
 {
   "name": "ldap-graphql",
-  "version": "0.2.2-beta1",
-  "description": "Graphql binding for LDAP server",
+  "version": "0.3.0",
+  "description": "Schema-aware binding between LDAP and Graphql",
   "repository": {
     "type": "git",
     "url": "https://github.com/saostad/ldap-graphql.git"
@@ -21,11 +21,9 @@
     "tsc:watch": "tsc --watch",
     "prepublishOnly": "npm-run-all -s tsc gen-docs",
     "postpublish": "npm-run-all -s tag gen-changelog",
-    "copy-files": "copyfiles --up 3 src/graphql/schema/**/*.gql src/graphql/schema/**/*.graphql dist/graphql/schema",
     "prod": "node --unhandled-rejections=strict dist/app.js",
     "inspect": "node --inspect --unhandled-rejections=strict dist/app.js",
-    "dev:scripts": "npm-run-all -p copy-files inspect ",
-    "dev": "nodemon --ext js,ts,gql,graphql --watch dist --watch src/graphql/schema --exec \"npm run dev:scripts\"",
+    "dev": "nodemon --ext js,ts,gql,graphql --watch dist --watch src/graphql/schema --exec \"npm run inspect\"",
     "start": "npm-run-all -p tsc:watch dev"
   },
   "keywords": [
@@ -39,7 +37,8 @@
     "ignore": [
       "test/*",
       "docs/*"
-    ]
+    ],
+    "delay": "3000"
   },
   "devDependencies": {
     "@types/jest": "^25.2.2",
@@ -53,7 +52,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
     "jest": "^26.0.1",
-    "nodemon": "^2.0.3",
+    "nodemon": "^2.0.4",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "ts-jest": "^25.5.1",
@@ -62,12 +61,11 @@
   },
   "dependencies": {
     "apollo-server": "^2.13.1",
-    "apollo-server-express": "^2.13.1",
     "change-case": "^4.1.1",
     "fast-node-logger": "^1.4.0",
     "graphql": "^15.0.0",
     "ldap-directory-manager": "^0.6.0",
-    "ldap-schema-ts-generator": "^3.5.0",
+    "ldap-schema-ts-generator": "^3.5.2",
     "merge-graphql-schemas": "^1.7.8"
   }
 }

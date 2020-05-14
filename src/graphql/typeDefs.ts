@@ -1,11 +1,11 @@
-import path from "path";
 import { fileLoader, mergeTypes } from "merge-graphql-schemas";
 import { DateScalar } from "./schema/custom-scalar";
 import { Config } from "apollo-server";
+import path from "path";
 
-const dirPath = path.join(__dirname, "schema", "generated");
+const schemaPath = path.join(process.cwd(), "generated", "graphql");
 
-const typesArray = fileLoader(dirPath, { ignoredExtensions: ["ts", "js"] });
+const typesArray = fileLoader(schemaPath, { ignoredExtensions: ["ts", "js"] });
 
 export const typeDefs: Config["typeDefs"] = mergeTypes(
   [...typesArray, DateScalar],
