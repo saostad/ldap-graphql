@@ -1,24 +1,21 @@
-import { config } from "dotenv";
-config();
 import * as directory from "ldap-directory-manager";
 import { transformData } from "../../../helpers/utils";
 import { writeLog } from "fast-node-logger";
+import { Context } from "../../../typings/general/context";
 
-export async function userGetAll(_: any, { criteria }: any, ctx: any) {
+export async function userGetAll(
+  _: any,
+  { criteria }: any,
+  { connectionInfo }: Context,
+) {
   writeLog(`userGetAll()`, { level: "trace" });
-  const options = {
-    user: process.env.AD_USER ?? "",
-    pass: process.env.AD_Pass ?? "",
-    ldapServerUrl: process.env.AD_URI ?? "",
-    baseDN: "DC=ki,DC=local",
-  };
 
-  const client = new directory.Client(options);
+  const client = new directory.Client(connectionInfo);
 
   const data = await directory.userGetAll(criteria, {
     client,
     attributes: ["*"],
-    baseDN: "DC=KI,DC=local",
+    baseDN: connectionInfo.baseDN,
   });
   await client.unbind();
 
