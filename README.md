@@ -8,14 +8,14 @@ Battery included, Schema-aware binding between LDAP and Graphql
 
 ```ts
 import { initial } from "ldap-graphql";
-const configs = {
+const connectionInfo = {
   baseDN: "DC=DOMAIN,DC=COM",
   user: "",
   pass: "",
   ldapServerUrl: "",
 };
 
-initial({ connectionInfo: configs }).then(({ url }) => {
+initial({ connectionInfo }).then(({ url }) => {
   console.log(`Server started on ${url}`);
 });
 ```
@@ -29,3 +29,7 @@ this is not meant to be used in edge
 - [ ] provide a way to extend pre-defined schema and resolvers via custom code
 - [ ] add ability to re-generate schema and update pre-defined schemas
 - [ ] add option to change default schema generated output directory
+- [ ] general graphql queries
+  - [ ] getByDn(dn: String!) // can fetch any object
+  - [ ] getOUs(baseDn: String)
+  - [ ] getDirectChildren(dn: String!) // one level search
