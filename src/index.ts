@@ -11,8 +11,7 @@ import { promises } from "fs";
 
 import { typeDefs } from "./graphql/typeDefs";
 import { resolvers } from "./graphql/resolvers";
-import path from "path";
-
+import { schemaPath } from "./helpers/variables";
 type InitialFnInput = {
   connectionInfo: IClientConfig;
   /** default true
@@ -23,8 +22,6 @@ type InitialFnInput = {
    */
   generateSchema?: boolean;
 };
-
-const schemaPath = path.join(process.cwd(), "generated", "graphql");
 
 /** initial an instance of Apollo-Server */
 export async function initial(configs: InitialFnInput) {
@@ -61,10 +58,11 @@ export async function initial(configs: InitialFnInput) {
     });
   }
 
+  /**@step make sure schema exist before starting the server */
   try {
     await promises.readdir(schemaPath);
   } catch (error) {
-    throw `schema not exist in path ${schemaPath}`;
+    throw `schema does not exist in path ${schemaPath}`;
   }
 
   const server = new ApolloServer({

@@ -1,8 +1,10 @@
 import type { Config } from "apollo-server";
 import * as queries from "./queries";
+import * as mutations from "./mutations";
 import { resolverMap } from "./custom-scalar/custom-resolvers";
 
 export const resolvers: Config["resolvers"] = {
-  Query: { ...queries },
   ...resolverMap,
+  Query: { ...queries },
+  Mutation: { ...mutations },
 };

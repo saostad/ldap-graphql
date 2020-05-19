@@ -14,6 +14,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "gen-docs": "typedoc",
+    "gen-types": "graphql-codegen",
     "postgen-docs": "node ./config/github.js",
     "tag": "node ./config/tag.js",
     "gen-changelog": "auto-changelog && git add CHANGELOG.md && git commit -m \"doc: change log\"",
@@ -41,10 +42,14 @@
     "delay": "3000"
   },
   "devDependencies": {
-    "@types/jest": "^25.2.2",
-    "@types/node": "^14.0.1",
-    "@typescript-eslint/eslint-plugin": "^2.33.0",
-    "@typescript-eslint/parser": "^2.33.0",
+    "@graphql-codegen/cli": "^1.14.0",
+    "@graphql-codegen/typescript": "^1.14.0",
+    "@graphql-codegen/typescript-operations": "^1.14.0",
+    "@graphql-codegen/typescript-resolvers": "^1.14.0",
+    "@types/jest": "^25.2.3",
+    "@types/node": "^14.0.3",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
     "auto-changelog": "^2.0.0",
     "copyfiles": "^2.2.0",
     "dotenv": "^8.2.0",
@@ -62,10 +67,10 @@
   "dependencies": {
     "apollo-server": "^2.13.1",
     "change-case": "^4.1.1",
-    "fast-node-logger": "^1.4.0",
+    "fast-node-logger": "^1.4.1",
     "graphql": "^15.0.0",
-    "ldap-directory-manager": "^0.6.0",
-    "ldap-schema-ts-generator": "^3.5.2",
+    "ldap-directory-manager": "^0.7.1",
+    "ldap-schema-ts-generator": "^3.7.0",
     "merge-graphql-schemas": "^1.7.8"
   }
 }

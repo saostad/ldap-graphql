@@ -7,13 +7,13 @@ config();
 
 createLogger({ prettyPrint: { colorize: true } });
 
-const configs: IClientConfig = {
+const connectionInfo: IClientConfig = {
   baseDN: "DC=ki,DC=local",
   user: process.env.AD_USER ?? "",
   pass: process.env.AD_Pass ?? "",
   ldapServerUrl: process.env.AD_URI ?? "",
 };
 
-initial({ connectionInfo: configs, generateSchema: false }).then(({ url }) => {
-  console.log(`Server started on ${url}`);
+initial({ connectionInfo, generateSchema: false }).then((server) => {
+  console.log(`Server started on ${server.url}`);
 });
