@@ -48,8 +48,15 @@ export const userUpdate: Exclude<
 > = async (_, { input }, { connectionInfo }) => {
   const client = new directory.Client(connectionInfo);
   try {
-    const attributesToUpdate = { ...input };
+    const attributesToUpdate: any = { ...input };
     delete attributesToUpdate.dn;
+
+    /**@step this is to delete existing values if value is 'null' */
+    Object.entries(input).forEach(([prop, value]) => {
+      if (value === null) {
+        attributesToUpdate[prop] = [];
+      }
+    });
 
     const data = await directory.entryUpdate<MutationUserUpdateArgs["input"]>(
       input.dn,

@@ -17,7 +17,6 @@ type InitialFnInput = {
   /** default true
    * @note use cases:
    * - first time to run the project
-   * - generate new entity from LDAP schema
    * - every time we change the LDAP schema and want to reflect changes to graphql schema
    */
   generateSchema?: boolean;
