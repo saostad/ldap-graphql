@@ -75,14 +75,14 @@
 					<h3>How to use it</h3>
 				</a>
 				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { initial } <span class="hljs-keyword">from</span> <span class="hljs-string">"ldap-graphql"</span>;
-<span class="hljs-keyword">const</span> configs = {
+<span class="hljs-keyword">const</span> connectionInfo = {
   baseDN: <span class="hljs-string">"DC=DOMAIN,DC=COM"</span>,
   user: <span class="hljs-string">""</span>,
   pass: <span class="hljs-string">""</span>,
   ldapServerUrl: <span class="hljs-string">""</span>,
 };
 
-initial({ connectionInfo: configs }).then(<span class="hljs-function">(<span class="hljs-params">{ url }</span>) =&gt;</span> {
+initial({ connectionInfo }).then(<span class="hljs-function">(<span class="hljs-params">{ url }</span>) =&gt;</span> {
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Server started on <span class="hljs-subst">${url}</span>`</span>);
 });</code></pre>
 				<a href="#note" id="note" style="color: inherit; text-decoration: none;">
@@ -96,6 +96,12 @@ initial({ connectionInfo: configs }).then(<span class="hljs-function">(<span cla
 					<li><input disabled="" type="checkbox"> provide a way to extend pre-defined schema and resolvers via custom code</li>
 					<li><input disabled="" type="checkbox"> add ability to re-generate schema and update pre-defined schemas</li>
 					<li><input disabled="" type="checkbox"> add option to change default schema generated output directory</li>
+					<li><input disabled="" type="checkbox"> general graphql queries<ul>
+							<li><input disabled="" type="checkbox"> getByDn(dn: String!) // can fetch any object</li>
+							<li><input disabled="" type="checkbox"> getOUs(baseDn: String)</li>
+							<li><input disabled="" type="checkbox"> getDirectChildren(dn: String!) // one level search</li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -111,6 +117,9 @@ initial({ connectionInfo: configs }).then(<span class="hljs-function">(<span cla
 					<li class=" tsd-kind-module">
 						<a href="modules/_typings_general_context_.html">&quot;typings/general/context&quot;</a>
 					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_typings_generated_types_.html">&quot;typings/generated/types&quot;</a>
+					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
@@ -125,9 +134,13 @@ initial({ connectionInfo: configs }).then(<span class="hljs-function">(<span cla
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
 			</ul>
 		</div>
 	</div>

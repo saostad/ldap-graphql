@@ -42,11 +42,10 @@ import { transformData } from "../../../helpers/utils";
     description: value 2
     ```
  */
-export const userUpdate: MutationResolvers["userUpdate"] = async (
-  _,
-  { input },
-  { connectionInfo },
-) => {
+export const userUpdate: Exclude<
+  MutationResolvers["userUpdate"],
+  undefined
+> = async (_, { input }, { connectionInfo }) => {
   const client = new directory.Client(connectionInfo);
   try {
     const attributesToUpdate = { ...input };
