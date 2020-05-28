@@ -25,6 +25,7 @@ initial({ connectionInfo }).then(({ url }) => {
 - [x] extend pre-defined schema and resolvers via custom code
 - [x] ability to re-generate schema and update pre-defined schemas
 - [ ] option to change default schema generated output directory
+- [ ] option to run server on different port
 - [x] general graphql queries
   - [x] userGetAll
   - [x] userUpdate

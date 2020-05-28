@@ -9,7 +9,6 @@ export async function userGetAll(
   { connectionInfo }: GraphqlContext,
 ) {
   writeLog(`userGetAll()`, { level: "trace" });
-
   const client = new directory.Client(connectionInfo);
   try {
     const data = await directory.userGetAll(criteria, {
@@ -17,12 +16,11 @@ export async function userGetAll(
       attributes: ["*"],
       baseDN: connectionInfo.baseDN,
     });
-    await client.unbind();
 
     const transferredData = data.map((el) => transformData(el));
 
     return transferredData;
   } finally {
-    await client.unbind();
+    client.unbind();
   }
 }

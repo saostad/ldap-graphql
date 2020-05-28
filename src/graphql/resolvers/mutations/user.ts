@@ -76,6 +76,6 @@ export const userUpdate: Exclude<
     const transferredData = transformData(data);
     return transferredData;
   } finally {
-    await client.unbind();
+    client.unbind();
   }
 };
