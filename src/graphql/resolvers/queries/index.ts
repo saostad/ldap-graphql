@@ -1,9 +1,9 @@
 import * as user from "./user";
-import * as common from "./common";
+import * as entry from "./entry";
 
 export const queries = {
   Query: {
-    ...common,
+    ...entry,
     ...user,
   },
 };
