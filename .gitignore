@@ -25,3 +25,4 @@ out
 dist
 .env
 generated
+customizations

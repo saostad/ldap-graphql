@@ -1,0 +1,15 @@
+type GeneralEntry {
+  objectClass: [String!]
+  objectCategory: [ID!]
+  instanceType: [Int!]
+  distinguishedName: [ID!]
+  cn: [String!]
+  displayName: [String]
+  description: [String]
+  adminDisplayName: [String]
+  adminDescription: [String]
+}
+
+type Query {
+  entryGetByDn(dn: ID!): GeneralEntry
+}

@@ -1,12 +1,50 @@
-import { fileLoader, mergeTypes } from "merge-graphql-schemas";
+import { mergeTypeDefs } from "@graphql-tools/merge";
+import { loadFiles } from "@graphql-tools/load-files";
+
 import { Config } from "apollo-server";
-import { schemaPath } from "../helpers/variables";
+import {
+  generatedSchemaPath,
+  userDefinedSchemaDefaultPath,
+  customSchemaPath,
+} from "../helpers/variables";
 
-const typesArray = fileLoader(schemaPath, {
-  ignoredExtensions: ["ts", "js"],
-  recursive: true,
-});
+type GetTypeFnInput = {
+  /**@default path.join(process.cwd(),"customizations","schema"); */
+  customSchemaPath?: string;
+  loadFilesOptions?: Parameters<typeof loadFiles>[1];
+};
+export async function getTypes(options?: GetTypeFnInput) {
+  let userDefinedSchemaPath = userDefinedSchemaDefaultPath;
+  if (options?.customSchemaPath) {
+    userDefinedSchemaPath = options?.customSchemaPath;
+  }
 
-export const typeDefs: Config["typeDefs"] = mergeTypes(typesArray, {
-  all: true,
-});
+  let userDefinedSchemaLoaderOptions: Parameters<typeof loadFiles>[1] = {
+    recursive: true,
+  };
+  if (options?.loadFilesOptions) {
+    userDefinedSchemaLoaderOptions = options.loadFilesOptions;
+  }
+
+  const generatedSchema = await loadFiles(generatedSchemaPath, {
+    ignoredExtensions: ["ts", "js"],
+    recursive: true,
+  });
+
+  const customSchema = await loadFiles(customSchemaPath, {
+    recursive: true,
+  });
+
+  const userDefinedSchema = await loadFiles(
+    userDefinedSchemaPath,
+    userDefinedSchemaLoaderOptions,
+  );
+
+  const typeDefs: Config["typeDefs"] = mergeTypeDefs([
+    ...generatedSchema,
+    ...customSchema,
+    ...userDefinedSchema,
+  ]);
+
+  return typeDefs;
+}

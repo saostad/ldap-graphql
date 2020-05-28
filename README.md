@@ -20,16 +20,14 @@ initial({ connectionInfo }).then(({ url }) => {
 });
 ```
 
-### Note
-
-this is not meant to be used in edge
-
 ### TODO:
 
-- [ ] provide a way to extend pre-defined schema and resolvers via custom code
-- [ ] add ability to re-generate schema and update pre-defined schemas
-- [ ] add option to change default schema generated output directory
-- [ ] general graphql queries
-  - [ ] getByDn(dn: String!) // can fetch any object
+- [x] extend pre-defined schema and resolvers via custom code
+- [x] ability to re-generate schema and update pre-defined schemas
+- [ ] option to change default schema generated output directory
+- [x] general graphql queries
+  - [x] userGetAll
+  - [x] userUpdate
+  - [x] getByDn(dn: String!) // can fetch any object
   - [ ] getOUs(baseDn: String)
   - [ ] getDirectChildren(dn: String!) // one level search

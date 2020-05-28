@@ -2,7 +2,7 @@ import { GraphQLScalarType } from "graphql";
 import { Kind } from "graphql/language";
 import { ldapDateToJsDate } from "../../../helpers/utils";
 
-export const resolverMap = {
+export const customScalar = {
   Date: new GraphQLScalarType({
     name: "Date",
     description: "Date custom scalar type",
