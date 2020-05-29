@@ -14,6 +14,6 @@ const connectionInfo: IClientConfig = {
   ldapServerUrl: process.env.AD_URI ?? "",
 };
 
-initial({ connectionInfo, generateSchema: false }).then((server) => {
+initial({ connectionInfo, generateSchema: true }).then((server) => {
   console.log(`Server started on ${server.url}`);
 });

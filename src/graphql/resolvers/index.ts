@@ -9,6 +9,7 @@ import { userDefinedResolversDefaultPath } from "../../helpers/variables";
 type GetResolversFnInput = {
   /**@default path.join(process.cwd(),"customizations","resolvers"); */
   customResolversPath?: string;
+  /** default {recursive: false} */
   loadFilesOptions?: Parameters<typeof loadFiles>[1];
 };
 export async function getResolvers(options?: GetResolversFnInput) {
@@ -18,7 +19,7 @@ export async function getResolvers(options?: GetResolversFnInput) {
   }
 
   let userDefinedResolverLoaderOptions: Parameters<typeof loadFiles>[1] = {
-    recursive: true,
+    recursive: false,
   };
   if (options?.loadFilesOptions) {
     userDefinedResolverLoaderOptions = options.loadFilesOptions;

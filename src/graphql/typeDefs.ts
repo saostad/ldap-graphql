@@ -11,6 +11,7 @@ import {
 type GetTypeFnInput = {
   /**@default path.join(process.cwd(),"customizations","schema"); */
   customSchemaPath?: string;
+  /** default {recursive: true} */
   loadFilesOptions?: Parameters<typeof loadFiles>[1];
 };
 export async function getTypes(options?: GetTypeFnInput) {

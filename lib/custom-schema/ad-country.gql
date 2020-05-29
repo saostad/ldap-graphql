@@ -1,0 +1,47 @@
+input AdEntryCountryUpdateInput {
+  """
+  Admin DisplayName: Obj-Dist-Name
+  Description: Obj-Dist-Name
+  ldapDisplayName: distinguishedName
+  attributeSyntax: 2.5.5.1
+  attributeID: 2.5.4.49
+  """
+  distinguishedName: ID!
+  """
+  ISO-3166 2-digit string value
+  Admin DisplayName: Country-Name
+  Description: Country-Name
+  ldapDisplayName: c
+  attributeSyntax: 2.5.5.12
+  attributeID: 2.5.4.6
+  """
+  c: String!
+  """
+  ISO-3166 Integer value
+  Admin DisplayName: Country-Code
+  Description: Country-Code
+  ldapDisplayName: countryCode
+  attributeSyntax: 2.5.5.9
+  attributeID: 1.2.840.113556.1.4.25
+  """
+  countryCode: Int!
+  """
+  Country Name Open string value
+  Admin DisplayName: Text-Country
+  Description: Text-Country
+  ldapDisplayName: co
+  attributeSyntax: 2.5.5.12
+  attributeID: 1.2.840.113556.1.2.131
+  """
+  co: String!
+}
+
+"""
+country value in Active Directory requires you to update three different attributes at the same time: the countryCode, c and co attributes. you must update two of the values, countryCode and c, using the appropriate integral and string ISO 3166 country code values or the update will fail.
+- countryCode (Country-Code): ISO-3166 Integer value
+- c (Country-Name): ISO-3166 2-digit string value
+- co (Text-Country): Open string value
+"""
+type Mutation {
+  adEntryCountryUpdate(input: AdEntryCountryUpdateInput!): GeneralEntry
+}
