@@ -26,7 +26,7 @@ input AdEntryCountryUpdateInput {
   """
   countryCode: Int!
   """
-  Country Name Open string value
+  Country Text Open string value
   Admin DisplayName: Text-Country
   Description: Text-Country
   ldapDisplayName: co

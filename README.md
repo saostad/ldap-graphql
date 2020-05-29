@@ -20,6 +20,10 @@ initial({ connectionInfo }).then(({ url }) => {
 });
 ```
 
+### Documentation
+
+Please refer to [documentations here](https://saostad.github.io/ldap-graphql/modules/_index_.html).
+
 ### TODO:
 
 - [x] extend pre-defined schema and resolvers via custom code

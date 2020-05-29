@@ -12,7 +12,8 @@ import { promises } from "fs";
 import { getTypes } from "./graphql/typeDefs";
 import { getResolvers } from "./graphql/resolvers";
 import { generatedSchemaPath } from "./helpers/variables";
-type InitialFnInput = {
+
+export type InitialFnInput = {
   connectionInfo: IClientConfig;
   /** default true
    * @note use cases:
@@ -20,7 +21,9 @@ type InitialFnInput = {
    * - every time we change the LDAP schema and want to reflect changes to graphql schema
    */
   generateSchema?: boolean;
+  /** user defined graphql resolvers files path to extends pre-defined resolvers */
   customResolversPath?: string;
+  /** user defined graphql schema files path to extends pre-defined schema */
   customSchemaPath?: string;
 };
 
