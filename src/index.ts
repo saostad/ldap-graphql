@@ -1,10 +1,11 @@
 import { ApolloServer } from "apollo-server";
-import { IClientConfig } from "ldap-directory-manager";
+import { IClientConfig, Client } from "ldap-directory-manager";
 import {
   getSchemaAttributes,
   getSchemaClasses,
   generateGraphqlTypeFiles,
-  getSchemaNamingContext,
+  getCountryIsoCodes,
+  generateCountryIsoCodesFile,
 } from "ldap-schema-ts-generator";
 
 import { promises } from "fs";
@@ -12,19 +13,27 @@ import { promises } from "fs";
 import { getTypes } from "./graphql/typeDefs";
 import { getResolvers } from "./graphql/resolvers";
 import { generatedSchemaPath } from "./helpers/variables";
+import type { Logger } from "fast-node-logger";
 
 export type InitialFnInput = {
   connectionInfo: IClientConfig;
   /** default true
    * @note use cases:
-   * - first time to run the project
-   * - every time we change the LDAP schema and want to reflect changes to graphql schema
+   * - first time to run the project.
+   * - every time we change the LDAP schema and want to reflect changes to graphql schema.
    */
   generateSchema?: boolean;
+  generateSchemaOptions?: {
+    /** option to select which objectClasses to generate. default ["user", "group", "computer"]*/
+    justThisClasses: string[];
+  };
   /** user defined graphql resolvers files path to extends pre-defined resolvers */
   customResolversPath?: string;
   /** user defined graphql schema files path to extends pre-defined schema */
   customSchemaPath?: string;
+  /** generate country iso-3166 codes. default false */
+  generateCountryIsoCodes?: boolean;
+  logger?: Logger;
 };
 
 /** initial an instance of Apollo-Server */
@@ -34,21 +43,31 @@ export async function initial(configs: InitialFnInput) {
     generateSchema = configs.generateSchema;
   }
 
+  let generateCountryIsoCodes = false;
+  if (typeof configs.generateCountryIsoCodes === "boolean") {
+    generateCountryIsoCodes = configs.generateCountryIsoCodes;
+  }
+
+  let justThisClasses = ["user", "group", "computer"];
+  if (configs.generateSchemaOptions) {
+    justThisClasses = configs.generateSchemaOptions.justThisClasses;
+  }
+
   /** @step generate graphql schema from LDAP schema */
   if (generateSchema) {
-    const schemaDn = await getSchemaNamingContext({
-      options: configs.connectionInfo,
-    });
+    const client = new Client(configs.connectionInfo);
 
     const objectAttributes = await getSchemaAttributes({
-      schemaDn,
-      options: configs.connectionInfo,
+      client,
+      options: { logger: configs.logger },
     });
 
     const objectClasses = await getSchemaClasses({
-      schemaDn,
-      options: configs.connectionInfo,
+      client,
+      options: { logger: configs.logger },
     });
+
+    await client.unbind();
 
     await generateGraphqlTypeFiles({
       objectAttributes,
@@ -57,9 +76,14 @@ export async function initial(configs: InitialFnInput) {
         generateEnumTypeMaps: false,
         generateClientSideDocuments: false,
         generateResolvers: true,
-        justThisClasses: ["user", "group", "computer"],
+        justThisClasses,
       },
     });
+  }
+
+  if (generateCountryIsoCodes) {
+    const countryCodes = await getCountryIsoCodes({ useCache: true });
+    await generateCountryIsoCodesFile({ countryCodes });
   }
 
   /**@step make sure schema exist before starting the server */

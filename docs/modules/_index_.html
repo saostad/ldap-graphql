@@ -90,10 +90,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
 					<a name="initialfninput" class="tsd-anchor"></a>
 					<h3>Initial<wbr>FnInput</h3>
-					<div class="tsd-signature tsd-kind-icon">Initial<wbr>FnInput<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>connectionInfo<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IClientConfig</span><span class="tsd-signature-symbol">; </span>customResolversPath<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>customSchemaPath<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>generateSchema<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> }</span></div>
+					<div class="tsd-signature tsd-kind-icon">Initial<wbr>FnInput<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>connectionInfo<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IClientConfig</span><span class="tsd-signature-symbol">; </span>customResolversPath<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>customSchemaPath<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>generateCountryIsoCodes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>generateSchema<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>generateSchemaOptions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>justThisClasses<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>logger<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Logger</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/saostad/ldap-graphql/blob/e5ad62d/src/index.ts#L16">src/index.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/saostad/ldap-graphql/blob/117b136/src/index.ts#L18">index.ts:18</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -119,6 +119,14 @@
 								</div>
 							</li>
 							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> generate<wbr>Country<wbr>Iso<wbr>Codes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>generate country iso-3166 codes. default false</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> generate<wbr>Schema<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
@@ -128,12 +136,18 @@
 										<dt>note</dt>
 										<dd><p>use cases:</p>
 											<ul>
-												<li>first time to run the project</li>
-												<li>every time we change the LDAP schema and want to reflect changes to graphql schema</li>
+												<li>first time to run the project.</li>
+												<li>every time we change the LDAP schema and want to reflect changes to graphql schema.</li>
 											</ul>
 										</dd>
 									</dl>
 								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> generate<wbr>Schema<wbr>Options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>justThisClasses<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> logger<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Logger</span></h5>
 							</li>
 						</ul>
 					</div>
@@ -151,7 +165,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/saostad/ldap-graphql/blob/e5ad62d/src/index.ts#L31">src/index.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/saostad/ldap-graphql/blob/117b136/src/index.ts#L40">index.ts:40</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -183,9 +197,6 @@
 					<li class=" tsd-kind-module">
 						<a href="_typings_general_context_.html">&quot;typings/general/context&quot;</a>
 					</li>
-					<li class=" tsd-kind-module">
-						<a href="_typings_generated_types_.html">&quot;typings/generated/types&quot;</a>
-					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
@@ -208,11 +219,6 @@
 			<ul class="tsd-legend">
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
 			</ul>
 		</div>
 	</div>

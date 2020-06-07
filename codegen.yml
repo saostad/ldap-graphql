@@ -1,4 +1,6 @@
-schema: ./generated/graphql/**/*.gql
+schema:
+  - ./generated/graphql/**/*.gql
+  - ./lib/**/*.gql
 generates:
   ./src/typings/generated/types.ts:
     plugins:

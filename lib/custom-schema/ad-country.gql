@@ -6,9 +6,9 @@ input AdEntryCountryUpdateInput {
   attributeSyntax: 2.5.5.1
   attributeID: 2.5.4.49
   """
-  distinguishedName: ID!
+  dn: ID!
   """
-  ISO-3166 2-digit string value
+  ISO-3166 2-digit string value e.g. 'US'
   Admin DisplayName: Country-Name
   Description: Country-Name
   ldapDisplayName: c
@@ -17,7 +17,7 @@ input AdEntryCountryUpdateInput {
   """
   c: String!
   """
-  ISO-3166 Integer value
+  ISO-3166 Integer value  e.g. 840
   Admin DisplayName: Country-Code
   Description: Country-Code
   ldapDisplayName: countryCode
@@ -26,7 +26,7 @@ input AdEntryCountryUpdateInput {
   """
   countryCode: Int!
   """
-  Country Text Open string value
+  Country Text Open string value e.g. 'United States'
   Admin DisplayName: Text-Country
   Description: Text-Country
   ldapDisplayName: co

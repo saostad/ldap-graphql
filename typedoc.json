@@ -8,7 +8,8 @@
     "**/*+(test|.spec|.e2e).ts",
     "./src/app.ts",
     "./src/graphql/**/*.*",
-    "./src/helpers/**/*.*"
+    "./src/helpers/**/*.*",
+    "./src/typings/generated/*.*"
   ],
   "readme": "./README.md"
 }

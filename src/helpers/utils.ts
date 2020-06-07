@@ -41,11 +41,12 @@ export function ldapDateToJsDate(input: string) {
  * @example
  * type A { field: String | [String] }
  */
-export function transformData<T extends {} = any>(
+export function transformData<T extends Record<string, unknown> = any>(
   obj: T,
 ): {
   [prop in Extract<keyof T, string>]: any[];
 } {
+  // TODO: fix generic input type, is not working
   writeLog(`transformData()`, { level: "trace" });
   const transferredObject = {} as any;
 

@@ -79,7 +79,7 @@ type GeneralEntry {
   attributeSyntax: 2.5.5.12
   attributeID: 2.5.4.6
   """
-  c: String!
+  c: [String!]
   """
   ISO-3166 Integer value
   Admin DisplayName: Country-Code
@@ -88,7 +88,7 @@ type GeneralEntry {
   attributeSyntax: 2.5.5.9
   attributeID: 1.2.840.113556.1.4.25
   """
-  countryCode: Int!
+  countryCode: [Int!]
   """
   Country Name Open string value
   Admin DisplayName: Text-Country
@@ -97,7 +97,7 @@ type GeneralEntry {
   attributeSyntax: 2.5.5.12
   attributeID: 1.2.840.113556.1.2.131
   """
-  co: String!
+  co: [String!]
 }
 
 type Query {

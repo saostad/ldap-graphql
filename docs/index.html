@@ -100,9 +100,17 @@ initial({ connectionInfo }).then(<span class="hljs-function">(<span class="hljs-
 					<li><input checked="" disabled="" type="checkbox"> general graphql queries<ul>
 							<li><input checked="" disabled="" type="checkbox"> userGetAll</li>
 							<li><input checked="" disabled="" type="checkbox"> userUpdate</li>
-							<li><input checked="" disabled="" type="checkbox"> getByDn(dn: String!) // can fetch any object</li>
+							<li><input checked="" disabled="" type="checkbox"> getByDn(dn: String!) // can fetch any entry</li>
+							<li><input disabled="" type="checkbox"> adEntryCountryUpdate(input: AdEntryCountryUpdateInput!): GeneralEntry<ul>
+									<li><input checked="" disabled="" type="checkbox"> update 3 fields(c, co, countryCode) at same time</li>
+									<li><input disabled="" type="checkbox"> add enum for acceptable values in adEntryCountryUpdate</li>
+								</ul>
+							</li>
 							<li><input disabled="" type="checkbox"> getOUs(baseDn: String)</li>
 							<li><input disabled="" type="checkbox"> getDirectChildren(dn: String!) // one level search</li>
+							<li><input disabled="" type="checkbox"> entryUpdate</li>
+							<li><input disabled="" type="checkbox"> entryDelete</li>
+							<li><input disabled="" type="checkbox"> entryAdd</li>
 						</ul>
 					</li>
 				</ul>
@@ -120,9 +128,6 @@ initial({ connectionInfo }).then(<span class="hljs-function">(<span class="hljs-
 					<li class=" tsd-kind-module">
 						<a href="modules/_typings_general_context_.html">&quot;typings/general/context&quot;</a>
 					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/_typings_generated_types_.html">&quot;typings/generated/types&quot;</a>
-					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
@@ -139,11 +144,6 @@ initial({ connectionInfo }).then(<span class="hljs-function">(<span class="hljs-
 			<ul class="tsd-legend">
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
 			</ul>
 		</div>
 	</div>

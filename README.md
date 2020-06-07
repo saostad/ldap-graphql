@@ -33,6 +33,12 @@ Please refer to [documentations here](https://saostad.github.io/ldap-graphql/mod
 - [x] general graphql queries
   - [x] userGetAll
   - [x] userUpdate
-  - [x] getByDn(dn: String!) // can fetch any object
+  - [x] getByDn(dn: String!) // can fetch any entry
+  - [ ] adEntryCountryUpdate(input: AdEntryCountryUpdateInput!): GeneralEntry
+    - [x] update 3 fields(c, co, countryCode) at same time
+    - [ ] add enum for acceptable values in adEntryCountryUpdate
   - [ ] getOUs(baseDn: String)
   - [ ] getDirectChildren(dn: String!) // one level search
+  - [ ] entryUpdate
+  - [ ] entryDelete
+  - [ ] entryAdd
