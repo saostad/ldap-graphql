@@ -14,7 +14,6 @@ export async function userGetAll(
     const data = await directory.userGetAll(criteria, {
       client,
       attributes: ["*"],
-      baseDN: connectionInfo.baseDN,
     });
 
     const transferredData = data.map((el) => transformData(el));

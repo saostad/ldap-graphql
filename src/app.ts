@@ -8,7 +8,6 @@ config();
 createLogger({ prettyPrint: { colorize: true } });
 
 const connectionInfo: IClientConfig = {
-  baseDN: "DC=ki,DC=local",
   user: process.env.AD_USER ?? "",
   pass: process.env.AD_Pass ?? "",
   ldapServerUrl: process.env.AD_URI ?? "",
