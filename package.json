@@ -1,6 +1,6 @@
 {
   "name": "ldap-graphql",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "Schema-aware binding between LDAP and Graphql",
   "repository": {
     "type": "git",
@@ -14,14 +14,16 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "gen-docs": "typedoc",
-    "gen-types": "graphql-codegen",
     "postgen-docs": "node ./config/github.js",
+    "graphdoc": "wait-on tcp:4000 && graphdoc",
+    "run-gql-server": "node ./config/run-gql-server.js",
+    "gen-gql-docs": "npm-run-all -p run-gql-server graphdoc",
+    "gen-types": "graphql-codegen",
     "tag": "node ./config/tag.js",
     "gen-changelog": "auto-changelog && git add CHANGELOG.md && git commit -m \"doc: change log\"",
-    "gen-gql-docs": "graphdoc",
     "tsc": "tsc",
     "tsc:watch": "tsc --watch",
-    "prepublishOnly": "npm-run-all -s tsc gen-docs",
+    "prepublishOnly": "npm-run-all -s tsc gen-docs gen-gql-docs",
     "postpublish": "npm-run-all -s tag gen-changelog",
     "prod": "node --unhandled-rejections=strict dist/app.js",
     "inspect": "node --inspect --unhandled-rejections=strict dist/app.js",
@@ -69,7 +71,8 @@
     "prettier": "^2.0.5",
     "ts-jest": "^26.1.0",
     "typedoc": "^0.17.7",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.5",
+    "wait-on": "^5.0.1"
   },
   "dependencies": {
     "@2fd/graphdoc": "^2.4.0",
