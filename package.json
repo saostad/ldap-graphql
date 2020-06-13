@@ -18,6 +18,7 @@
     "postgen-docs": "node ./config/github.js",
     "tag": "node ./config/tag.js",
     "gen-changelog": "auto-changelog && git add CHANGELOG.md && git commit -m \"doc: change log\"",
+    "gen-gql-docs": "graphdoc",
     "tsc": "tsc",
     "tsc:watch": "tsc --watch",
     "prepublishOnly": "npm-run-all -s tsc gen-docs",
@@ -40,6 +41,13 @@
       "docs/*"
     ],
     "delay": "3000"
+  },
+  "graphdoc": {
+    "endpoint": "http://localhost:4000/graphql",
+    "output": "./docs/schema",
+    "plugins": [
+      "graphdoc/plugins/default"
+    ]
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^1.15.3",
@@ -64,6 +72,7 @@
     "typescript": "^3.9.5"
   },
   "dependencies": {
+    "@2fd/graphdoc": "^2.4.0",
     "@graphql-tools/load-files": "^6.0.9",
     "@graphql-tools/merge": "^6.0.9",
     "apollo-server": "^2.14.4",

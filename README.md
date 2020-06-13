@@ -22,7 +22,9 @@ initial({ connectionInfo }).then(({ url }) => {
 
 ### Documentation
 
-Please refer to [documentations here](https://saostad.github.io/ldap-graphql/modules/_index_.html).
+[Schema API Docs](https://saostad.github.io/ldap-graphql/schema)
+
+[Module Code Docs](https://saostad.github.io/ldap-graphql)
 
 ### TODO:
 
