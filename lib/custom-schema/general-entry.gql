@@ -101,5 +101,8 @@ type GeneralEntry {
 }
 
 type Query {
+  """
+  get general entry by DN search
+  """
   entryGetByDn(dn: ID!): GeneralEntry
 }

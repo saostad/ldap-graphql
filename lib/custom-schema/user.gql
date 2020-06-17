@@ -1,0 +1,15 @@
+type Query {
+  """
+  search against "sAmAccountName" attribute of users
+  """
+  userGetByUserName(userName: String!): [User]!
+  """
+  search against common name "cn" attribute of users
+  """
+  userGetByName(cn: String!): [User]!
+  """
+  fussy search against common name "cn" attribute of users.
+  note depend on number of users this can be slow process.
+  """
+  userGetByNameApproxMatch(cn: String!): [User]!
+}
