@@ -53,6 +53,7 @@
     ]
   },
   "devDependencies": {
+    "@2fd/graphdoc": "^2.4.0",
     "@graphql-codegen/cli": "^1.15.3",
     "@graphql-codegen/typescript": "^1.15.3",
     "@graphql-codegen/typescript-operations": "^1.15.3",
@@ -76,7 +77,6 @@
     "wait-on": "^5.0.1"
   },
   "dependencies": {
-    "@2fd/graphdoc": "^2.4.0",
     "@graphql-tools/load-files": "^6.0.10",
     "@graphql-tools/merge": "^6.0.10",
     "apollo-server": "^2.15.0",
