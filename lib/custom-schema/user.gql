@@ -12,4 +12,39 @@ type Query {
   note depend on number of users this can be slow process.
   """
   userGetByNameApproxMatch(cn: String!): [User]!
+  """
+  based on criteria return not disabled users respecting userAccountControl flags
+  """
+  userGetDisabled(criteria: String): [User]!
+  """
+  based on criteria return not disabled users respecting userAccountControl flags
+  """
+  userGetNotDisabled(criteria: String): [User]!
+  """
+  based on criteria return user that are Locked Out
+  """
+  userGetLockedOut(criteria: String): [User]!
+  """
+  based on criteria return Cannot change password accounts respecting userAccountControl flags
+  """
+  userGetCannotChangePassword(criteria: String): [User]!
+  """
+  based on criteria return user accounts required a home directory respecting userAccountControl flags
+  """
+  userGetHomedirRequired(criteria: String): [User]!
+  """
+  based on criteria return not password never expire users respecting userAccountControl flags
+  """
+  userGetPasswordNeverExpires(criteria: String): [User]!
+  """
+  based on criteria return not password not required users respecting userAccountControl flags
+  """
+  userGetPasswordNotRequired(criteria: String): [User]!
+  """
+  based on criteria return user accounts respecting multiple userAccountControl flags
+  """
+  userGetByUserAccountControl(
+    criteria: String
+    accountControls: [String!]!
+  ): [User]!
 }

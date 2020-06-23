@@ -1,6 +1,6 @@
 import * as user from "./user";
-import * as adEntry from "./ad-entry";
+import * as entry from "./entry";
 
 export const mutations = {
-  Mutation: { ...user, ...adEntry },
+  Mutation: { ...user, ...entry },
 };

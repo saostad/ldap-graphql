@@ -1,4 +1,4 @@
-input AdEntryCountryUpdateInput {
+input EntryCountryUpdateInput {
   """
   Admin DisplayName: Obj-Dist-Name
   Description: Obj-Dist-Name
@@ -43,5 +43,5 @@ type Mutation {
   - c (Country-Name): ISO-3166 2-digit string value
   - co (Text-Country): Open string value
   """
-  adEntryCountryUpdate(input: AdEntryCountryUpdateInput!): GeneralEntry
+  entryCountryUpdate(input: EntryCountryUpdateInput!): GeneralEntry
 }
