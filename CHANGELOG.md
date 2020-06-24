@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.9.0](https://github.com/saostad/ldap-graphql/compare/v0.8.0...v0.9.0)
+
+> 24 June 2020
+
+- package: updated [`6fd71a8`](https://github.com/saostad/ldap-graphql/commit/6fd71a862667be531af035c47dc0a7a1381cbcc9)
+- feat: queries based on userAcoountCotrol flags added [`74a3329`](https://github.com/saostad/ldap-graphql/commit/74a3329a1520f39ff36e9c6ecd4aa8c3782a6084)
+- package: updated [`631c14e`](https://github.com/saostad/ldap-graphql/commit/631c14e0f5fcd1ac91b648d0532567773f7a8554)
+
 #### [v0.8.0](https://github.com/saostad/ldap-graphql/compare/v0.7.5...v0.8.0)
 
 > 17 June 2020
