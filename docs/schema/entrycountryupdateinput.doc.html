@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>deprecated</title>
+    <title>EntryCountryUpdateInput</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -165,7 +165,7 @@
                 ComputerUpdateInput
             </a>
         </li>
-        <li  title="EntryCountryUpdateInput">
+        <li class="slds-is-active" title="EntryCountryUpdateInput">
             <a href="entrycountryupdateinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 EntryCountryUpdateInput
             </a>
@@ -190,7 +190,7 @@
                 cacheControl
             </a>
         </li>
-        <li class="slds-is-active" title="deprecated">
+        <li  title="deprecated">
             <a href="deprecated.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 deprecated
             </a>
@@ -225,10 +225,9 @@
         </div>
     </div>
     <div class="container">
-        <p class="slds-text-title--caps slds-text-color--weak"></p>
-        <h1 class="slds-text-heading--large">deprecated</h1>
-        <div class="slds-text-body--regular"><p>Marks an element of a GraphQL schema as no longer supported.</p>
-</div>
+        <p class="slds-text-title--caps slds-text-color--weak">INPUT_OBJECT</p>
+        <h1 class="slds-text-heading--large">EntryCountryUpdateInput</h1>
+        <div class="slds-text-body--regular"></div>
     </div>
 </section>
 <section>
@@ -239,7 +238,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">directive</span> <span class="keyword operator ts">@deprecated</span>(<span class="meta">reason</span>: <a class="support type" href="string.doc.html">String</a>) on <span class="keyword operator ts">FIELD_DEFINITION</span> | <span class="keyword operator ts">ENUM_VALUE</span></li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">input</span> <span class="identifier">EntryCountryUpdateInput</span> {</li><li><span class="tab"><li><span class="tab"><span class="comment line">#   Admin DisplayName: Obj-Dist-Name</span></span></li><li><span class="tab"><span class="comment line">#   Description: Obj-Dist-Name</span></span></li><li><span class="tab"><span class="comment line">#   ldapDisplayName: distinguishedName</span></span></li><li><span class="tab"><span class="comment line">#   attributeSyntax: 2.5.5.1</span></span></li><li><span class="tab"><span class="comment line">#   attributeID: 2.5.4.49</span></span></li><li><span class="tab"><span class="meta">dn</span>: <a class="support type" href="id.doc.html">ID</a>!</span></li></span></li><li><span class="tab"><li><span class="tab"><span class="comment line">#   ISO-3166 2-digit string value e.g. 'US'</span></span></li><li><span class="tab"><span class="comment line">#   Admin DisplayName: Country-Name</span></span></li><li><span class="tab"><span class="comment line">#   Description: Country-Name</span></span></li><li><span class="tab"><span class="comment line">#   ldapDisplayName: c</span></span></li><li><span class="tab"><span class="comment line">#   attributeSyntax: 2.5.5.12</span></span></li><li><span class="tab"><span class="comment line">#   attributeID: 2.5.4.6</span></span></li><li><span class="tab"><span class="meta">c</span>: <a class="support type" href="string.doc.html">String</a>!</span></li></span></li><li><span class="tab"><li><span class="tab"><span class="comment line">#   ISO-3166 Integer value  e.g. 840</span></span></li><li><span class="tab"><span class="comment line">#   Admin DisplayName: Country-Code</span></span></li><li><span class="tab"><span class="comment line">#   Description: Country-Code</span></span></li><li><span class="tab"><span class="comment line">#   ldapDisplayName: countryCode</span></span></li><li><span class="tab"><span class="comment line">#   attributeSyntax: 2.5.5.9</span></span></li><li><span class="tab"><span class="comment line">#   attributeID: 1.2.840.113556.1.4.25</span></span></li><li><span class="tab"><span class="meta">countryCode</span>: <a class="support type" href="int.doc.html">Int</a>!</span></li></span></li><li><span class="tab"><li><span class="tab"><span class="comment line">#   Country Text Open string value e.g. 'United States'</span></span></li><li><span class="tab"><span class="comment line">#   Admin DisplayName: Text-Country</span></span></li><li><span class="tab"><span class="comment line">#   Description: Text-Country</span></span></li><li><span class="tab"><span class="comment line">#   ldapDisplayName: co</span></span></li><li><span class="tab"><span class="comment line">#   attributeSyntax: 2.5.5.12</span></span></li><li><span class="tab"><span class="comment line">#   attributeID: 1.2.840.113556.1.2.131</span></span></li><li><span class="tab"><span class="meta">co</span>: <a class="support type" href="string.doc.html">String</a>!</span></li></span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -250,7 +249,7 @@
             </a>
             Require by
         </h2>
-        <div class="require-by anyone">This element is not required by anyone</div>
+        <ul class="require-by"><li><a href="mutation.doc.html" title="Mutation - ">Mutation<em>null</em></a><li></ul>
     </div>
 </section>
 <footer>

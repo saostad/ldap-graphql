@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>AdEntryCountryUpdateInput</title>
+    <title>UserAccountControl</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -78,6 +78,11 @@
         <li  title="CacheControlScope">
             <a href="cachecontrolscope.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CacheControlScope
+            </a>
+        </li>
+        <li class="slds-is-active" title="UserAccountControl">
+            <a href="useraccountcontrol.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                UserAccountControl
             </a>
         </li>
         <li  title="__DirectiveLocation">
@@ -155,14 +160,14 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Input Objects</h4>
     <ul>
-        <li class="slds-is-active" title="AdEntryCountryUpdateInput">
-            <a href="adentrycountryupdateinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                AdEntryCountryUpdateInput
-            </a>
-        </li>
         <li  title="ComputerUpdateInput">
             <a href="computerupdateinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ComputerUpdateInput
+            </a>
+        </li>
+        <li  title="EntryCountryUpdateInput">
+            <a href="entrycountryupdateinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                EntryCountryUpdateInput
             </a>
         </li>
         <li  title="GroupUpdateInput">
@@ -220,9 +225,10 @@
         </div>
     </div>
     <div class="container">
-        <p class="slds-text-title--caps slds-text-color--weak">INPUT_OBJECT</p>
-        <h1 class="slds-text-heading--large">AdEntryCountryUpdateInput</h1>
-        <div class="slds-text-body--regular"></div>
+        <p class="slds-text-title--caps slds-text-color--weak">ENUM</p>
+        <h1 class="slds-text-heading--large">UserAccountControl</h1>
+        <div class="slds-text-body--regular"><p>UserAccountControl flags to manipulate user account properties. <a href="https://support.microsoft.com/en-us/help/305144/how-to-use-useraccountcontrol-to-manipulate-user-account-properties">source</a></p>
+</div>
     </div>
 </section>
 <section>
@@ -233,7 +239,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">input</span> <span class="identifier">AdEntryCountryUpdateInput</span> {</li><li><span class="tab"><li><span class="tab"><span class="comment line">#   Admin DisplayName: Obj-Dist-Name</span></span></li><li><span class="tab"><span class="comment line">#   Description: Obj-Dist-Name</span></span></li><li><span class="tab"><span class="comment line">#   ldapDisplayName: distinguishedName</span></span></li><li><span class="tab"><span class="comment line">#   attributeSyntax: 2.5.5.1</span></span></li><li><span class="tab"><span class="comment line">#   attributeID: 2.5.4.49</span></span></li><li><span class="tab"><span class="meta">dn</span>: <a class="support type" href="id.doc.html">ID</a>!</span></li></span></li><li><span class="tab"><li><span class="tab"><span class="comment line">#   ISO-3166 2-digit string value e.g. 'US'</span></span></li><li><span class="tab"><span class="comment line">#   Admin DisplayName: Country-Name</span></span></li><li><span class="tab"><span class="comment line">#   Description: Country-Name</span></span></li><li><span class="tab"><span class="comment line">#   ldapDisplayName: c</span></span></li><li><span class="tab"><span class="comment line">#   attributeSyntax: 2.5.5.12</span></span></li><li><span class="tab"><span class="comment line">#   attributeID: 2.5.4.6</span></span></li><li><span class="tab"><span class="meta">c</span>: <a class="support type" href="string.doc.html">String</a>!</span></li></span></li><li><span class="tab"><li><span class="tab"><span class="comment line">#   ISO-3166 Integer value  e.g. 840</span></span></li><li><span class="tab"><span class="comment line">#   Admin DisplayName: Country-Code</span></span></li><li><span class="tab"><span class="comment line">#   Description: Country-Code</span></span></li><li><span class="tab"><span class="comment line">#   ldapDisplayName: countryCode</span></span></li><li><span class="tab"><span class="comment line">#   attributeSyntax: 2.5.5.9</span></span></li><li><span class="tab"><span class="comment line">#   attributeID: 1.2.840.113556.1.4.25</span></span></li><li><span class="tab"><span class="meta">countryCode</span>: <a class="support type" href="int.doc.html">Int</a>!</span></li></span></li><li><span class="tab"><li><span class="tab"><span class="comment line">#   Country Text Open string value e.g. 'United States'</span></span></li><li><span class="tab"><span class="comment line">#   Admin DisplayName: Text-Country</span></span></li><li><span class="tab"><span class="comment line">#   Description: Text-Country</span></span></li><li><span class="tab"><span class="comment line">#   ldapDisplayName: co</span></span></li><li><span class="tab"><span class="comment line">#   attributeSyntax: 2.5.5.12</span></span></li><li><span class="tab"><span class="comment line">#   attributeID: 1.2.840.113556.1.2.131</span></span></li><li><span class="tab"><span class="meta">co</span>: <a class="support type" href="string.doc.html">String</a>!</span></li></span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">enum</span> <span class="identifier">UserAccountControl</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SCRIPT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ACCOUNTDISABLE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">HOMEDIR_REQUIRED</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LOCKOUT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PASSWD_NOTREQD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PASSWD_CANT_CHANGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ENCRYPTED_TEXT_PWD_ALLOWED</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TEMP_DUPLICATE_ACCOUNT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">NORMAL_ACCOUNT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">INTERDOMAIN_TRUST_ACCOUNT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">WORKSTATION_TRUST_ACCOUNT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SERVER_TRUST_ACCOUNT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DONT_EXPIRE_PASSWORD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MNS_LOGON_ACCOUNT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SMARTCARD_REQUIRED</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TRUSTED_FOR_DELEGATION</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">NOT_DELEGATED</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">USE_DES_KEY_ONLY</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DONT_REQ_PREAUTH</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PASSWORD_EXPIRED</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TRUSTED_TO_AUTH_FOR_DELEGATION</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PARTIAL_SECRETS_ACCOUN</span></span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -244,7 +250,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="mutation.doc.html" title="Mutation - ">Mutation<em>null</em></a><li></ul>
+        <ul class="require-by"><li><a href="query.doc.html" title="Query - ">Query<em>null</em></a><li></ul>
     </div>
 </section>
 <footer>

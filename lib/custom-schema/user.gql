@@ -1,3 +1,31 @@
+"""
+UserAccountControl flags to manipulate user account properties. [source](https://support.microsoft.com/en-us/help/305144/how-to-use-useraccountcontrol-to-manipulate-user-account-properties)
+"""
+enum UserAccountControl {
+  SCRIPT
+  ACCOUNTDISABLE
+  HOMEDIR_REQUIRED
+  LOCKOUT
+  PASSWD_NOTREQD
+  PASSWD_CANT_CHANGE
+  ENCRYPTED_TEXT_PWD_ALLOWED
+  TEMP_DUPLICATE_ACCOUNT
+  NORMAL_ACCOUNT
+  INTERDOMAIN_TRUST_ACCOUNT
+  WORKSTATION_TRUST_ACCOUNT
+  SERVER_TRUST_ACCOUNT
+  DONT_EXPIRE_PASSWORD
+  MNS_LOGON_ACCOUNT
+  SMARTCARD_REQUIRED
+  TRUSTED_FOR_DELEGATION
+  NOT_DELEGATED
+  USE_DES_KEY_ONLY
+  DONT_REQ_PREAUTH
+  PASSWORD_EXPIRED
+  TRUSTED_TO_AUTH_FOR_DELEGATION
+  PARTIAL_SECRETS_ACCOUN
+}
+
 type Query {
   """
   search against "sAmAccountName" attribute of users
@@ -25,10 +53,6 @@ type Query {
   """
   userGetLockedOut(criteria: String): [User]!
   """
-  based on criteria return Cannot change password accounts respecting userAccountControl flags
-  """
-  userGetCannotChangePassword(criteria: String): [User]!
-  """
   based on criteria return user accounts required a home directory respecting userAccountControl flags
   """
   userGetHomedirRequired(criteria: String): [User]!
@@ -45,6 +69,6 @@ type Query {
   """
   userGetByUserAccountControl(
     criteria: String
-    accountControls: [String!]!
+    accountControls: [UserAccountControl!]!
   ): [User]!
 }
