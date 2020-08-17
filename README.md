@@ -41,6 +41,6 @@ initial({ connectionInfo }).then(({ url }) => {
     - [ ] add enum for acceptable values in adEntryCountryUpdate
   - [ ] getOUs(baseDn: String)
   - [ ] getDirectChildren(dn: String!) // one level search
-  - [ ] entryUpdate
-  - [ ] entryDelete
-  - [ ] entryAdd
+  - [x] entryUpdate
+  - [x] entryDelete
+  - [x] entryAdd
