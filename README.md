@@ -31,16 +31,15 @@ initial({ connectionInfo }).then(({ url }) => {
 - [x] extend pre-defined schema and resolvers via custom code
 - [x] ability to re-generate schema and update pre-defined schemas
 - [ ] option to change default schema generated output directory
-- [ ] option to run server on different port
+- [x] option to run server on different port
 - [x] general graphql queries
   - [x] userGetAll
   - [x] userUpdate
   - [x] getByDn(dn: String!) // can fetch any entry
-  - [ ] adEntryCountryUpdate(input: AdEntryCountryUpdateInput!): GeneralEntry
+  - [x] adEntryCountryUpdate(input: AdEntryCountryUpdateInput!): GeneralEntry
     - [x] update 3 fields(c, co, countryCode) at same time
-    - [ ] add enum for acceptable values in adEntryCountryUpdate
-  - [ ] getOUs(baseDn: String)
-  - [ ] getDirectChildren(dn: String!) // one level search
   - [x] entryUpdate
   - [x] entryDelete
   - [x] entryAdd
+  - [ ] getOUs(baseDn: String)
+  - [ ] getDirectChildren(dn: String!) // one level search

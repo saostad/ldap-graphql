@@ -34,6 +34,8 @@ export type InitialFnInput = {
   /** generate country iso-3166 codes. default false */
   generateCountryIsoCodes?: boolean;
   logger?: Logger;
+  /** default 4000 */
+  port?: number;
 };
 
 /** initial an instance of Apollo-Server */
@@ -51,6 +53,11 @@ export async function initial(configs: InitialFnInput) {
   let justThisClasses = ["user", "group", "computer"];
   if (configs.generateSchemaOptions) {
     justThisClasses = configs.generateSchemaOptions.justThisClasses;
+  }
+
+  let port = 4000;
+  if (configs.port) {
+    port = configs.port;
   }
 
   /** @step generate graphql schema from LDAP schema */
@@ -107,5 +114,5 @@ export async function initial(configs: InitialFnInput) {
     playground: true,
     introspection: true,
   });
-  return server.listen();
+  return server.listen({ port });
 }
