@@ -51,9 +51,13 @@ export const userUpdate: Exclude<
     const attributesToUpdate: any = { ...input };
     delete attributesToUpdate.dn;
 
-    /**@step this is to delete existing values if value is 'null' */
+    /**@step this is to delete existing values if value is 'null' or empty string */
     Object.entries(input).forEach(([prop, value]) => {
-      if (value === null) {
+      if (
+        value === null ||
+        value === "" ||
+        (Array.isArray(value) && value[0] === "")
+      ) {
         attributesToUpdate[prop] = [];
       }
     });

@@ -13,6 +13,6 @@ const connectionInfo: IClientConfig = {
   ldapServerUrl: process.env.AD_URI ?? "",
 };
 
-initial({ connectionInfo, generateSchema: true, port: 3999 }).then((server) => {
+initial({ connectionInfo, generateSchema: true, port: 4000 }).then((server) => {
   console.log(`Server started on ${server.url}`);
 });
