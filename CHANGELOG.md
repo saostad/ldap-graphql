@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.10.0](https://github.com/saostad/ldap-graphql/compare/v0.9.0...v0.10.0)
+
+> 18 August 2020
+
+- pkg: updated [`7a9032a`](https://github.com/saostad/ldap-graphql/commit/7a9032ae790ecec21c83c3198da1f9d0a51d51fa)
+- fix: delete existing attibute throw error [`f3aeb29`](https://github.com/saostad/ldap-graphql/commit/f3aeb2998af83e01b59a649463daacf04634a763)
+- feat: added server config to change the port [`56e08bb`](https://github.com/saostad/ldap-graphql/commit/56e08bb4a10f3c73d357c6117d450bd4fc4eb251)
+
 #### [v0.9.0](https://github.com/saostad/ldap-graphql/compare/v0.8.0...v0.9.0)
 
 > 24 June 2020
