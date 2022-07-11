@@ -111,7 +111,6 @@ export async function initial(configs: InitialFnInput) {
     resolvers,
     typeDefs,
     context: { connectionInfo: configs.connectionInfo },
-    playground: true,
     introspection: true,
   });
   return server.listen({ port });

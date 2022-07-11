@@ -22,13 +22,14 @@ export const entryCountryUpdate: Exclude<
     const attributesToUpdate: MutationEntryCountryUpdateArgs["input"] = {
       ...input,
     };
+    // @ts-expect-error The operand of a 'delete' operator must be optional.
     delete attributesToUpdate.dn;
 
     /**@step this is to delete existing values if value is 'null' */
     // TODO: to delete an existing value it should set to 0
     Object.entries(input).forEach(([prop, value]) => {
       if (value === null) {
-        // @ts-expect-error
+        // @ts-expect-error known issue
         attributesToUpdate[prop] = [];
       }
     });
