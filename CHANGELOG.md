@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.11.0](https://github.com/saostad/ldap-graphql/compare/v0.10.1...v0.11.0)
+
+> 14 July 2022
+
+- feat: grpahql query resolvers for groupGetAll and groupGetByDn added [`6d27b5b`](https://github.com/saostad/ldap-graphql/commit/6d27b5b89ce75eede91dfd63fc435ff3d6df3de3)
+- doc: change log [`20f5477`](https://github.com/saostad/ldap-graphql/commit/20f547756dafdb49414098818fb6c05a517e48a6)
+
 #### [v0.10.1](https://github.com/saostad/ldap-graphql/compare/v0.10.0...v0.10.1)
 
 > 11 July 2022
