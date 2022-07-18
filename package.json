@@ -1,6 +1,6 @@
 {
   "name": "ldap-graphql",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "description": "Schema-aware binding between LDAP and Graphql",
   "repository": {
     "type": "git",

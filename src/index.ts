@@ -13,7 +13,7 @@ import { promises } from "fs";
 import { getTypes } from "./graphql/typeDefs";
 import { getResolvers } from "./graphql/resolvers";
 import { generatedSchemaPath } from "./helpers/variables";
-import type { Logger } from "fast-node-logger";
+import { Logger, writeLog } from "fast-node-logger";
 
 export type InitialFnInput = {
   connectionInfo: IClientConfig;
@@ -40,78 +40,83 @@ export type InitialFnInput = {
 
 /** initial an instance of Apollo-Server */
 export async function initial(configs: InitialFnInput) {
-  let generateSchema = true;
-  if (typeof configs.generateSchema === "boolean") {
-    generateSchema = configs.generateSchema;
-  }
-
-  let generateCountryIsoCodes = false;
-  if (typeof configs.generateCountryIsoCodes === "boolean") {
-    generateCountryIsoCodes = configs.generateCountryIsoCodes;
-  }
-
-  let justThisClasses = ["user", "group", "computer"];
-  if (configs.generateSchemaOptions) {
-    justThisClasses = configs.generateSchemaOptions.justThisClasses;
-  }
-
-  let port = 4000;
-  if (configs.port) {
-    port = configs.port;
-  }
-
-  /** @step generate graphql schema from LDAP schema */
-  if (generateSchema) {
-    const client = new Client(configs.connectionInfo);
-
-    const objectAttributes = await getSchemaAttributes({
-      client,
-      options: { logger: configs.logger },
-    });
-
-    const objectClasses = await getSchemaClasses({
-      client,
-      options: { logger: configs.logger },
-    });
-
-    await client.unbind();
-
-    await generateGraphqlTypeFiles({
-      objectAttributes,
-      objectClasses,
-      options: {
-        generateEnumTypeMaps: false,
-        generateClientSideDocuments: false,
-        generateResolvers: true,
-        justThisClasses,
-      },
-    });
-  }
-
-  if (generateCountryIsoCodes) {
-    const countryCodes = await getCountryIsoCodes({ useCache: true });
-    await generateCountryIsoCodesFile({ countryCodes });
-  }
-
-  /**@step make sure schema exist before starting the server */
   try {
-    await promises.readdir(generatedSchemaPath);
+    let generateSchema = true;
+    if (typeof configs.generateSchema === "boolean") {
+      generateSchema = configs.generateSchema;
+    }
+
+    let generateCountryIsoCodes = false;
+    if (typeof configs.generateCountryIsoCodes === "boolean") {
+      generateCountryIsoCodes = configs.generateCountryIsoCodes;
+    }
+
+    let justThisClasses = ["user", "group", "computer"];
+    if (configs.generateSchemaOptions) {
+      justThisClasses = configs.generateSchemaOptions.justThisClasses;
+    }
+
+    let port = 4000;
+    if (configs.port) {
+      port = configs.port;
+    }
+
+    /** @step generate graphql schema from LDAP schema */
+    if (generateSchema) {
+      const client = new Client(configs.connectionInfo);
+
+      const objectAttributes = await getSchemaAttributes({
+        client,
+        options: { logger: configs.logger },
+      });
+
+      const objectClasses = await getSchemaClasses({
+        client,
+        options: { logger: configs.logger },
+      });
+
+      await client.unbind();
+
+      await generateGraphqlTypeFiles({
+        objectAttributes,
+        objectClasses,
+        options: {
+          generateEnumTypeMaps: false,
+          generateClientSideDocuments: false,
+          generateResolvers: true,
+          justThisClasses,
+        },
+      });
+    }
+
+    if (generateCountryIsoCodes) {
+      const countryCodes = await getCountryIsoCodes({ useCache: true });
+      await generateCountryIsoCodesFile({ countryCodes });
+    }
+
+    /**@step make sure schema exist before starting the server */
+    try {
+      await promises.readdir(generatedSchemaPath);
+    } catch (error) {
+      throw `schema does not exist in path ${generatedSchemaPath}`;
+    }
+
+    const typeDefs = await getTypes({
+      customSchemaPath: configs?.customSchemaPath,
+    });
+    const resolvers = await getResolvers({
+      customResolversPath: configs?.customResolversPath,
+    });
+
+    const server = new ApolloServer({
+      resolvers,
+      typeDefs,
+      context: { connectionInfo: configs.connectionInfo },
+      introspection: true,
+    });
+    return server.listen({ port });
   } catch (error) {
-    throw `schema does not exist in path ${generatedSchemaPath}`;
+    writeLog(error, { level: "fatal", stdout: true });
+    throw error;
   }
-
-  const typeDefs = await getTypes({
-    customSchemaPath: configs?.customSchemaPath,
-  });
-  const resolvers = await getResolvers({
-    customResolversPath: configs?.customResolversPath,
-  });
-
-  const server = new ApolloServer({
-    resolvers,
-    typeDefs,
-    context: { connectionInfo: configs.connectionInfo },
-    introspection: true,
-  });
-  return server.listen({ port });
 }
