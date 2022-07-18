@@ -68,14 +68,23 @@ export async function initial(configs: InitialFnInput) {
       const objectAttributes = await getSchemaAttributes({
         client,
         options: { logger: configs.logger },
+      }).catch((error: Error) => {
+        writeLog(error, { level: "error", stdout: true });
+        throw error;
       });
 
       const objectClasses = await getSchemaClasses({
         client,
         options: { logger: configs.logger },
+      }).catch((error: Error) => {
+        writeLog(error, { level: "error", stdout: true });
+        throw error;
       });
 
-      await client.unbind();
+      await client.unbind().catch((error: Error) => {
+        writeLog(error, { level: "error", stdout: true });
+        throw error;
+      });
 
       await generateGraphqlTypeFiles({
         objectAttributes,
@@ -86,26 +95,45 @@ export async function initial(configs: InitialFnInput) {
           generateResolvers: true,
           justThisClasses,
         },
+      }).catch((error: Error) => {
+        writeLog(error, { level: "error", stdout: true });
+        throw error;
       });
     }
 
     if (generateCountryIsoCodes) {
-      const countryCodes = await getCountryIsoCodes({ useCache: true });
-      await generateCountryIsoCodesFile({ countryCodes });
+      const countryCodes = await getCountryIsoCodes({ useCache: true }).catch(
+        (error: Error) => {
+          writeLog(error, { level: "error", stdout: true });
+          throw error;
+        },
+      );
+      await generateCountryIsoCodesFile({ countryCodes }).catch(
+        (error: Error) => {
+          writeLog(error, { level: "error", stdout: true });
+          throw error;
+        },
+      );
     }
 
     /**@step make sure schema exist before starting the server */
-    try {
-      await promises.readdir(generatedSchemaPath);
-    } catch (error) {
-      throw `schema does not exist in path ${generatedSchemaPath}`;
-    }
+
+    await promises.readdir(generatedSchemaPath).catch((error: Error) => {
+      writeLog(error, { level: "error", stdout: true });
+      throw error;
+    });
 
     const typeDefs = await getTypes({
       customSchemaPath: configs?.customSchemaPath,
+    }).catch((error: Error) => {
+      writeLog(error, { level: "error", stdout: true });
+      throw error;
     });
     const resolvers = await getResolvers({
       customResolversPath: configs?.customResolversPath,
+    }).catch((error: Error) => {
+      writeLog(error, { level: "error", stdout: true });
+      throw error;
     });
 
     const server = new ApolloServer({
