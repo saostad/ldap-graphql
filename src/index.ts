@@ -117,7 +117,6 @@ export async function initial(configs: InitialFnInput) {
     }
 
     /**@step make sure schema exist before starting the server */
-
     await promises.readdir(generatedSchemaPath).catch((error: Error) => {
       writeLog(error, { level: "error", stdout: true });
       throw error;
