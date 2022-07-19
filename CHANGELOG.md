@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.11.3](https://github.com/saostad/ldap-graphql/compare/v0.11.2...v0.11.3)
+
+> 19 July 2022
+
+- pkg: updated [`18279c0`](https://github.com/saostad/ldap-graphql/commit/18279c03527a32f3b4f2b7da21ef48a9a6a23610)
+- doc: change log [`c12fbcd`](https://github.com/saostad/ldap-graphql/commit/c12fbcd7f558368c6241c10ea947cc42f47ebd44)
+
 #### [v0.11.2](https://github.com/saostad/ldap-graphql/compare/v0.11.1...v0.11.2)
 
 > 18 July 2022
