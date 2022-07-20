@@ -1,11 +1,11 @@
 // HOW TO USE IT
 import { IClientConfig } from "ldap-directory-manager";
-import { createLogger } from "fast-node-logger";
+import { createLogger, writeLog } from "fast-node-logger";
 import { initial } from "./index";
 import { config } from "dotenv";
 config();
 
-createLogger({ prettyPrint: { colorize: true } });
+createLogger();
 
 const connectionInfo: IClientConfig = {
   user: process.env.AD_USER ?? "",
@@ -13,6 +13,13 @@ const connectionInfo: IClientConfig = {
   ldapServerUrl: process.env.AD_URI ?? "",
 };
 
-initial({ connectionInfo, generateSchema: true, port: 4000 }).then((server) => {
-  console.log(`Server started on ${server.url}`);
-});
+initial({ connectionInfo, generateSchema: true, port: 4000 })
+  .then((server) => {
+    writeLog(`Server started on ${server.url}`, {
+      stdout: true,
+      level: "info",
+    });
+  })
+  .catch((err) => {
+    writeLog(err, { level: "fatal", stdout: true });
+  });
