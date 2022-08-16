@@ -12,7 +12,9 @@ type GetResolversFnInput = {
   /** default {recursive: false} */
   loadFilesOptions?: Parameters<typeof loadFiles>[1];
 };
-export async function getResolvers(options?: GetResolversFnInput) {
+export async function getResolvers(
+  options?: GetResolversFnInput,
+): Promise<ReturnType<typeof mergeResolvers>> {
   let userDefinedResolversPath = userDefinedResolversDefaultPath;
   if (options?.customResolversPath) {
     userDefinedResolversPath = options?.customResolversPath;
