@@ -1,6 +1,6 @@
 {
   "name": "ldap-graphql",
-  "version": "0.11.5",
+  "version": "0.11.6",
   "description": "Schema-aware binding between LDAP and Graphql",
   "repository": {
     "type": "git",
@@ -81,9 +81,9 @@
     "@graphql-tools/load-files": "^6.6.1",
     "apollo-server": "^3.10.1",
     "change-case": "^4.1.2",
-    "fast-node-logger": "^3.0.2",
-    "graphql": "^16.5.0",
-    "ldap-directory-manager": "^0.16.7",
-    "ldap-schema-ts-generator": "^4.0.13"
+    "fast-node-logger": "^3.0.3",
+    "graphql": "^16.6.0",
+    "ldap-directory-manager": "^0.16.8",
+    "ldap-schema-ts-generator": "^4.0.14"
   }
 }
